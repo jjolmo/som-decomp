@@ -1,0 +1,2595 @@
+{
+ "source": "drop row = 0x103A50 + monster_id*5 (5 bytes); rolled by $C0:4203 (death) and $C8:E0B0/$C8:E12C (chest opening). Probabilities assume the RNG byte is uniform.",
+ "kill_class_table": [
+  2,
+  3,
+  4,
+  1,
+  5,
+  7,
+  6,
+  0
+ ],
+ "rows": [
+  {
+   "monster_id": 0,
+   "raw": [
+    8,
+    16,
+    248,
+    64,
+    4
+   ],
+   "p_chest": 0.125,
+   "chance_64": 8,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 8,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 3,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "gold",
+     "amount": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 1,
+   "raw": [
+    4,
+    48,
+    248,
+    64,
+    22
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 3,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "gold",
+     "amount": 22
+    }
+   ]
+  },
+  {
+   "monster_id": 2,
+   "raw": [
+    4,
+    32,
+    184,
+    14,
+    64
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 16,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 2,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "gold",
+     "amount": 14
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 3,
+   "raw": [
+    4,
+    48,
+    184,
+    34,
+    64
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 2,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "gold",
+     "amount": 34
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 4,
+   "raw": [
+    4,
+    32,
+    248,
+    68,
+    16
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 16,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 3,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "gold",
+     "amount": 16
+    }
+   ]
+  },
+  {
+   "monster_id": 5,
+   "raw": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "p_chest": 0.0,
+   "chance_64": 0,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 0,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 0,
+   "content_mode": 0,
+   "contents": [
+    {
+     "probability": 1.0,
+     "kind": "gold",
+     "amount": 0
+    },
+    {
+     "probability": 0.0,
+     "kind": "gold",
+     "amount": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 6,
+   "raw": [
+    4,
+    51,
+    184,
+    28,
+    4
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 2,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "gold",
+     "amount": 28
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 4,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 7,
+   "raw": [
+    4,
+    48,
+    120,
+    65,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 8,
+   "raw": [
+    132,
+    48,
+    248,
+    68,
+    24
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 3,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "gold",
+     "amount": 24
+    }
+   ]
+  },
+  {
+   "monster_id": 9,
+   "raw": [
+    4,
+    48,
+    120,
+    67,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 10,
+   "raw": [
+    4,
+    48,
+    250,
+    64,
+    20
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 3,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "gold",
+     "amount": 20
+    }
+   ]
+  },
+  {
+   "monster_id": 11,
+   "raw": [
+    4,
+    48,
+    120,
+    64,
+    67
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 3
+    }
+   ]
+  },
+  {
+   "monster_id": 12,
+   "raw": [
+    4,
+    67,
+    123,
+    64,
+    46
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 46,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 13,
+   "raw": [
+    4,
+    48,
+    186,
+    44,
+    74
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 2,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "gold",
+     "amount": 44
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 10
+    }
+   ]
+  },
+  {
+   "monster_id": 14,
+   "raw": [
+    132,
+    67,
+    186,
+    60,
+    45
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 2,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "gold",
+     "amount": 60
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 45,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 15,
+   "raw": [
+    4,
+    64,
+    122,
+    64,
+    67
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 3
+    }
+   ]
+  },
+  {
+   "monster_id": 16,
+   "raw": [
+    4,
+    64,
+    124,
+    64,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 17,
+   "raw": [
+    132,
+    131,
+    120,
+    66,
+    58
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 64,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 2
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 58,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 18,
+   "raw": [
+    4,
+    64,
+    251,
+    68,
+    96
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 3,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "gold",
+     "amount": 96
+    }
+   ]
+  },
+  {
+   "monster_id": 19,
+   "raw": [
+    132,
+    67,
+    124,
+    65,
+    28
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 28,
+     "slot": "body"
+    }
+   ]
+  },
+  {
+   "monster_id": 20,
+   "raw": [
+    4,
+    64,
+    188,
+    158,
+    65
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 2,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "gold",
+     "amount": 158
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 1
+    }
+   ]
+  },
+  {
+   "monster_id": 21,
+   "raw": [
+    132,
+    67,
+    122,
+    68,
+    5
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 5,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 22,
+   "raw": [
+    4,
+    64,
+    124,
+    65,
+    67
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 3
+    }
+   ]
+  },
+  {
+   "monster_id": 23,
+   "raw": [
+    4,
+    64,
+    186,
+    24,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 2,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "gold",
+     "amount": 24
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 24,
+   "raw": [
+    4,
+    64,
+    124,
+    67,
+    64
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 25,
+   "raw": [
+    4,
+    48,
+    124,
+    68,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 24,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 26,
+   "raw": [
+    132,
+    80,
+    124,
+    65,
+    67
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 40,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 3
+    }
+   ]
+  },
+  {
+   "monster_id": 27,
+   "raw": [
+    4,
+    64,
+    124,
+    64,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 28,
+   "raw": [
+    132,
+    83,
+    122,
+    65,
+    9
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 40,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 9,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 29,
+   "raw": [
+    4,
+    64,
+    122,
+    67,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 30,
+   "raw": [
+    4,
+    80,
+    124,
+    64,
+    65
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 40,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 1
+    }
+   ]
+  },
+  {
+   "monster_id": 31,
+   "raw": [
+    132,
+    35,
+    123,
+    69,
+    27
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 16,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 5
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 27,
+     "slot": "body"
+    }
+   ]
+  },
+  {
+   "monster_id": 32,
+   "raw": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "p_chest": 0.0,
+   "chance_64": 0,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 0,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 0,
+   "content_mode": 0,
+   "contents": [
+    {
+     "probability": 1.0,
+     "kind": "gold",
+     "amount": 0
+    },
+    {
+     "probability": 0.0,
+     "kind": "gold",
+     "amount": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 33,
+   "raw": [
+    4,
+    64,
+    252,
+    64,
+    120
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 3,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "gold",
+     "amount": 120
+    }
+   ]
+  },
+  {
+   "monster_id": 34,
+   "raw": [
+    132,
+    64,
+    122,
+    67,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 35,
+   "raw": [
+    4,
+    64,
+    122,
+    65,
+    67
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 3
+    }
+   ]
+  },
+  {
+   "monster_id": 36,
+   "raw": [
+    4,
+    64,
+    125,
+    64,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 37,
+   "raw": [
+    4,
+    64,
+    122,
+    64,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 38,
+   "raw": [
+    4,
+    64,
+    120,
+    67,
+    65
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 1
+    }
+   ]
+  },
+  {
+   "monster_id": 39,
+   "raw": [
+    132,
+    67,
+    124,
+    65,
+    48
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 48,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 40,
+   "raw": [
+    4,
+    112,
+    123,
+    68,
+    65
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 1
+    }
+   ]
+  },
+  {
+   "monster_id": 41,
+   "raw": [
+    4,
+    80,
+    124,
+    68,
+    66
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 40,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 2
+    }
+   ]
+  },
+  {
+   "monster_id": 42,
+   "raw": [
+    4,
+    64,
+    122,
+    65,
+    74
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 10
+    }
+   ]
+  },
+  {
+   "monster_id": 43,
+   "raw": [
+    4,
+    96,
+    124,
+    68,
+    64
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 44,
+   "raw": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "p_chest": 0.0,
+   "chance_64": 0,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 0,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 0,
+   "content_mode": 0,
+   "contents": [
+    {
+     "probability": 1.0,
+     "kind": "gold",
+     "amount": 0
+    },
+    {
+     "probability": 0.0,
+     "kind": "gold",
+     "amount": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 45,
+   "raw": [
+    4,
+    32,
+    125,
+    67,
+    66
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 16,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 2
+    }
+   ]
+  },
+  {
+   "monster_id": 46,
+   "raw": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "p_chest": 0.0,
+   "chance_64": 0,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 0,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 0,
+   "content_mode": 0,
+   "contents": [
+    {
+     "probability": 1.0,
+     "kind": "gold",
+     "amount": 0
+    },
+    {
+     "probability": 0.0,
+     "kind": "gold",
+     "amount": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 47,
+   "raw": [
+    4,
+    96,
+    122,
+    67,
+    66
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 2
+    }
+   ]
+  },
+  {
+   "monster_id": 48,
+   "raw": [
+    132,
+    83,
+    122,
+    66,
+    60
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 40,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 2
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 60,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 49,
+   "raw": [
+    4,
+    99,
+    122,
+    65,
+    56
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 56,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 50,
+   "raw": [
+    4,
+    32,
+    125,
+    65,
+    64
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 16,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 51,
+   "raw": [
+    132,
+    67,
+    122,
+    68,
+    29
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 29,
+     "slot": "body"
+    }
+   ]
+  },
+  {
+   "monster_id": 52,
+   "raw": [
+    4,
+    64,
+    122,
+    65,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 53,
+   "raw": [
+    4,
+    96,
+    122,
+    65,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 54,
+   "raw": [
+    4,
+    96,
+    122,
+    64,
+    68
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 4
+    }
+   ]
+  },
+  {
+   "monster_id": 55,
+   "raw": [
+    4,
+    80,
+    122,
+    64,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 40,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 56,
+   "raw": [
+    132,
+    67,
+    122,
+    65,
+    7
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 7,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 57,
+   "raw": [
+    132,
+    112,
+    122,
+    67,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 58,
+   "raw": [
+    132,
+    115,
+    122,
+    67,
+    13
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 13,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 59,
+   "raw": [
+    132,
+    131,
+    125,
+    65,
+    19
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 64,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 19,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 60,
+   "raw": [
+    132,
+    115,
+    125,
+    66,
+    16
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 2
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 16,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 61,
+   "raw": [
+    4,
+    99,
+    122,
+    38,
+    133
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 38,
+     "slot": "body"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "weapon_orb",
+     "weapon_type": 5,
+     "fallback_if_type_maxed": {
+      "kind": "consumable",
+      "id": 0
+     }
+    }
+   ]
+  },
+  {
+   "monster_id": 62,
+   "raw": [
+    4,
+    64,
+    125,
+    64,
+    69
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 32,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 5
+    }
+   ]
+  },
+  {
+   "monster_id": 63,
+   "raw": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "p_chest": 0.0,
+   "chance_64": 0,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 0,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 0,
+   "content_mode": 0,
+   "contents": [
+    {
+     "probability": 1.0,
+     "kind": "gold",
+     "amount": 0
+    },
+    {
+     "probability": 0.0,
+     "kind": "gold",
+     "amount": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 64,
+   "raw": [
+    132,
+    99,
+    122,
+    69,
+    59
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 5
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 59,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 65,
+   "raw": [
+    4,
+    115,
+    122,
+    66,
+    15
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 2
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 15,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 66,
+   "raw": [
+    4,
+    112,
+    124,
+    69,
+    65
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 5
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 1
+    }
+   ]
+  },
+  {
+   "monster_id": 67,
+   "raw": [
+    132,
+    115,
+    122,
+    65,
+    35
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 35,
+     "slot": "body"
+    }
+   ]
+  },
+  {
+   "monster_id": 68,
+   "raw": [
+    132,
+    115,
+    122,
+    61,
+    131
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 61,
+     "slot": "accessory"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "weapon_orb",
+     "weapon_type": 3,
+     "fallback_if_type_maxed": {
+      "kind": "consumable",
+      "id": 0
+     }
+    }
+   ]
+  },
+  {
+   "monster_id": 69,
+   "raw": [
+    132,
+    131,
+    122,
+    67,
+    17
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 64,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 17,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 70,
+   "raw": [
+    132,
+    128,
+    122,
+    64,
+    66
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 64,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 2
+    }
+   ]
+  },
+  {
+   "monster_id": 71,
+   "raw": [
+    4,
+    112,
+    122,
+    68,
+    66
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 4
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 2
+    }
+   ]
+  },
+  {
+   "monster_id": 72,
+   "raw": [
+    4,
+    96,
+    122,
+    64,
+    65
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 0
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 1
+    }
+   ]
+  },
+  {
+   "monster_id": 73,
+   "raw": [
+    132,
+    136,
+    122,
+    40,
+    135
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 64,
+   "byte1_low_nibble": 8,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 40,
+     "slot": "body"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "weapon_orb",
+     "weapon_type": 7,
+     "fallback_if_type_maxed": {
+      "kind": "consumable",
+      "id": 0
+     }
+    }
+   ]
+  },
+  {
+   "monster_id": 74,
+   "raw": [
+    132,
+    128,
+    122,
+    66,
+    67
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 64,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 2
+    },
+    {
+     "probability": 0.109375,
+     "kind": "consumable",
+     "id": 3
+    }
+   ]
+  },
+  {
+   "monster_id": 75,
+   "raw": [
+    132,
+    131,
+    122,
+    39,
+    130
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 64,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 39,
+     "slot": "body"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "weapon_orb",
+     "weapon_type": 2,
+     "fallback_if_type_maxed": {
+      "kind": "consumable",
+      "id": 0
+     }
+    }
+   ]
+  },
+  {
+   "monster_id": 76,
+   "raw": [
+    132,
+    115,
+    122,
+    67,
+    18
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 3
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 18,
+     "slot": "head"
+    }
+   ]
+  },
+  {
+   "monster_id": 77,
+   "raw": [
+    132,
+    115,
+    122,
+    65,
+    57
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 1
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 57,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 78,
+   "raw": [
+    132,
+    115,
+    122,
+    34,
+    56
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 56,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 34,
+     "slot": "body"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 56,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 79,
+   "raw": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "p_chest": 0.0,
+   "chance_64": 0,
+   "always": false,
+   "flag_bit7": false,
+   "trap_agi_threshold": 0,
+   "byte1_low_nibble": 0,
+   "content_roll_threshold": 0,
+   "content_mode": 0,
+   "contents": [
+    {
+     "probability": 1.0,
+     "kind": "gold",
+     "amount": 0
+    },
+    {
+     "probability": 0.0,
+     "kind": "gold",
+     "amount": 0
+    }
+   ]
+  },
+  {
+   "monster_id": 80,
+   "raw": [
+    132,
+    152,
+    122,
+    43,
+    128
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 72,
+   "byte1_low_nibble": 8,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 43,
+     "slot": "accessory"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "weapon_orb",
+     "weapon_type": 0,
+     "fallback_if_type_maxed": {
+      "kind": "consumable",
+      "id": 0
+     }
+    }
+   ]
+  },
+  {
+   "monster_id": 81,
+   "raw": [
+    132,
+    99,
+    122,
+    69,
+    55
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 48,
+   "byte1_low_nibble": 3,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "consumable",
+     "id": 5
+    },
+    {
+     "probability": 0.109375,
+     "kind": "armor",
+     "armor_row": 55,
+     "slot": "accessory"
+    }
+   ]
+  },
+  {
+   "monster_id": 82,
+   "raw": [
+    132,
+    152,
+    122,
+    20,
+    132
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 72,
+   "byte1_low_nibble": 8,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 20,
+     "slot": "head"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "weapon_orb",
+     "weapon_type": 4,
+     "fallback_if_type_maxed": {
+      "kind": "consumable",
+      "id": 0
+     }
+    }
+   ]
+  },
+  {
+   "monster_id": 83,
+   "raw": [
+    132,
+    152,
+    122,
+    41,
+    134
+   ],
+   "p_chest": 0.0625,
+   "chance_64": 4,
+   "always": false,
+   "flag_bit7": true,
+   "trap_agi_threshold": 72,
+   "byte1_low_nibble": 8,
+   "content_roll_threshold": 7,
+   "content_mode": 1,
+   "contents": [
+    {
+     "probability": 0.890625,
+     "kind": "armor",
+     "armor_row": 41,
+     "slot": "body"
+    },
+    {
+     "probability": 0.109375,
+     "kind": "weapon_orb",
+     "weapon_type": 6,
+     "fallback_if_type_maxed": {
+      "kind": "consumable",
+      "id": 0
+     }
+    }
+   ]
+  }
+ ]
+}

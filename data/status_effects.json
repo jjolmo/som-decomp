@@ -1,0 +1,739 @@
+{
+ "source": "$C8:E301 (apply), E3A9 (duration), E487/E4D7/E50F (exclusivity), $C0:3C19-3DCD (timers), $C0:5119 (weapon status roll). word = E191<<8 | E190",
+ "bits": [
+  {
+   "mask": 4,
+   "effect": "accuracy -1/16 in the hit test (E190 bit 2)",
+   "timer_byte": 434,
+   "spell_ids": [
+    2
+   ],
+   "player_weapon_rows": [
+    37,
+    42,
+    56
+   ],
+   "monster_attack_rows": [],
+   "boss_attack_rows": [
+    [
+     23,
+     50
+    ],
+    [
+     75,
+     99
+    ],
+    [
+     76,
+     99
+    ]
+   ],
+   "armor_rows_immune": [
+    49,
+    57
+   ],
+   "monsters_immune": 57
+  },
+  {
+   "mask": 8,
+   "effect": "Agi -1/16 in the stat build (E190 bit 3); no spell/attack row sets it",
+   "timer_byte": 434,
+   "spell_ids": [],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [],
+   "boss_attack_rows": [],
+   "armor_rows_immune": [],
+   "monsters_immune": 48
+  },
+  {
+   "mask": 16,
+   "effect": "cleared by any damaging hit ($C0:5119); crit chance x2 against it; sets E1B1 bit 0",
+   "timer_byte": 434,
+   "spell_ids": [
+    30
+   ],
+   "player_weapon_rows": [
+    2,
+    32
+   ],
+   "monster_attack_rows": [
+    [
+     76,
+     99
+    ],
+    [
+     106,
+     99
+    ],
+    [
+     128,
+     99
+    ],
+    [
+     158,
+     99
+    ]
+   ],
+   "boss_attack_rows": [
+    [
+     8,
+     99
+    ],
+    [
+     17,
+     99
+    ],
+    [
+     19,
+     99
+    ],
+    [
+     20,
+     50
+    ],
+    [
+     27,
+     50
+    ],
+    [
+     33,
+     50
+    ],
+    [
+     34,
+     33
+    ],
+    [
+     41,
+     33
+    ],
+    [
+     43,
+     99
+    ],
+    [
+     45,
+     33
+    ],
+    [
+     50,
+     33
+    ],
+    [
+     51,
+     25
+    ],
+    [
+     52,
+     50
+    ],
+    [
+     59,
+     99
+    ],
+    [
+     63,
+     33
+    ],
+    [
+     65,
+     33
+    ],
+    [
+     66,
+     33
+    ],
+    [
+     67,
+     33
+    ],
+    [
+     78,
+     33
+    ],
+    [
+     88,
+     50
+    ],
+    [
+     97,
+     50
+    ],
+    [
+     99,
+     99
+    ],
+    [
+     110,
+     99
+    ]
+   ],
+   "armor_rows_immune": [
+    36,
+    51
+   ],
+   "monsters_immune": 62
+  },
+  {
+   "mask": 32,
+   "effect": "cannot act (mask C160 in the input handler)",
+   "timer_byte": 434,
+   "spell_ids": [
+    9
+   ],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [
+    [
+     111,
+     25
+    ],
+    [
+     148,
+     80
+    ],
+    [
+     149,
+     80
+    ],
+    [
+     161,
+     25
+    ],
+    [
+     172,
+     25
+    ]
+   ],
+   "boss_attack_rows": [
+    [
+     1,
+     99
+    ],
+    [
+     14,
+     99
+    ],
+    [
+     55,
+     99
+    ],
+    [
+     86,
+     66
+    ],
+    [
+     107,
+     66
+    ]
+   ],
+   "armor_rows_immune": [
+    50,
+    60
+   ],
+   "monsters_immune": 67
+  },
+  {
+   "mask": 64,
+   "effect": "cannot act (mask C160), HP -> HP/2+1 when applied, cascade keeps 0x9AC0",
+   "timer_byte": 434,
+   "spell_ids": [
+    3
+   ],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [
+    [
+     124,
+     25
+    ],
+    [
+     156,
+     25
+    ],
+    [
+     170,
+     25
+    ]
+   ],
+   "boss_attack_rows": [
+    [
+     7,
+     99
+    ],
+    [
+     15,
+     99
+    ],
+    [
+     58,
+     99
+    ]
+   ],
+   "armor_rows_immune": [
+    17,
+    52,
+    61
+   ],
+   "monsters_immune": 64
+  },
+  {
+   "mask": 128,
+   "effect": "effect not determined",
+   "timer_byte": 435,
+   "spell_ids": [
+    20
+   ],
+   "player_weapon_rows": [
+    31,
+    48,
+    51
+   ],
+   "monster_attack_rows": [],
+   "boss_attack_rows": [
+    [
+     71,
+     99
+    ]
+   ],
+   "armor_rows_immune": [
+    43
+   ],
+   "monsters_immune": 51
+  },
+  {
+   "mask": 256,
+   "effect": "cannot act, sprite size depends on the spell level (<4, <8, 8)",
+   "timer_byte": 435,
+   "spell_ids": [
+    22
+   ],
+   "player_weapon_rows": [
+    29,
+    66,
+    68
+   ],
+   "monster_attack_rows": [],
+   "boss_attack_rows": [
+    [
+     18,
+     80
+    ],
+    [
+     73,
+     99
+    ]
+   ],
+   "armor_rows_immune": [
+    43
+   ],
+   "monsters_immune": 70
+  },
+  {
+   "mask": 512,
+   "effect": "own damage forced to 1, defense /4; no timer",
+   "timer_byte": null,
+   "spell_ids": [],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [
+    [
+     114,
+     25
+    ],
+    [
+     150,
+     25
+    ],
+    [
+     152,
+     60
+    ],
+    [
+     179,
+     99
+    ]
+   ],
+   "boss_attack_rows": [
+    [
+     22,
+     99
+    ],
+    [
+     24,
+     50
+    ],
+    [
+     61,
+     99
+    ],
+    [
+     62,
+     50
+    ],
+    [
+     74,
+     99
+    ],
+    [
+     87,
+     50
+    ],
+    [
+     89,
+     50
+    ]
+   ],
+   "armor_rows_immune": [
+    43
+   ],
+   "monsters_immune": 125
+  },
+  {
+   "mask": 1024,
+   "effect": "no hits resolved on the actor ($C0:4F7B); no timer",
+   "timer_byte": null,
+   "spell_ids": [],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [],
+   "boss_attack_rows": [],
+   "armor_rows_immune": [],
+   "monsters_immune": 125
+  },
+  {
+   "mask": 2048,
+   "effect": "monsters take one of 8 random sprites; heroes are always immune (0x0800 in the hero immunity word)",
+   "timer_byte": 437,
+   "spell_ids": [
+    24
+   ],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [],
+   "boss_attack_rows": [],
+   "armor_rows_immune": [],
+   "monsters_immune": 69
+  },
+  {
+   "mask": 4096,
+   "effect": "sprite offset +0x70",
+   "timer_byte": 437,
+   "spell_ids": [],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [
+    [
+     83,
+     50
+    ],
+    [
+     108,
+     25
+    ],
+    [
+     140,
+     25
+    ],
+    [
+     176,
+     99
+    ]
+   ],
+   "boss_attack_rows": [
+    [
+     16,
+     50
+    ],
+    [
+     21,
+     99
+    ],
+    [
+     24,
+     50
+    ],
+    [
+     47,
+     33
+    ],
+    [
+     48,
+     33
+    ],
+    [
+     49,
+     33
+    ],
+    [
+     62,
+     50
+    ]
+   ],
+   "armor_rows_immune": [
+    59
+   ],
+   "monsters_immune": 125
+  },
+  {
+   "mask": 8192,
+   "effect": "1 HP per timer drop, ends at HP 1",
+   "timer_byte": 438,
+   "spell_ids": [
+    7
+   ],
+   "player_weapon_rows": [
+    6,
+    59
+   ],
+   "monster_attack_rows": [
+    [
+     73,
+     25
+    ],
+    [
+     74,
+     25
+    ],
+    [
+     78,
+     25
+    ],
+    [
+     84,
+     80
+    ],
+    [
+     94,
+     25
+    ],
+    [
+     97,
+     25
+    ],
+    [
+     118,
+     25
+    ],
+    [
+     125,
+     25
+    ],
+    [
+     137,
+     25
+    ],
+    [
+     144,
+     25
+    ],
+    [
+     151,
+     25
+    ],
+    [
+     173,
+     25
+    ],
+    [
+     178,
+     99
+    ]
+   ],
+   "boss_attack_rows": [
+    [
+     4,
+     50
+    ],
+    [
+     9,
+     99
+    ],
+    [
+     30,
+     33
+    ],
+    [
+     31,
+     50
+    ],
+    [
+     64,
+     99
+    ],
+    [
+     77,
+     99
+    ],
+    [
+     84,
+     99
+    ],
+    [
+     98,
+     50
+    ]
+   ],
+   "armor_rows_immune": [
+    36,
+    43,
+    46,
+    51
+   ],
+   "monsters_immune": 69
+  },
+  {
+   "mask": 16384,
+   "effect": "1 HP per timer drop, ends at HP 1; cannot act (mask C160); removes the 0x2000 bit",
+   "timer_byte": 438,
+   "spell_ids": [
+    15,
+    17
+   ],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [
+    [
+     93,
+     0
+    ],
+    [
+     120,
+     25
+    ],
+    [
+     121,
+     25
+    ],
+    [
+     122,
+     80
+    ],
+    [
+     123,
+     80
+    ],
+    [
+     126,
+     25
+    ],
+    [
+     138,
+     33
+    ],
+    [
+     147,
+     50
+    ]
+   ],
+   "boss_attack_rows": [
+    [
+     0,
+     99
+    ],
+    [
+     11,
+     99
+    ],
+    [
+     53,
+     50
+    ],
+    [
+     54,
+     99
+    ],
+    [
+     85,
+     66
+    ],
+    [
+     108,
+     66
+    ]
+   ],
+   "armor_rows_immune": [
+    60
+   ],
+   "monsters_immune": 59
+  },
+  {
+   "mask": 32768,
+   "effect": "KO flag; clears every other bit when applied; removed by item routine $C0:54E7 id 5 and spell handler ED04",
+   "timer_byte": null,
+   "spell_ids": [
+    33
+   ],
+   "player_weapon_rows": [],
+   "monster_attack_rows": [],
+   "boss_attack_rows": [],
+   "armor_rows_immune": [],
+   "monsters_immune": 0
+  }
+ ],
+ "timer_groups": [
+  {
+   "timer_byte": 434,
+   "bits": 124
+  },
+  {
+   "timer_byte": 435,
+   "bits": 384
+  },
+  {
+   "timer_byte": 437,
+   "bits_assigned": 7168,
+   "bits_counted_down": 6144
+  },
+  {
+   "timer_byte": 438,
+   "bits": 24576
+  }
+ ],
+ "duration_formula": "d = max(20, low byte of ((damage_before_defense >> 2) - (magic_defense >> 1))); 20 when the difference is negative; spells use the spell power byte as damage_before_defense",
+ "timer_tick": "every 4th call of the per-actor combat tick $C0:3A79 (first drop on call 1): lifetime = 4*d - 3 calls; tick rate: see docs/rom-combat.md section 1.3",
+ "dot": {
+  "bits": 24576,
+  "hp_per_timer_drop": 1,
+  "stops_at_hp": 1
+ },
+ "exclusivity": [
+  {
+   "trigger": 64,
+   "keep_mask": 39616
+  },
+  {
+   "trigger": 32,
+   "keep_mask": 39648
+  },
+  {
+   "trigger": 16,
+   "keep_mask": 64496
+  },
+  {
+   "trigger": 8,
+   "keep_mask": 64496
+  },
+  {
+   "trigger": 4,
+   "keep_mask": 65532
+  },
+  {
+   "trigger": 4096,
+   "keep_mask": 37631
+  },
+  {
+   "trigger": 2048,
+   "keep_mask_if_0260": 63487,
+   "keep_mask_else": 39443
+  },
+  {
+   "trigger": 1024,
+   "keep_mask_if_617B": 64511
+  },
+  {
+   "trigger": 16384,
+   "keep_mask": 56063
+  },
+  {
+   "trigger": 8192,
+   "keep_mask_if_1860": 57343
+  }
+ ],
+ "weapon_inflicted": "attacker word & defender immunity != 0 -> nothing; else rnd(100) < chance% and damage > 0 -> word queued ($9A)",
+ "spell_inflicted": "always applied (immune bits removed bitwise) on the first hit of the cast",
+ "hero_immunity": "OR of the three armor status words | 0x0800"
+}

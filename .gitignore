@@ -1,0 +1,6 @@
+*.sfc
+*.smc
+*.rom
+*.bin
+dumps/
+__pycache__/

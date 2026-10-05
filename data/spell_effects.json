@@ -1,0 +1,5021 @@
+{
+ "barrier": [
+  {
+   "barrier_bit_after": false,
+   "guard": 0,
+   "hit_by": "weapon",
+   "hp_after": 500,
+   "pending_damage_after_guard": 104,
+   "pool": 100,
+   "pool_after": 0
+  },
+  {
+   "barrier_bit_after": true,
+   "guard": 10,
+   "hit_by": "weapon",
+   "hp_after": 500,
+   "pending_damage_after_guard": 94,
+   "pool": 100,
+   "pool_after": 6
+  },
+  {
+   "barrier_bit_after": false,
+   "guard": 10,
+   "hit_by": "weapon",
+   "hp_after": 500,
+   "pending_damage_after_guard": 94,
+   "pool": 30,
+   "pool_after": 0
+  },
+  {
+   "barrier_bit_after": true,
+   "guard": 50,
+   "hit_by": "weapon",
+   "hp_after": 500,
+   "pending_damage_after_guard": 54,
+   "pool": 1000,
+   "pool_after": 946
+  },
+  {
+   "barrier_bit_after": true,
+   "guard": 10,
+   "hit_by": "spell",
+   "hp_after": 406,
+   "pending_damage_after_guard": 94,
+   "pool": 100,
+   "pool_after": 100
+  }
+ ],
+ "drain_flag": [
+  {
+   "E195": 0,
+   "defender_type_byte": 0,
+   "hit": true,
+   "pending_damage_attacker": 0,
+   "pending_damage_defender": 390,
+   "pending_heal_attacker": 0,
+   "pending_heal_defender": 0
+  },
+  {
+   "E195": 64,
+   "defender_type_byte": 0,
+   "hit": true,
+   "pending_damage_attacker": 0,
+   "pending_damage_defender": 390,
+   "pending_heal_attacker": 390,
+   "pending_heal_defender": 0
+  },
+  {
+   "E195": 64,
+   "defender_type_byte": 32,
+   "hit": true,
+   "pending_damage_attacker": 390,
+   "pending_damage_defender": 0,
+   "pending_heal_attacker": 0,
+   "pending_heal_defender": 390
+  },
+  {
+   "E195": 32,
+   "defender_type_byte": 0,
+   "hit": true,
+   "pending_damage_attacker": 0,
+   "pending_damage_defender": 390,
+   "pending_heal_attacker": 0,
+   "pending_heal_defender": 0
+  },
+  {
+   "E195": 4,
+   "defender_type_byte": 0,
+   "hit": true,
+   "pending_damage_attacker": 0,
+   "pending_damage_defender": 390,
+   "pending_heal_attacker": 0,
+   "pending_heal_defender": 0
+  }
+ ],
+ "effects": {
+  "02": {
+   "handler": "C8:EA97",
+   "kind": "status only (no damage)",
+   "status_word": "0x0004",
+   "target": [
+    {
+     "offset": "0x190",
+     "op": "status word: new bits through the immunity word E1AA and the exclusivity cascade"
+    },
+    {
+     "offset": "0x1B2",
+     "op": "timer = max(20, (V>>2) - (E1A8>>1)) low byte, only for newly set bits"
+    }
+   ]
+  },
+  "03": {
+   "element_bit_into_E195": "0x01",
+   "handler": "C8:EAA3",
+   "kind": "saber",
+   "status_word_into_E199": "0x0040"
+  },
+  "04": {
+   "handler": "C8:EB04",
+   "kind": "buff",
+   "target": [
+    {
+     "offset": "0x1B0",
+     "op": "(old & 0xC3) | 0x14: EVA+25% and ACC+25%"
+    },
+    {
+     "offset": "0x1BB",
+     "op": "timer = V>>2"
+    },
+    {
+     "offset": "0x1BA",
+     "op": "timer = V>>2"
+    }
+   ],
+   "value_mode": "fixed m=4"
+  },
+  "05": {
+   "handler": "C8:EB20",
+   "kind": "buff",
+   "target": [
+    {
+     "offset": "0x1B0",
+     "op": "(old & 0xFC) | 0x01: DEF+25%"
+    },
+    {
+     "offset": "0x1BC",
+     "op": "timer = V>>2"
+    }
+   ],
+   "value_mode": "fixed m=4"
+  },
+  "07": {
+   "handler": "C8:EB39",
+   "kind": "damage + debuff",
+   "note": "the status word 0x2000 of the spell row is not applied by the handler",
+   "target": [
+    {
+     "offset": "0x1F1",
+     "op": "pending damage += max(1, V - D)"
+    },
+    {
+     "offset": "0x1B0",
+     "op": "(old & 0xFC) | 0x02: DEF-25%"
+    },
+    {
+     "offset": "0x1BC",
+     "op": "timer = V>>2"
+    }
+   ],
+   "value_mode": "element m"
+  },
+  "08": {
+   "handler": "C8:EB54",
+   "kind": "HP drain",
+   "value_mode": "element m"
+  },
+  "09": {
+   "element_bit_into_E195": "0x04",
+   "handler": "C8:EAA8",
+   "kind": "saber",
+   "status_word_into_E199": "0x0020"
+  },
+  "0A": {
+   "handler": "C8:EB9F",
+   "kind": "status cure",
+   "value_mode": "fixed m=4"
+  },
+  "0B": {
+   "handler": "C8:EBB3",
+   "kind": "heal",
+   "target": [
+    {
+     "offset": "0x1F3",
+     "op": "pending heal += V"
+    }
+   ],
+   "value_mode": "fixed m=4"
+  },
+  "0F": {
+   "element_bit_into_E195": "0x08",
+   "handler": "C8:EAAD",
+   "kind": "saber",
+   "status_word_into_E199": "0x4000"
+  },
+  "10": {
+   "handler": "C8:EBCA",
+   "kind": "damage + debuff",
+   "target": [
+    {
+     "offset": "0x1F1",
+     "op": "pending damage += max(1, V - D)"
+    },
+    {
+     "offset": "0x1B0",
+     "op": "(old & 0x3F) | 0x80: ATK-25%"
+    },
+    {
+     "offset": "0x1B7",
+     "op": "timer = V>>2"
+    }
+   ],
+   "value_mode": "element m"
+  },
+  "11": {
+   "handler": "C8:EBE5",
+   "kind": "damage + status",
+   "status_word": "0x4000",
+   "target": [
+    {
+     "offset": "0x1F1",
+     "op": "pending damage += max(1, V - D)"
+    },
+    {
+     "offset": "0x190",
+     "op": "status word: new bits through the immunity word E1AA and the exclusivity cascade"
+    },
+    {
+     "offset": "0x1B6",
+     "op": "timer = max(20, (V>>2) - (E1A8>>1)) low byte, only for newly set bits"
+    }
+   ],
+   "value_mode": "element m"
+  },
+  "14": {
+   "handler": "C8:EBF4",
+   "kind": "status only (no damage)",
+   "status_word": "0x0080",
+   "target": [
+    {
+     "offset": "0x190",
+     "op": "status word: new bits through the immunity word E1AA and the exclusivity cascade"
+    },
+    {
+     "offset": "0x1B3",
+     "op": "timer = max(20, (V>>2) - (E1A8>>1)) low byte, only for newly set bits"
+    }
+   ]
+  },
+  "15": {
+   "element_bit_into_E195": "0x02",
+   "handler": "C8:EAB2",
+   "kind": "saber",
+   "status_word_into_E199": "0x0000"
+  },
+  "16": {
+   "handler": "C8:EBF4",
+   "kind": "status only (no damage)",
+   "status_word": "0x0100",
+   "target": [
+    {
+     "offset": "0x190",
+     "op": "status word: new bits through the immunity word E1AA and the exclusivity cascade"
+    },
+    {
+     "offset": "0x1B3",
+     "op": "timer = max(20, (V>>2) - (E1A8>>1)) low byte, only for newly set bits"
+    }
+   ]
+  },
+  "17": {
+   "handler": "C8:EC00",
+   "kind": "analyzer: builds the message, writes no gameplay field"
+  },
+  "18": {
+   "handler": "C8:EBF4",
+   "kind": "status only (no damage)",
+   "note": "a monster that keeps the bit becomes the object whose id is table[R&7], table at C8:E5F3 = 00 02 04 06 08 0C 16 17",
+   "status_word": "0x0800",
+   "target": [
+    {
+     "offset": "0x190",
+     "op": "status word: new bits through the immunity word E1AA and the exclusivity cascade"
+    },
+    {
+     "offset": "0x1B5",
+     "op": "timer = max(20, (V>>2) - (E1A8>>1)) low byte, only for newly set bits"
+    }
+   ]
+  },
+  "19": {
+   "handler": "C8:EC3B",
+   "kind": "MP drain",
+   "value_mode": "element m"
+  },
+  "1A": {
+   "handler": "C8:EEF5",
+   "kind": "random effect 0..7",
+   "value_mode": "element m (value only used by effect 1 and 2)"
+  },
+  "1B": {
+   "element_bit_into_E195": "0x40",
+   "handler": "C8:EABC",
+   "kind": "saber",
+   "note": "E195 bit 0x40 is the weapon drain flag",
+   "status_word_into_E199": "0x0000"
+  },
+  "1C": {
+   "handler": "C8:ECB5",
+   "kind": "buff",
+   "target": [
+    {
+     "offset": "0x1B0",
+     "op": "(old & 0x33) | 0x48: ATK+25% and EVA-25%"
+    },
+    {
+     "offset": "0x1B7",
+     "op": "timer = V>>2"
+    },
+    {
+     "offset": "0x1BB",
+     "op": "timer = V>>2"
+    }
+   ],
+   "value_mode": "fixed m=4"
+  },
+  "1D": {
+   "handler": "C8:ECD1",
+   "kind": "forced critical hits",
+   "target": [
+    {
+     "offset": "0x1AE",
+     "op": "high nibble = (L+1)"
+    }
+   ]
+  },
+  "1E": {
+   "handler": "C8:EBF4",
+   "kind": "status only (no damage)",
+   "status_word": "0x0010",
+   "target": [
+    {
+     "offset": "0x190",
+     "op": "status word: new bits through the immunity word E1AA and the exclusivity cascade"
+    },
+    {
+     "offset": "0x1B2",
+     "op": "timer = max(20, (V>>2) - (E1A8>>1)) low byte, only for newly set bits"
+    }
+   ]
+  },
+  "20": {
+   "handler": "C8:ECEA",
+   "kind": "first half of a two-spell weapon change",
+   "value_mode": "fixed m=4",
+   "writes": "$CC78 = V>>2"
+  },
+  "21": {
+   "handler": "C8:ED04",
+   "kind": "revive + cure + heal",
+   "value_mode": "fixed m=4"
+  },
+  "22": {
+   "handler": "C8:ED53",
+   "kind": "spell block",
+   "target": [
+    {
+     "offset": "0x1B1",
+     "op": "|= 0x40"
+    },
+    {
+     "offset": "0x1B8",
+     "op": "= L+2"
+    }
+   ]
+  },
+  "23": {
+   "handler": "C8:ED68",
+   "kind": "second half of a two-spell weapon change",
+   "value_mode": "fixed m=4",
+   "writes": "$CC79 = V>>2"
+  },
+  "24": {
+   "handler": "C8:ED82",
+   "kind": "fraction of current HP",
+   "target": [
+    {
+     "offset": "0x1F1",
+     "op": "pending damage += ((HP+maxHP)>>1)/(10-L), 1 for a boss"
+    }
+   ]
+  },
+  "26": {
+   "handler": "C8:EDCB",
+   "kind": "buff / saber / wall scrub",
+   "value_mode": "element m"
+  },
+  "27": {
+   "element_bit_into_E195": "0x20",
+   "handler": "C8:EAB7",
+   "kind": "saber",
+   "status_word_into_E199": "0x0000"
+  },
+  "29": {
+   "handler": "C8:EEB7",
+   "kind": "physical damage absorber",
+   "target": [
+    {
+     "offset": "0x1B1",
+     "op": "|= 0x10"
+    },
+    {
+     "offset": "0x1BD",
+     "op": "pool = min(V, maxHP) (word)"
+    },
+    {
+     "offset": "0x1BF",
+     "op": "guard = ((E1A5>>1)/targets) low byte"
+    }
+   ],
+   "value_mode": "fixed m=4"
+  }
+ },
+ "frame_hz": 60.0988,
+ "level8_roll": {
+  "cases": 1792,
+  "level8_out_of_256_by_progress": {
+   "0": 0,
+   "1": 0,
+   "10": 18,
+   "2": 2,
+   "50": 97,
+   "98": 193,
+   "99": 195
+  },
+  "mismatches": 0
+ },
+ "lifetimes_ticks": {
+  "buff_timer_125_over_8_tick_phases": [
+   497,
+   498,
+   499,
+   500
+  ],
+  "buff_timer_1_over_8_tick_phases": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "buff_timer_20_over_8_tick_phases": [
+   77,
+   78,
+   79,
+   80
+  ],
+  "buff_timer_249_over_8_tick_phases": [
+   993,
+   994,
+   995,
+   996
+  ],
+  "buff_timer_2_over_8_tick_phases": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "buff_timer_5_over_8_tick_phases": [
+   17,
+   18,
+   19,
+   20
+  ],
+  "status_0x0010_set_directly_timer_0": 1021,
+  "status_0x0080_set_directly_timer_0": 1021,
+  "status_0x0200_set_directly_timer_0": null,
+  "status_0x0800_set_directly_timer_0": 1021,
+  "status_0x1000_set_directly_timer_0": 1021
+ },
+ "lunar_magic_effect_counts": {
+  "0": 38,
+  "1": 30,
+  "2": 29,
+  "3": 39,
+  "4": 48,
+  "5": 28,
+  "6": 52,
+  "7": 36
+ },
+ "per_level": {
+  "dispel_removes_saber_hits": [
+   4,
+   8,
+   12,
+   16,
+   20,
+   24,
+   28,
+   32,
+   36
+  ],
+  "dispel_removes_wall_hits": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "evil_gate_divisor": [
+   10,
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2
+  ],
+  "moon_energy_forced_crits": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "remedy_full_cure_any_targets": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  "remedy_full_cure_single_target": [
+   false,
+   false,
+   false,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "revivifier_divisor": [
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2,
+   1
+  ],
+  "saber_damage_bonus_divisor": [
+   null,
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2
+  ],
+  "saber_hits": [
+   4,
+   8,
+   12,
+   16,
+   20,
+   24,
+   28,
+   32,
+   36
+  ],
+  "wall_hits": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ "source": "numbers measured by running the real spell handlers; layout and meaning: docs/spells-non-damage.md",
+ "spell_17_fields_written": [
+  "caster 0x172",
+  "caster 0x186",
+  "caster 0x1c5",
+  "caster 0x1c6",
+  "caster 0x1c7",
+  "caster 0x1d8",
+  "caster 0x1d9",
+  "caster 0x1da",
+  "caster 0x1db",
+  "caster 0x1dc",
+  "caster 0x1dd",
+  "caster 0x1de",
+  "caster 0x1df",
+  "caster 0x1f8",
+  "target 0x1ec",
+  "target 0x1f8",
+  "target 0xa"
+ ],
+ "spell_rows": {
+  "00": {
+   "element_mask": 1,
+   "mp": 3,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "01": {
+   "element_mask": 1,
+   "mp": 2,
+   "power": 43,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "02": {
+   "element_mask": 1,
+   "mp": 1,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 4,
+   "target_flags": 129
+  },
+  "03": {
+   "element_mask": 1,
+   "mp": 4,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 64,
+   "target_flags": 1
+  },
+  "04": {
+   "element_mask": 1,
+   "mp": 3,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "05": {
+   "element_mask": 1,
+   "mp": 2,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "06": {
+   "element_mask": 4,
+   "mp": 2,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "07": {
+   "element_mask": 4,
+   "mp": 3,
+   "power": 43,
+   "stat": "INT",
+   "status_word": 8192,
+   "target_flags": 129
+  },
+  "08": {
+   "element_mask": 4,
+   "mp": 2,
+   "power": 43,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "09": {
+   "element_mask": 4,
+   "mp": 2,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 32,
+   "target_flags": 1
+  },
+  "0A": {
+   "element_mask": 4,
+   "mp": 1,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "0B": {
+   "element_mask": 4,
+   "mp": 2,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "0C": {
+   "element_mask": 8,
+   "mp": 2,
+   "power": 52,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "0D": {
+   "element_mask": 8,
+   "mp": 4,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "0E": {
+   "element_mask": 8,
+   "mp": 3,
+   "power": 43,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "0F": {
+   "element_mask": 8,
+   "mp": 2,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 16384,
+   "target_flags": 1
+  },
+  "10": {
+   "element_mask": 8,
+   "mp": 3,
+   "power": 43,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "11": {
+   "element_mask": 8,
+   "mp": 4,
+   "power": 32,
+   "stat": "WIS",
+   "status_word": 16384,
+   "target_flags": 129
+  },
+  "12": {
+   "element_mask": 2,
+   "mp": 2,
+   "power": 43,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "13": {
+   "element_mask": 2,
+   "mp": 4,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "14": {
+   "element_mask": 2,
+   "mp": 2,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 128,
+   "target_flags": 129
+  },
+  "15": {
+   "element_mask": 2,
+   "mp": 3,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "16": {
+   "element_mask": 2,
+   "mp": 2,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 256,
+   "target_flags": 129
+  },
+  "17": {
+   "element_mask": 2,
+   "mp": 1,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 160
+  },
+  "18": {
+   "element_mask": 64,
+   "mp": 5,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 2048,
+   "target_flags": 129
+  },
+  "19": {
+   "element_mask": 64,
+   "mp": 1,
+   "power": 43,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "1A": {
+   "element_mask": 64,
+   "mp": 8,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "1B": {
+   "element_mask": 64,
+   "mp": 3,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "1C": {
+   "element_mask": 64,
+   "mp": 2,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "1D": {
+   "element_mask": 64,
+   "mp": 2,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 0
+  },
+  "1E": {
+   "element_mask": 128,
+   "mp": 2,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 16,
+   "target_flags": 129
+  },
+  "1F": {
+   "element_mask": 128,
+   "mp": 4,
+   "power": 100,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "20": {
+   "element_mask": 128,
+   "mp": 1,
+   "power": 250,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 64
+  },
+  "21": {
+   "element_mask": 128,
+   "mp": 10,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 32768,
+   "target_flags": 1
+  },
+  "22": {
+   "element_mask": 128,
+   "mp": 6,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "23": {
+   "element_mask": 128,
+   "mp": 1,
+   "power": 250,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 64
+  },
+  "24": {
+   "element_mask": 16,
+   "mp": 8,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "25": {
+   "element_mask": 16,
+   "mp": 2,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "26": {
+   "element_mask": 16,
+   "mp": 4,
+   "power": 61,
+   "stat": "INT",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "27": {
+   "element_mask": 32,
+   "mp": 5,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  },
+  "28": {
+   "element_mask": 32,
+   "mp": 8,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 129
+  },
+  "29": {
+   "element_mask": 32,
+   "mp": 4,
+   "power": 61,
+   "stat": "WIS",
+   "status_word": 0,
+   "target_flags": 1
+  }
+ },
+ "tick_hz": 12.0198,
+ "timer_unit_ticks": 4,
+ "validation": {
+  "02": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "03": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "04": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "05": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "07": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "08": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "09": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "0A": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "0B": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "0F": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "10": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "11": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "14": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "15": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "16": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "18": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "19": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "1A": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "1B": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "1C": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "1D": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "1E": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "21": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "22": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "24": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "26": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "27": {
+   "cases": 300,
+   "mismatches": 0
+  },
+  "29": {
+   "cases": 300,
+   "mismatches": 0
+  }
+ },
+ "value_ranges": {
+  "accuracy_percent_by_stat": {
+   "10": 77,
+   "20": 80,
+   "30": 82,
+   "40": 85,
+   "50": 87,
+   "60": 90,
+   "70": 92,
+   "80": 95,
+   "90": 97,
+   "99": 99
+  },
+  "layout": "[glancing, nonglancing_min, nonglancing_max] of V for caster stat s and level 0..8, number of targets 1; V = $89 after $C8:E8C0",
+  "tables": {
+   "power250_m2_E1E6_0": {
+    "10": [
+     [
+      3,
+      4,
+      4
+     ],
+     [
+      4,
+      6,
+      6
+     ],
+     [
+      6,
+      8,
+      8
+     ],
+     [
+      7,
+      10,
+      10
+     ],
+     [
+      9,
+      12,
+      12
+     ],
+     [
+      10,
+      14,
+      14
+     ],
+     [
+      12,
+      16,
+      16
+     ],
+     [
+      13,
+      18,
+      18
+     ],
+     [
+      15,
+      20,
+      20
+     ]
+    ],
+    "20": [
+     [
+      11,
+      14,
+      14
+     ],
+     [
+      16,
+      21,
+      21
+     ],
+     [
+      22,
+      28,
+      28
+     ],
+     [
+      28,
+      35,
+      36
+     ],
+     [
+      33,
+      42,
+      43
+     ],
+     [
+      39,
+      49,
+      51
+     ],
+     [
+      44,
+      56,
+      58
+     ],
+     [
+      50,
+      63,
+      65
+     ],
+     [
+      56,
+      70,
+      73
+     ]
+    ],
+    "30": [
+     [
+      19,
+      24,
+      24
+     ],
+     [
+      29,
+      36,
+      37
+     ],
+     [
+      39,
+      48,
+      50
+     ],
+     [
+      49,
+      60,
+      62
+     ],
+     [
+      59,
+      72,
+      75
+     ],
+     [
+      68,
+      84,
+      88
+     ],
+     [
+      78,
+      96,
+      101
+     ],
+     [
+      88,
+      108,
+      113
+     ],
+     [
+      98,
+      120,
+      126
+     ]
+    ],
+    "40": [
+     [
+      28,
+      34,
+      35
+     ],
+     [
+      43,
+      51,
+      53
+     ],
+     [
+      57,
+      68,
+      71
+     ],
+     [
+      72,
+      85,
+      89
+     ],
+     [
+      86,
+      102,
+      107
+     ],
+     [
+      101,
+      119,
+      125
+     ],
+     [
+      115,
+      136,
+      143
+     ],
+     [
+      130,
+      153,
+      161
+     ],
+     [
+      144,
+      170,
+      179
+     ]
+    ],
+    "50": [
+     [
+      38,
+      44,
+      45
+     ],
+     [
+      57,
+      66,
+      69
+     ],
+     [
+      76,
+      88,
+      92
+     ],
+     [
+      95,
+      110,
+      115
+     ],
+     [
+      114,
+      132,
+      139
+     ],
+     [
+      133,
+      154,
+      162
+     ],
+     [
+      153,
+      176,
+      186
+     ],
+     [
+      172,
+      198,
+      209
+     ],
+     [
+      191,
+      220,
+      232
+     ]
+    ],
+    "60": [
+     [
+      48,
+      54,
+      56
+     ],
+     [
+      72,
+      81,
+      85
+     ],
+     [
+      97,
+      108,
+      113
+     ],
+     [
+      121,
+      135,
+      142
+     ],
+     [
+      145,
+      162,
+      171
+     ],
+     [
+      170,
+      189,
+      199
+     ],
+     [
+      194,
+      216,
+      228
+     ],
+     [
+      218,
+      243,
+      257
+     ],
+     [
+      243,
+      270,
+      285
+     ]
+    ],
+    "70": [
+     [
+      58,
+      64,
+      67
+     ],
+     [
+      88,
+      96,
+      101
+     ],
+     [
+      117,
+      128,
+      135
+     ],
+     [
+      147,
+      160,
+      169
+     ],
+     [
+      176,
+      192,
+      203
+     ],
+     [
+      206,
+      224,
+      237
+     ],
+     [
+      235,
+      256,
+      271
+     ],
+     [
+      264,
+      288,
+      305
+     ],
+     [
+      294,
+      320,
+      339
+     ]
+    ],
+    "80": [
+     [
+      70,
+      74,
+      77
+     ],
+     [
+      105,
+      111,
+      116
+     ],
+     [
+      140,
+      148,
+      156
+     ],
+     [
+      175,
+      185,
+      195
+     ],
+     [
+      210,
+      222,
+      234
+     ],
+     [
+      246,
+      259,
+      274
+     ],
+     [
+      281,
+      296,
+      313
+     ],
+     [
+      316,
+      333,
+      352
+     ],
+     [
+      351,
+      370,
+      392
+     ]
+    ],
+    "90": [
+     [
+      81,
+      84,
+      88
+     ],
+     [
+      122,
+      126,
+      132
+     ],
+     [
+      162,
+      168,
+      177
+     ],
+     [
+      203,
+      210,
+      222
+     ],
+     [
+      244,
+      252,
+      266
+     ],
+     [
+      285,
+      294,
+      311
+     ],
+     [
+      325,
+      336,
+      356
+     ],
+     [
+      366,
+      378,
+      400
+     ],
+     [
+      407,
+      420,
+      445
+     ]
+    ],
+    "99": [
+     [
+      92,
+      93,
+      97
+     ],
+     [
+      137,
+      139,
+      146
+     ],
+     [
+      184,
+      186,
+      196
+     ],
+     [
+      229,
+      232,
+      245
+     ],
+     [
+      276,
+      279,
+      295
+     ],
+     [
+      321,
+      325,
+      344
+     ],
+     [
+      368,
+      372,
+      394
+     ],
+     [
+      413,
+      418,
+      443
+     ],
+     [
+      460,
+      465,
+      493
+     ]
+    ]
+   },
+   "power250_m2_E1E6_8": {
+    "10": [
+     [
+      3,
+      68,
+      71
+     ],
+     [
+      4,
+      70,
+      73
+     ],
+     [
+      6,
+      72,
+      75
+     ],
+     [
+      7,
+      74,
+      77
+     ],
+     [
+      9,
+      76,
+      79
+     ],
+     [
+      10,
+      78,
+      81
+     ],
+     [
+      12,
+      80,
+      84
+     ],
+     [
+      13,
+      82,
+      86
+     ],
+     [
+      15,
+      84,
+      88
+     ]
+    ],
+    "20": [
+     [
+      11,
+      78,
+      81
+     ],
+     [
+      16,
+      85,
+      89
+     ],
+     [
+      22,
+      92,
+      96
+     ],
+     [
+      28,
+      99,
+      104
+     ],
+     [
+      33,
+      106,
+      111
+     ],
+     [
+      39,
+      113,
+      119
+     ],
+     [
+      44,
+      120,
+      126
+     ],
+     [
+      50,
+      127,
+      133
+     ],
+     [
+      56,
+      134,
+      141
+     ]
+    ],
+    "30": [
+     [
+      19,
+      88,
+      92
+     ],
+     [
+      29,
+      100,
+      105
+     ],
+     [
+      39,
+      112,
+      118
+     ],
+     [
+      49,
+      124,
+      130
+     ],
+     [
+      59,
+      136,
+      143
+     ],
+     [
+      68,
+      148,
+      156
+     ],
+     [
+      78,
+      160,
+      169
+     ],
+     [
+      88,
+      172,
+      181
+     ],
+     [
+      98,
+      184,
+      194
+     ]
+    ],
+    "40": [
+     [
+      28,
+      98,
+      103
+     ],
+     [
+      43,
+      115,
+      121
+     ],
+     [
+      57,
+      132,
+      139
+     ],
+     [
+      72,
+      149,
+      157
+     ],
+     [
+      86,
+      166,
+      175
+     ],
+     [
+      101,
+      183,
+      193
+     ],
+     [
+      115,
+      200,
+      211
+     ],
+     [
+      130,
+      217,
+      229
+     ],
+     [
+      144,
+      234,
+      247
+     ]
+    ],
+    "50": [
+     [
+      38,
+      108,
+      113
+     ],
+     [
+      57,
+      130,
+      137
+     ],
+     [
+      76,
+      152,
+      160
+     ],
+     [
+      95,
+      174,
+      183
+     ],
+     [
+      114,
+      196,
+      207
+     ],
+     [
+      133,
+      218,
+      230
+     ],
+     [
+      153,
+      240,
+      254
+     ],
+     [
+      172,
+      262,
+      277
+     ],
+     [
+      191,
+      284,
+      300
+     ]
+    ],
+    "60": [
+     [
+      48,
+      118,
+      124
+     ],
+     [
+      72,
+      145,
+      153
+     ],
+     [
+      97,
+      172,
+      181
+     ],
+     [
+      121,
+      199,
+      210
+     ],
+     [
+      145,
+      226,
+      239
+     ],
+     [
+      170,
+      253,
+      267
+     ],
+     [
+      194,
+      280,
+      296
+     ],
+     [
+      218,
+      307,
+      325
+     ],
+     [
+      243,
+      334,
+      353
+     ]
+    ],
+    "70": [
+     [
+      58,
+      128,
+      135
+     ],
+     [
+      88,
+      160,
+      169
+     ],
+     [
+      117,
+      192,
+      203
+     ],
+     [
+      147,
+      224,
+      237
+     ],
+     [
+      176,
+      256,
+      271
+     ],
+     [
+      206,
+      288,
+      305
+     ],
+     [
+      235,
+      320,
+      339
+     ],
+     [
+      264,
+      352,
+      373
+     ],
+     [
+      294,
+      384,
+      407
+     ]
+    ],
+    "80": [
+     [
+      70,
+      138,
+      145
+     ],
+     [
+      105,
+      175,
+      184
+     ],
+     [
+      140,
+      212,
+      224
+     ],
+     [
+      175,
+      249,
+      263
+     ],
+     [
+      210,
+      286,
+      302
+     ],
+     [
+      246,
+      323,
+      342
+     ],
+     [
+      281,
+      360,
+      381
+     ],
+     [
+      316,
+      397,
+      420
+     ],
+     [
+      351,
+      434,
+      460
+     ]
+    ],
+    "90": [
+     [
+      81,
+      148,
+      156
+     ],
+     [
+      122,
+      190,
+      200
+     ],
+     [
+      162,
+      232,
+      245
+     ],
+     [
+      203,
+      274,
+      290
+     ],
+     [
+      244,
+      316,
+      334
+     ],
+     [
+      285,
+      358,
+      379
+     ],
+     [
+      325,
+      400,
+      424
+     ],
+     [
+      366,
+      442,
+      468
+     ],
+     [
+      407,
+      484,
+      513
+     ]
+    ],
+    "99": [
+     [
+      92,
+      157,
+      165
+     ],
+     [
+      137,
+      203,
+      214
+     ],
+     [
+      184,
+      250,
+      264
+     ],
+     [
+      229,
+      296,
+      313
+     ],
+     [
+      276,
+      343,
+      363
+     ],
+     [
+      321,
+      389,
+      412
+     ],
+     [
+      368,
+      436,
+      462
+     ],
+     [
+      413,
+      482,
+      511
+     ],
+     [
+      460,
+      529,
+      561
+     ]
+    ]
+   },
+   "power250_m4_E1E6_0": {
+    "10": [
+     [
+      6,
+      8,
+      8
+     ],
+     [
+      8,
+      12,
+      12
+     ],
+     [
+      12,
+      16,
+      16
+     ],
+     [
+      14,
+      20,
+      20
+     ],
+     [
+      18,
+      24,
+      24
+     ],
+     [
+      20,
+      28,
+      28
+     ],
+     [
+      24,
+      32,
+      32
+     ],
+     [
+      26,
+      36,
+      36
+     ],
+     [
+      30,
+      40,
+      40
+     ]
+    ],
+    "20": [
+     [
+      22,
+      28,
+      28
+     ],
+     [
+      32,
+      42,
+      42
+     ],
+     [
+      44,
+      56,
+      56
+     ],
+     [
+      56,
+      70,
+      72
+     ],
+     [
+      66,
+      84,
+      86
+     ],
+     [
+      78,
+      98,
+      102
+     ],
+     [
+      88,
+      112,
+      116
+     ],
+     [
+      100,
+      126,
+      130
+     ],
+     [
+      112,
+      140,
+      146
+     ]
+    ],
+    "30": [
+     [
+      38,
+      48,
+      48
+     ],
+     [
+      58,
+      72,
+      74
+     ],
+     [
+      78,
+      96,
+      100
+     ],
+     [
+      98,
+      120,
+      124
+     ],
+     [
+      118,
+      144,
+      150
+     ],
+     [
+      136,
+      168,
+      176
+     ],
+     [
+      156,
+      192,
+      202
+     ],
+     [
+      176,
+      216,
+      226
+     ],
+     [
+      196,
+      240,
+      252
+     ]
+    ],
+    "40": [
+     [
+      56,
+      68,
+      70
+     ],
+     [
+      86,
+      102,
+      106
+     ],
+     [
+      114,
+      136,
+      142
+     ],
+     [
+      144,
+      170,
+      178
+     ],
+     [
+      172,
+      204,
+      214
+     ],
+     [
+      202,
+      238,
+      250
+     ],
+     [
+      230,
+      272,
+      286
+     ],
+     [
+      260,
+      306,
+      322
+     ],
+     [
+      288,
+      340,
+      358
+     ]
+    ],
+    "50": [
+     [
+      76,
+      88,
+      90
+     ],
+     [
+      114,
+      132,
+      138
+     ],
+     [
+      152,
+      176,
+      184
+     ],
+     [
+      190,
+      220,
+      230
+     ],
+     [
+      228,
+      264,
+      278
+     ],
+     [
+      266,
+      308,
+      324
+     ],
+     [
+      306,
+      352,
+      372
+     ],
+     [
+      344,
+      396,
+      418
+     ],
+     [
+      382,
+      440,
+      464
+     ]
+    ],
+    "60": [
+     [
+      96,
+      108,
+      112
+     ],
+     [
+      144,
+      162,
+      170
+     ],
+     [
+      194,
+      216,
+      226
+     ],
+     [
+      242,
+      270,
+      284
+     ],
+     [
+      290,
+      324,
+      342
+     ],
+     [
+      340,
+      378,
+      398
+     ],
+     [
+      388,
+      432,
+      456
+     ],
+     [
+      436,
+      486,
+      514
+     ],
+     [
+      486,
+      540,
+      570
+     ]
+    ],
+    "70": [
+     [
+      116,
+      128,
+      134
+     ],
+     [
+      176,
+      192,
+      202
+     ],
+     [
+      234,
+      256,
+      270
+     ],
+     [
+      294,
+      320,
+      338
+     ],
+     [
+      352,
+      384,
+      406
+     ],
+     [
+      412,
+      448,
+      474
+     ],
+     [
+      470,
+      512,
+      542
+     ],
+     [
+      528,
+      576,
+      610
+     ],
+     [
+      588,
+      640,
+      678
+     ]
+    ],
+    "80": [
+     [
+      140,
+      148,
+      154
+     ],
+     [
+      210,
+      222,
+      232
+     ],
+     [
+      280,
+      296,
+      312
+     ],
+     [
+      350,
+      370,
+      390
+     ],
+     [
+      420,
+      444,
+      468
+     ],
+     [
+      492,
+      518,
+      548
+     ],
+     [
+      562,
+      592,
+      626
+     ],
+     [
+      632,
+      666,
+      704
+     ],
+     [
+      702,
+      740,
+      784
+     ]
+    ],
+    "90": [
+     [
+      162,
+      168,
+      176
+     ],
+     [
+      244,
+      252,
+      264
+     ],
+     [
+      324,
+      336,
+      354
+     ],
+     [
+      406,
+      420,
+      444
+     ],
+     [
+      488,
+      504,
+      532
+     ],
+     [
+      570,
+      588,
+      622
+     ],
+     [
+      650,
+      672,
+      712
+     ],
+     [
+      732,
+      756,
+      800
+     ],
+     [
+      814,
+      840,
+      890
+     ]
+    ],
+    "99": [
+     [
+      184,
+      186,
+      194
+     ],
+     [
+      274,
+      278,
+      292
+     ],
+     [
+      368,
+      372,
+      392
+     ],
+     [
+      458,
+      464,
+      490
+     ],
+     [
+      552,
+      558,
+      590
+     ],
+     [
+      642,
+      650,
+      688
+     ],
+     [
+      736,
+      744,
+      788
+     ],
+     [
+      826,
+      836,
+      886
+     ],
+     [
+      920,
+      930,
+      986
+     ]
+    ]
+   },
+   "power250_m4_E1E6_8": {
+    "10": [
+     [
+      6,
+      136,
+      142
+     ],
+     [
+      8,
+      140,
+      146
+     ],
+     [
+      12,
+      144,
+      150
+     ],
+     [
+      14,
+      148,
+      154
+     ],
+     [
+      18,
+      152,
+      158
+     ],
+     [
+      20,
+      156,
+      162
+     ],
+     [
+      24,
+      160,
+      168
+     ],
+     [
+      26,
+      164,
+      172
+     ],
+     [
+      30,
+      168,
+      176
+     ]
+    ],
+    "20": [
+     [
+      22,
+      156,
+      162
+     ],
+     [
+      32,
+      170,
+      178
+     ],
+     [
+      44,
+      184,
+      192
+     ],
+     [
+      56,
+      198,
+      208
+     ],
+     [
+      66,
+      212,
+      222
+     ],
+     [
+      78,
+      226,
+      238
+     ],
+     [
+      88,
+      240,
+      252
+     ],
+     [
+      100,
+      254,
+      266
+     ],
+     [
+      112,
+      268,
+      282
+     ]
+    ],
+    "30": [
+     [
+      38,
+      176,
+      184
+     ],
+     [
+      58,
+      200,
+      210
+     ],
+     [
+      78,
+      224,
+      236
+     ],
+     [
+      98,
+      248,
+      260
+     ],
+     [
+      118,
+      272,
+      286
+     ],
+     [
+      136,
+      296,
+      312
+     ],
+     [
+      156,
+      320,
+      338
+     ],
+     [
+      176,
+      344,
+      362
+     ],
+     [
+      196,
+      368,
+      388
+     ]
+    ],
+    "40": [
+     [
+      56,
+      196,
+      206
+     ],
+     [
+      86,
+      230,
+      242
+     ],
+     [
+      114,
+      264,
+      278
+     ],
+     [
+      144,
+      298,
+      314
+     ],
+     [
+      172,
+      332,
+      350
+     ],
+     [
+      202,
+      366,
+      386
+     ],
+     [
+      230,
+      400,
+      422
+     ],
+     [
+      260,
+      434,
+      458
+     ],
+     [
+      288,
+      468,
+      494
+     ]
+    ],
+    "50": [
+     [
+      76,
+      216,
+      226
+     ],
+     [
+      114,
+      260,
+      274
+     ],
+     [
+      152,
+      304,
+      320
+     ],
+     [
+      190,
+      348,
+      366
+     ],
+     [
+      228,
+      392,
+      414
+     ],
+     [
+      266,
+      436,
+      460
+     ],
+     [
+      306,
+      480,
+      508
+     ],
+     [
+      344,
+      524,
+      554
+     ],
+     [
+      382,
+      568,
+      600
+     ]
+    ],
+    "60": [
+     [
+      96,
+      236,
+      248
+     ],
+     [
+      144,
+      290,
+      306
+     ],
+     [
+      194,
+      344,
+      362
+     ],
+     [
+      242,
+      398,
+      420
+     ],
+     [
+      290,
+      452,
+      478
+     ],
+     [
+      340,
+      506,
+      534
+     ],
+     [
+      388,
+      560,
+      592
+     ],
+     [
+      436,
+      614,
+      650
+     ],
+     [
+      486,
+      668,
+      706
+     ]
+    ],
+    "70": [
+     [
+      116,
+      256,
+      270
+     ],
+     [
+      176,
+      320,
+      338
+     ],
+     [
+      234,
+      384,
+      406
+     ],
+     [
+      294,
+      448,
+      474
+     ],
+     [
+      352,
+      512,
+      542
+     ],
+     [
+      412,
+      576,
+      610
+     ],
+     [
+      470,
+      640,
+      678
+     ],
+     [
+      528,
+      704,
+      746
+     ],
+     [
+      588,
+      768,
+      814
+     ]
+    ],
+    "80": [
+     [
+      140,
+      276,
+      290
+     ],
+     [
+      210,
+      350,
+      368
+     ],
+     [
+      280,
+      424,
+      448
+     ],
+     [
+      350,
+      498,
+      526
+     ],
+     [
+      420,
+      572,
+      604
+     ],
+     [
+      492,
+      646,
+      684
+     ],
+     [
+      562,
+      720,
+      762
+     ],
+     [
+      632,
+      794,
+      840
+     ],
+     [
+      702,
+      868,
+      920
+     ]
+    ],
+    "90": [
+     [
+      162,
+      296,
+      312
+     ],
+     [
+      244,
+      380,
+      400
+     ],
+     [
+      324,
+      464,
+      490
+     ],
+     [
+      406,
+      548,
+      580
+     ],
+     [
+      488,
+      632,
+      668
+     ],
+     [
+      570,
+      716,
+      758
+     ],
+     [
+      650,
+      800,
+      848
+     ],
+     [
+      732,
+      884,
+      936
+     ],
+     [
+      814,
+      968,
+      999
+     ]
+    ],
+    "99": [
+     [
+      184,
+      314,
+      330
+     ],
+     [
+      274,
+      406,
+      428
+     ],
+     [
+      368,
+      500,
+      528
+     ],
+     [
+      458,
+      592,
+      626
+     ],
+     [
+      552,
+      686,
+      726
+     ],
+     [
+      642,
+      778,
+      824
+     ],
+     [
+      736,
+      872,
+      924
+     ],
+     [
+      826,
+      964,
+      999
+     ],
+     [
+      920,
+      999,
+      999
+     ]
+    ]
+   },
+   "power61_m2_E1E6_0": {
+    "10": [
+     [
+      54,
+      71,
+      74
+     ],
+     [
+      81,
+      106,
+      111
+     ],
+     [
+      109,
+      142,
+      149
+     ],
+     [
+      136,
+      177,
+      187
+     ],
+     [
+      164,
+      213,
+      225
+     ],
+     [
+      190,
+      248,
+      262
+     ],
+     [
+      218,
+      284,
+      300
+     ],
+     [
+      245,
+      319,
+      337
+     ],
+     [
+      273,
+      355,
+      376
+     ]
+    ],
+    "20": [
+     [
+      64,
+      81,
+      85
+     ],
+     [
+      96,
+      121,
+      127
+     ],
+     [
+      129,
+      162,
+      171
+     ],
+     [
+      161,
+      202,
+      213
+     ],
+     [
+      194,
+      243,
+      257
+     ],
+     [
+      226,
+      283,
+      299
+     ],
+     [
+      259,
+      324,
+      343
+     ],
+     [
+      291,
+      364,
+      385
+     ],
+     [
+      324,
+      405,
+      429
+     ]
+    ],
+    "30": [
+     [
+      74,
+      91,
+      95
+     ],
+     [
+      111,
+      136,
+      143
+     ],
+     [
+      149,
+      182,
+      192
+     ],
+     [
+      186,
+      227,
+      240
+     ],
+     [
+      223,
+      273,
+      289
+     ],
+     [
+      260,
+      318,
+      336
+     ],
+     [
+      298,
+      364,
+      385
+     ],
+     [
+      335,
+      409,
+      433
+     ],
+     [
+      373,
+      455,
+      482
+     ]
+    ],
+    "40": [
+     [
+      85,
+      101,
+      106
+     ],
+     [
+      128,
+      151,
+      159
+     ],
+     [
+      171,
+      202,
+      213
+     ],
+     [
+      214,
+      252,
+      266
+     ],
+     [
+      257,
+      303,
+      320
+     ],
+     [
+      300,
+      353,
+      374
+     ],
+     [
+      343,
+      404,
+      428
+     ],
+     [
+      385,
+      454,
+      481
+     ],
+     [
+      429,
+      505,
+      535
+     ]
+    ],
+    "50": [
+     [
+      96,
+      111,
+      116
+     ],
+     [
+      144,
+      166,
+      175
+     ],
+     [
+      193,
+      222,
+      234
+     ],
+     [
+      240,
+      277,
+      293
+     ],
+     [
+      289,
+      333,
+      352
+     ],
+     [
+      337,
+      388,
+      411
+     ],
+     [
+      386,
+      444,
+      470
+     ],
+     [
+      434,
+      499,
+      529
+     ],
+     [
+      482,
+      555,
+      588
+     ]
+    ],
+    "60": [
+     [
+      108,
+      121,
+      127
+     ],
+     [
+      162,
+      181,
+      191
+     ],
+     [
+      217,
+      242,
+      256
+     ],
+     [
+      271,
+      302,
+      319
+     ],
+     [
+      326,
+      363,
+      384
+     ],
+     [
+      380,
+      423,
+      448
+     ],
+     [
+      435,
+      484,
+      513
+     ],
+     [
+      489,
+      544,
+      577
+     ],
+     [
+      544,
+      605,
+      641
+     ]
+    ],
+    "70": [
+     [
+      120,
+      131,
+      138
+     ],
+     [
+      180,
+      196,
+      207
+     ],
+     [
+      241,
+      262,
+      277
+     ],
+     [
+      300,
+      327,
+      346
+     ],
+     [
+      361,
+      393,
+      416
+     ],
+     [
+      421,
+      458,
+      485
+     ],
+     [
+      482,
+      524,
+      555
+     ],
+     [
+      541,
+      589,
+      624
+     ],
+     [
+      602,
+      655,
+      694
+     ]
+    ],
+    "80": [
+     [
+      133,
+      141,
+      148
+     ],
+     [
+      200,
+      211,
+      223
+     ],
+     [
+      267,
+      282,
+      298
+     ],
+     [
+      334,
+      352,
+      373
+     ],
+     [
+      401,
+      423,
+      448
+     ],
+     [
+      468,
+      493,
+      522
+     ],
+     [
+      535,
+      564,
+      598
+     ],
+     [
+      602,
+      634,
+      672
+     ],
+     [
+      669,
+      705,
+      748
+     ]
+    ],
+    "90": [
+     [
+      146,
+      151,
+      159
+     ],
+     [
+      219,
+      226,
+      239
+     ],
+     [
+      292,
+      302,
+      319
+     ],
+     [
+      365,
+      377,
+      399
+     ],
+     [
+      439,
+      453,
+      480
+     ],
+     [
+      512,
+      528,
+      560
+     ],
+     [
+      585,
+      604,
+      640
+     ],
+     [
+      658,
+      679,
+      720
+     ],
+     [
+      732,
+      755,
+      801
+     ]
+    ],
+    "99": [
+     [
+      158,
+      160,
+      169
+     ],
+     [
+      237,
+      240,
+      254
+     ],
+     [
+      316,
+      320,
+      339
+     ],
+     [
+      396,
+      400,
+      424
+     ],
+     [
+      475,
+      480,
+      509
+     ],
+     [
+      554,
+      560,
+      594
+     ],
+     [
+      633,
+      640,
+      679
+     ],
+     [
+      712,
+      720,
+      764
+     ],
+     [
+      792,
+      800,
+      849
+     ]
+    ]
+   },
+   "power61_m2_E1E6_8": {
+    "10": [
+     [
+      54,
+      135,
+      142
+     ],
+     [
+      81,
+      170,
+      179
+     ],
+     [
+      109,
+      206,
+      217
+     ],
+     [
+      136,
+      241,
+      255
+     ],
+     [
+      164,
+      277,
+      293
+     ],
+     [
+      190,
+      312,
+      330
+     ],
+     [
+      218,
+      348,
+      368
+     ],
+     [
+      245,
+      383,
+      405
+     ],
+     [
+      273,
+      419,
+      444
+     ]
+    ],
+    "20": [
+     [
+      64,
+      145,
+      153
+     ],
+     [
+      96,
+      185,
+      195
+     ],
+     [
+      129,
+      226,
+      239
+     ],
+     [
+      161,
+      266,
+      281
+     ],
+     [
+      194,
+      307,
+      325
+     ],
+     [
+      226,
+      347,
+      367
+     ],
+     [
+      259,
+      388,
+      411
+     ],
+     [
+      291,
+      428,
+      453
+     ],
+     [
+      324,
+      469,
+      497
+     ]
+    ],
+    "30": [
+     [
+      74,
+      155,
+      163
+     ],
+     [
+      111,
+      200,
+      211
+     ],
+     [
+      149,
+      246,
+      260
+     ],
+     [
+      186,
+      291,
+      308
+     ],
+     [
+      223,
+      337,
+      357
+     ],
+     [
+      260,
+      382,
+      404
+     ],
+     [
+      298,
+      428,
+      453
+     ],
+     [
+      335,
+      473,
+      501
+     ],
+     [
+      373,
+      519,
+      550
+     ]
+    ],
+    "40": [
+     [
+      85,
+      165,
+      174
+     ],
+     [
+      128,
+      215,
+      227
+     ],
+     [
+      171,
+      266,
+      281
+     ],
+     [
+      214,
+      316,
+      334
+     ],
+     [
+      257,
+      367,
+      388
+     ],
+     [
+      300,
+      417,
+      442
+     ],
+     [
+      343,
+      468,
+      496
+     ],
+     [
+      385,
+      518,
+      549
+     ],
+     [
+      429,
+      569,
+      603
+     ]
+    ],
+    "50": [
+     [
+      96,
+      175,
+      184
+     ],
+     [
+      144,
+      230,
+      243
+     ],
+     [
+      193,
+      286,
+      302
+     ],
+     [
+      240,
+      341,
+      361
+     ],
+     [
+      289,
+      397,
+      420
+     ],
+     [
+      337,
+      452,
+      479
+     ],
+     [
+      386,
+      508,
+      538
+     ],
+     [
+      434,
+      563,
+      597
+     ],
+     [
+      482,
+      619,
+      656
+     ]
+    ],
+    "60": [
+     [
+      108,
+      185,
+      195
+     ],
+     [
+      162,
+      245,
+      259
+     ],
+     [
+      217,
+      306,
+      324
+     ],
+     [
+      271,
+      366,
+      387
+     ],
+     [
+      326,
+      427,
+      452
+     ],
+     [
+      380,
+      487,
+      516
+     ],
+     [
+      435,
+      548,
+      581
+     ],
+     [
+      489,
+      608,
+      645
+     ],
+     [
+      544,
+      669,
+      709
+     ]
+    ],
+    "70": [
+     [
+      120,
+      195,
+      206
+     ],
+     [
+      180,
+      260,
+      275
+     ],
+     [
+      241,
+      326,
+      345
+     ],
+     [
+      300,
+      391,
+      414
+     ],
+     [
+      361,
+      457,
+      484
+     ],
+     [
+      421,
+      522,
+      553
+     ],
+     [
+      482,
+      588,
+      623
+     ],
+     [
+      541,
+      653,
+      692
+     ],
+     [
+      602,
+      719,
+      762
+     ]
+    ],
+    "80": [
+     [
+      133,
+      205,
+      216
+     ],
+     [
+      200,
+      275,
+      291
+     ],
+     [
+      267,
+      346,
+      366
+     ],
+     [
+      334,
+      416,
+      441
+     ],
+     [
+      401,
+      487,
+      516
+     ],
+     [
+      468,
+      557,
+      590
+     ],
+     [
+      535,
+      628,
+      666
+     ],
+     [
+      602,
+      698,
+      740
+     ],
+     [
+      669,
+      769,
+      816
+     ]
+    ],
+    "90": [
+     [
+      146,
+      215,
+      227
+     ],
+     [
+      219,
+      290,
+      307
+     ],
+     [
+      292,
+      366,
+      387
+     ],
+     [
+      365,
+      441,
+      467
+     ],
+     [
+      439,
+      517,
+      548
+     ],
+     [
+      512,
+      592,
+      628
+     ],
+     [
+      585,
+      668,
+      708
+     ],
+     [
+      658,
+      743,
+      788
+     ],
+     [
+      732,
+      819,
+      869
+     ]
+    ],
+    "99": [
+     [
+      158,
+      224,
+      237
+     ],
+     [
+      237,
+      304,
+      322
+     ],
+     [
+      316,
+      384,
+      407
+     ],
+     [
+      396,
+      464,
+      492
+     ],
+     [
+      475,
+      544,
+      577
+     ],
+     [
+      554,
+      624,
+      662
+     ],
+     [
+      633,
+      704,
+      747
+     ],
+     [
+      712,
+      784,
+      832
+     ],
+     [
+      792,
+      864,
+      917
+     ]
+    ]
+   },
+   "power61_m4_E1E6_0": {
+    "10": [
+     [
+      108,
+      142,
+      148
+     ],
+     [
+      162,
+      212,
+      222
+     ],
+     [
+      218,
+      284,
+      298
+     ],
+     [
+      272,
+      354,
+      374
+     ],
+     [
+      328,
+      426,
+      450
+     ],
+     [
+      380,
+      496,
+      524
+     ],
+     [
+      436,
+      568,
+      600
+     ],
+     [
+      490,
+      638,
+      674
+     ],
+     [
+      546,
+      710,
+      752
+     ]
+    ],
+    "20": [
+     [
+      128,
+      162,
+      170
+     ],
+     [
+      192,
+      242,
+      254
+     ],
+     [
+      258,
+      324,
+      342
+     ],
+     [
+      322,
+      404,
+      426
+     ],
+     [
+      388,
+      486,
+      514
+     ],
+     [
+      452,
+      566,
+      598
+     ],
+     [
+      518,
+      648,
+      686
+     ],
+     [
+      582,
+      728,
+      770
+     ],
+     [
+      648,
+      810,
+      858
+     ]
+    ],
+    "30": [
+     [
+      148,
+      182,
+      190
+     ],
+     [
+      222,
+      272,
+      286
+     ],
+     [
+      298,
+      364,
+      384
+     ],
+     [
+      372,
+      454,
+      480
+     ],
+     [
+      446,
+      546,
+      578
+     ],
+     [
+      520,
+      636,
+      672
+     ],
+     [
+      596,
+      728,
+      770
+     ],
+     [
+      670,
+      818,
+      866
+     ],
+     [
+      746,
+      910,
+      964
+     ]
+    ],
+    "40": [
+     [
+      170,
+      202,
+      212
+     ],
+     [
+      256,
+      302,
+      318
+     ],
+     [
+      342,
+      404,
+      426
+     ],
+     [
+      428,
+      504,
+      532
+     ],
+     [
+      514,
+      606,
+      640
+     ],
+     [
+      600,
+      706,
+      748
+     ],
+     [
+      686,
+      808,
+      856
+     ],
+     [
+      770,
+      908,
+      962
+     ],
+     [
+      858,
+      999,
+      999
+     ]
+    ],
+    "50": [
+     [
+      192,
+      222,
+      232
+     ],
+     [
+      288,
+      332,
+      350
+     ],
+     [
+      386,
+      444,
+      468
+     ],
+     [
+      480,
+      554,
+      586
+     ],
+     [
+      578,
+      666,
+      704
+     ],
+     [
+      674,
+      776,
+      822
+     ],
+     [
+      772,
+      888,
+      940
+     ],
+     [
+      868,
+      998,
+      999
+     ],
+     [
+      964,
+      999,
+      999
+     ]
+    ],
+    "60": [
+     [
+      216,
+      242,
+      254
+     ],
+     [
+      324,
+      362,
+      382
+     ],
+     [
+      434,
+      484,
+      512
+     ],
+     [
+      542,
+      604,
+      638
+     ],
+     [
+      652,
+      726,
+      768
+     ],
+     [
+      760,
+      846,
+      896
+     ],
+     [
+      870,
+      968,
+      999
+     ],
+     [
+      978,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "70": [
+     [
+      240,
+      262,
+      276
+     ],
+     [
+      360,
+      392,
+      414
+     ],
+     [
+      482,
+      524,
+      554
+     ],
+     [
+      600,
+      654,
+      692
+     ],
+     [
+      722,
+      786,
+      832
+     ],
+     [
+      842,
+      916,
+      970
+     ],
+     [
+      964,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "80": [
+     [
+      266,
+      282,
+      296
+     ],
+     [
+      400,
+      422,
+      446
+     ],
+     [
+      534,
+      564,
+      596
+     ],
+     [
+      668,
+      704,
+      746
+     ],
+     [
+      802,
+      846,
+      896
+     ],
+     [
+      936,
+      986,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "90": [
+     [
+      292,
+      302,
+      318
+     ],
+     [
+      438,
+      452,
+      478
+     ],
+     [
+      584,
+      604,
+      638
+     ],
+     [
+      730,
+      754,
+      798
+     ],
+     [
+      878,
+      906,
+      960
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "99": [
+     [
+      316,
+      320,
+      338
+     ],
+     [
+      474,
+      480,
+      508
+     ],
+     [
+      632,
+      640,
+      678
+     ],
+     [
+      792,
+      800,
+      848
+     ],
+     [
+      950,
+      960,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ]
+   },
+   "power61_m4_E1E6_8": {
+    "10": [
+     [
+      108,
+      270,
+      284
+     ],
+     [
+      162,
+      340,
+      358
+     ],
+     [
+      218,
+      412,
+      434
+     ],
+     [
+      272,
+      482,
+      510
+     ],
+     [
+      328,
+      554,
+      586
+     ],
+     [
+      380,
+      624,
+      660
+     ],
+     [
+      436,
+      696,
+      736
+     ],
+     [
+      490,
+      766,
+      810
+     ],
+     [
+      546,
+      838,
+      888
+     ]
+    ],
+    "20": [
+     [
+      128,
+      290,
+      306
+     ],
+     [
+      192,
+      370,
+      390
+     ],
+     [
+      258,
+      452,
+      478
+     ],
+     [
+      322,
+      532,
+      562
+     ],
+     [
+      388,
+      614,
+      650
+     ],
+     [
+      452,
+      694,
+      734
+     ],
+     [
+      518,
+      776,
+      822
+     ],
+     [
+      582,
+      856,
+      906
+     ],
+     [
+      648,
+      938,
+      994
+     ]
+    ],
+    "30": [
+     [
+      148,
+      310,
+      326
+     ],
+     [
+      222,
+      400,
+      422
+     ],
+     [
+      298,
+      492,
+      520
+     ],
+     [
+      372,
+      582,
+      616
+     ],
+     [
+      446,
+      674,
+      714
+     ],
+     [
+      520,
+      764,
+      808
+     ],
+     [
+      596,
+      856,
+      906
+     ],
+     [
+      670,
+      946,
+      999
+     ],
+     [
+      746,
+      999,
+      999
+     ]
+    ],
+    "40": [
+     [
+      170,
+      330,
+      348
+     ],
+     [
+      256,
+      430,
+      454
+     ],
+     [
+      342,
+      532,
+      562
+     ],
+     [
+      428,
+      632,
+      668
+     ],
+     [
+      514,
+      734,
+      776
+     ],
+     [
+      600,
+      834,
+      884
+     ],
+     [
+      686,
+      936,
+      992
+     ],
+     [
+      770,
+      999,
+      999
+     ],
+     [
+      858,
+      999,
+      999
+     ]
+    ],
+    "50": [
+     [
+      192,
+      350,
+      368
+     ],
+     [
+      288,
+      460,
+      486
+     ],
+     [
+      386,
+      572,
+      604
+     ],
+     [
+      480,
+      682,
+      722
+     ],
+     [
+      578,
+      794,
+      840
+     ],
+     [
+      674,
+      904,
+      958
+     ],
+     [
+      772,
+      999,
+      999
+     ],
+     [
+      868,
+      999,
+      999
+     ],
+     [
+      964,
+      999,
+      999
+     ]
+    ],
+    "60": [
+     [
+      216,
+      370,
+      390
+     ],
+     [
+      324,
+      490,
+      518
+     ],
+     [
+      434,
+      612,
+      648
+     ],
+     [
+      542,
+      732,
+      774
+     ],
+     [
+      652,
+      854,
+      904
+     ],
+     [
+      760,
+      974,
+      999
+     ],
+     [
+      870,
+      999,
+      999
+     ],
+     [
+      978,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "70": [
+     [
+      240,
+      390,
+      412
+     ],
+     [
+      360,
+      520,
+      550
+     ],
+     [
+      482,
+      652,
+      690
+     ],
+     [
+      600,
+      782,
+      828
+     ],
+     [
+      722,
+      914,
+      968
+     ],
+     [
+      842,
+      999,
+      999
+     ],
+     [
+      964,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "80": [
+     [
+      266,
+      410,
+      432
+     ],
+     [
+      400,
+      550,
+      582
+     ],
+     [
+      534,
+      692,
+      732
+     ],
+     [
+      668,
+      832,
+      882
+     ],
+     [
+      802,
+      974,
+      999
+     ],
+     [
+      936,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "90": [
+     [
+      292,
+      430,
+      454
+     ],
+     [
+      438,
+      580,
+      614
+     ],
+     [
+      584,
+      732,
+      774
+     ],
+     [
+      730,
+      882,
+      934
+     ],
+     [
+      878,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ],
+    "99": [
+     [
+      316,
+      448,
+      474
+     ],
+     [
+      474,
+      608,
+      644
+     ],
+     [
+      632,
+      768,
+      814
+     ],
+     [
+      792,
+      928,
+      984
+     ],
+     [
+      950,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ],
+     [
+      999,
+      999,
+      999
+     ]
+    ]
+   }
+  }
+ },
+ "wall_wrapper": [
+  {
+   "A": 255,
+   "X": 1536,
+   "candidate_E1FB": 0,
+   "candidate_alive": true,
+   "candidate_distance": 100,
+   "pending_damage": 0,
+   "pending_heal": 0,
+   "spell": 0,
+   "wall_bit_after": true,
+   "wall_count_after": 2,
+   "wall_count_before": 3
+  },
+  {
+   "A": 0,
+   "X": 0,
+   "candidate_E1FB": 0,
+   "candidate_alive": true,
+   "candidate_distance": 300,
+   "pending_damage": 1,
+   "pending_heal": 0,
+   "spell": 0,
+   "wall_bit_after": true,
+   "wall_count_after": 2,
+   "wall_count_before": 3
+  },
+  {
+   "A": 0,
+   "X": 0,
+   "candidate_E1FB": 0,
+   "candidate_alive": false,
+   "candidate_distance": 100,
+   "pending_damage": 0,
+   "pending_heal": 0,
+   "spell": 0,
+   "wall_bit_after": true,
+   "wall_count_after": 2,
+   "wall_count_before": 3
+  },
+  {
+   "A": 0,
+   "X": 0,
+   "candidate_E1FB": 16,
+   "candidate_alive": true,
+   "candidate_distance": 100,
+   "pending_damage": 1,
+   "pending_heal": 0,
+   "spell": 0,
+   "wall_bit_after": true,
+   "wall_count_after": 2,
+   "wall_count_before": 3
+  },
+  {
+   "A": 255,
+   "X": 1536,
+   "candidate_E1FB": 0,
+   "candidate_alive": true,
+   "candidate_distance": 100,
+   "pending_damage": 0,
+   "pending_heal": 0,
+   "spell": 0,
+   "wall_bit_after": false,
+   "wall_count_after": 0,
+   "wall_count_before": 1
+  },
+  {
+   "A": 255,
+   "X": 1536,
+   "candidate_E1FB": 0,
+   "candidate_alive": true,
+   "candidate_distance": 100,
+   "pending_damage": 0,
+   "pending_heal": 0,
+   "spell": 11,
+   "wall_bit_after": true,
+   "wall_count_after": 2,
+   "wall_count_before": 3
+  },
+  {
+   "A": 0,
+   "X": 0,
+   "candidate_E1FB": 0,
+   "candidate_alive": true,
+   "candidate_distance": 100,
+   "pending_damage": 0,
+   "pending_heal": 0,
+   "spell": 32,
+   "wall_bit_after": true,
+   "wall_count_after": 3,
+   "wall_count_before": 3
+  },
+  {
+   "A": 0,
+   "X": 0,
+   "candidate_E1FB": 0,
+   "candidate_alive": true,
+   "candidate_distance": 100,
+   "pending_damage": 0,
+   "pending_heal": 0,
+   "spell": 38,
+   "wall_bit_after": false,
+   "wall_count_after": 0,
+   "wall_count_before": 3
+  }
+ ],
+ "weapon_change_20_23": [
+  {
+   "after": "start",
+   "boy_weapon_row": 43
+  },
+  {
+   "CC77": 0,
+   "CC78": 127,
+   "CC79": 0,
+   "after": "cast 20",
+   "boy_weapon_row": 43
+  },
+  {
+   "CC77": 43,
+   "CC78": 127,
+   "CC79": 88,
+   "after": "cast 23",
+   "boy_weapon_row": 17
+  },
+  {
+   "CC77": 43,
+   "CC78": 0,
+   "CC79": 0,
+   "after": "cast 03",
+   "boy_weapon_row": 17
+  },
+  {
+   "after": "both timers forced to 3, slot 0 combat ticks",
+   "restored_row_equals_previous": true,
+   "ticks_until_weapon_row_restored": 9,
+   "timers_before_forcing": [
+    127,
+    88
+   ]
+  }
+ ]
+}

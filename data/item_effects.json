@@ -1,0 +1,217 @@
+{
+ "source": "measured by executing $C0:54E7 on hero 0 (500 max HP, 100 HP, 50 max MP) in a save state; ids = consumable index (0 first). Heal values are pending amounts, applied by $C0:4004 (capped at 999 and max HP; skipped for dead heroes).",
+ "effect_bytes": [
+  100,
+  250,
+  1,
+  50,
+  1,
+  250,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "rows": [
+  {
+   "id": 0,
+   "pending_hp_heal": 100,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 1,
+   "pending_hp_heal": 250,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 2,
+   "pending_hp_heal": 500,
+   "pending_hp_heal_is_max_hp": true,
+   "pending_mp_heal": 0,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 500
+   }
+  },
+  {
+   "id": 3,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 50,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 4,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 0,
+   "clears_status_word": true,
+   "e191_after": 0,
+   "timers_set": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 5,
+   "pending_hp_heal": 500,
+   "pending_hp_heal_is_max_hp": true,
+   "pending_mp_heal": 0,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 500,
+    "e191_after": 0,
+    "pending_hp_heal": 500
+   }
+  },
+  {
+   "id": 6,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 7,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 8,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 4112,
+   "clears_status_word": false,
+   "e191_after": 16,
+   "timers_set": [
+    0,
+    0,
+    0,
+    255,
+    0
+   ],
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 144,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 9,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 528,
+   "clears_status_word": false,
+   "e191_after": 2,
+   "timers_set": [
+    0,
+    0,
+    0,
+    255,
+    0
+   ],
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 130,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 10,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 1040,
+   "clears_status_word": false,
+   "e191_after": 4,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 132,
+    "pending_hp_heal": 0
+   }
+  },
+  {
+   "id": 11,
+   "pending_hp_heal": 0,
+   "pending_hp_heal_is_max_hp": false,
+   "pending_mp_heal": 0,
+   "status_word_after": 16,
+   "clears_status_word": false,
+   "e191_after": 0,
+   "timers_set": null,
+   "on_dead_hero": {
+    "hp_after": 0,
+    "e191_after": 128,
+    "pending_hp_heal": 0
+   }
+  }
+ ]
+}

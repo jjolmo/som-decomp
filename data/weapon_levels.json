@@ -1,0 +1,38 @@
+{
+ "source": "$C0:4358 (level up), $C0:43AC (thresholds), $C0:7B9B shop/orb purchase, D8:FCFB price table, $C0:B330 charge gauge",
+ "progress_threshold_by_level": [
+  99,
+  99,
+  99,
+  99,
+  99,
+  99,
+  99,
+  99,
+  99
+ ],
+ "max_level": 8,
+ "level_cap_rule": "progress is frozen at 0 once level == orbs_bought[type] + 1; level 8 is the absolute maximum",
+ "progress_gain_formula": "9 - weapon_level of the killer, halved when monster level < killer level; killer gets it, the other living heroes get half",
+ "orb_price_by_level": [
+  200,
+  400,
+  800,
+  1600,
+  3000,
+  6500,
+  12500,
+  25000,
+  65535
+ ],
+ "orb_price_note": "65535 = cannot be bought (level 8)",
+ "charge": {
+  "calls_per_act": 2,
+  "acts_per_stage": 45,
+  "calls_per_stage": 90,
+  "first_stage_call": 89,
+  "unit": "calls of the per-frame input handler $C0:B330, one per frame while the attack button is held",
+  "seconds_per_stage_60fps": 1.5,
+  "seconds_full_level8_60fps": 11.98
+ }
+}

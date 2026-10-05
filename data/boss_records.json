@@ -1,0 +1,3805 @@
+{
+ "source": "records: pointer table 0x10BC34 (D0:BC34), bank C2; bosses: boss_sim.py runs (real engine, no heroes hit). attack row ids index data/boss_attacks.json; spell ids index data/spells.json",
+ "records": [
+  {
+   "index": 0,
+   "address": "C2:D080",
+   "flags": 7185,
+   "init": 15688,
+   "chooser": 15706,
+   "action": 15756,
+   "hurt": 0,
+   "state_table": "C2:D0C9",
+   "attack_rows": [
+    3,
+    10,
+    11,
+    68,
+    99
+   ],
+   "spells": [
+    {
+     "spell_id": 1,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 1,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 28,
+     "area": false,
+     "own_side": true
+    }
+   ],
+   "states": [
+    {
+     "state": 7,
+     "attack_rows": [
+      68
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 8,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 1,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 10,
+     "attack_rows": [
+      68
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 11,
+     "attack_rows": [
+      68
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 16,
+     "attack_rows": [
+      99
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      3
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       3,
+       0,
+       224
+      ]
+     ]
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      10
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       10,
+       0,
+       224
+      ]
+     ]
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      11
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       11,
+       0,
+       224
+      ]
+     ]
+    },
+    {
+     "state": 22,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 28,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 1,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "address": "C2:D658",
+   "flags": 39937,
+   "init": 17121,
+   "chooser": 17128,
+   "action": 17217,
+   "hurt": 0,
+   "state_table": "C2:D6CA",
+   "attack_rows": [
+    7,
+    39,
+    40,
+    41,
+    43,
+    44,
+    45
+   ],
+   "spells": [
+    {
+     "spell_id": 0,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 0,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 5,
+     "area": false,
+     "own_side": true
+    }
+   ],
+   "states": [
+    {
+     "state": 12,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 13,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 14,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 15,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 16,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 18,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      40
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      39
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      39
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      39
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [
+      39
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 24,
+     "attack_rows": [
+      44
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 25,
+     "attack_rows": [
+      44
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 26,
+     "attack_rows": [
+      44
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 27,
+     "attack_rows": [
+      44
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 31,
+     "attack_rows": [
+      41
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 39,
+     "attack_rows": [
+      45
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 47,
+     "attack_rows": [
+      43
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 48,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 5,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 49,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 0,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 50,
+     "attack_rows": [
+      7
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       7,
+       0,
+       248
+      ]
+     ]
+    },
+    {
+     "state": 54,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 0,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "address": "C2:D20A",
+   "flags": 7185,
+   "init": 16248,
+   "chooser": 16275,
+   "action": 16345,
+   "hurt": 16515,
+   "state_table": "C2:D272",
+   "attack_rows": [
+    47,
+    48,
+    49
+   ],
+   "spells": [
+    {
+     "spell_id": 28,
+     "area": false,
+     "own_side": true
+    }
+   ],
+   "states": [
+    {
+     "state": 16,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 18,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 24,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 25,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 26,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 27,
+     "attack_rows": [
+      47
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 28,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 29,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 30,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 31,
+     "attack_rows": [
+      48
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 32,
+     "attack_rows": [
+      49
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 33,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 28,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 36,
+     "attack_rows": [
+      49
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 37,
+     "attack_rows": [
+      49
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 38,
+     "attack_rows": [
+      49
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 39,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 28,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "address": "C2:DF9E",
+   "flags": 39953,
+   "init": 25272,
+   "chooser": 25282,
+   "action": 25359,
+   "hurt": 0,
+   "state_table": "C2:DFE7",
+   "attack_rows": [
+    1,
+    2,
+    53,
+    72
+   ],
+   "spells": [
+    {
+     "spell_id": 18,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 19,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 20,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 21,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 6,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 7,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 9,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 12,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 13,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 14,
+     "area": true,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 7,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 14,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 8,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 12,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 9,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 9,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 10,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 9,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 11,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 9,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 12,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 7,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 13,
+     "attack_rows": [
+      53
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       0,
+       0,
+       232
+      ]
+     ]
+    },
+    {
+     "state": 14,
+     "attack_rows": [
+      1
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       1,
+       0,
+       232
+      ]
+     ]
+    },
+    {
+     "state": 21,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 18,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 18,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 20,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 24,
+     "attack_rows": [
+      2
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       2,
+       0,
+       232
+      ]
+     ]
+    },
+    {
+     "state": 26,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 6,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 27,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 13,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 28,
+     "attack_rows": [
+      72
+     ],
+     "spells": [
+      {
+       "spell_id": 19,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 29,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 21,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "address": "C2:E5AD",
+   "flags": 39938,
+   "init": 27419,
+   "chooser": 27443,
+   "action": 27491,
+   "hurt": 0,
+   "state_table": "C2:E5FC",
+   "attack_rows": [
+    19,
+    75,
+    77,
+    78,
+    81,
+    82
+   ],
+   "spells": [
+    {
+     "spell_id": 6,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 8,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 37,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 38,
+     "area": false,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 8,
+     "attack_rows": [
+      77
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 10,
+     "attack_rows": [
+      81
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 11,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 8,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 12,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 8,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 13,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 8,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 14,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 6,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 15,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 8,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 16,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 37,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 38,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 18,
+     "attack_rows": [
+      19
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       19,
+       0,
+       208
+      ]
+     ]
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      75
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       23,
+       0,
+       208
+      ]
+     ]
+    },
+    {
+     "state": 27,
+     "attack_rows": [
+      78
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 32,
+     "attack_rows": [
+      82
+     ],
+     "spells": [],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "address": "C2:DD35",
+   "flags": 39953,
+   "init": 24635,
+   "chooser": 24651,
+   "action": 24763,
+   "hurt": 24949,
+   "state_table": "C2:DD94",
+   "attack_rows": [
+    36
+   ],
+   "spells": [
+    {
+     "spell_id": 11,
+     "area": false,
+     "own_side": true
+    },
+    {
+     "spell_id": 11,
+     "area": true,
+     "own_side": true
+    }
+   ],
+   "states": [
+    {
+     "state": 25,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 11,
+       "area": true,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 26,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 11,
+       "area": true,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 27,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 11,
+       "area": true,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 28,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 11,
+       "area": true,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 29,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 11,
+       "area": true,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 34,
+     "attack_rows": [
+      36
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 43,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 11,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "address": "C2:D451",
+   "flags": 7185,
+   "init": 16888,
+   "chooser": 16915,
+   "action": 16949,
+   "hurt": 17107,
+   "state_table": "C2:D4CF",
+   "attack_rows": [
+    13,
+    50,
+    52
+   ],
+   "spells": [
+    {
+     "spell_id": 28,
+     "area": false,
+     "own_side": true
+    },
+    {
+     "spell_id": 41,
+     "area": false,
+     "own_side": true
+    }
+   ],
+   "states": [
+    {
+     "state": 16,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 18,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 24,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 25,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 26,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 27,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 28,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 29,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 30,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 31,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 32,
+     "attack_rows": [
+      52
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 33,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 28,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 36,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 41,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 37,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 41,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 38,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 41,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 39,
+     "attack_rows": [
+      13
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 40,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 41,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 42,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 43,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 44,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 45,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 46,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 47,
+     "attack_rows": [
+      50
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 48,
+     "attack_rows": [
+      52
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 49,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 28,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 50,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 41,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "address": "C2:EB49",
+   "flags": 39937,
+   "init": 28851,
+   "chooser": 28869,
+   "action": 28944,
+   "hurt": 0,
+   "state_table": "C2:EB9D",
+   "attack_rows": [
+    25,
+    26,
+    63,
+    65,
+    66,
+    70
+   ],
+   "spells": [
+    {
+     "spell_id": 4,
+     "area": false,
+     "own_side": true
+    },
+    {
+     "spell_id": 34,
+     "area": false,
+     "own_side": true
+    }
+   ],
+   "states": [
+    {
+     "state": 3,
+     "attack_rows": [
+      63
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 7,
+     "attack_rows": [
+      66
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 8,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 4,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 9,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 34,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 10,
+     "attack_rows": [
+      25
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       25,
+       26,
+       241
+      ]
+     ]
+    },
+    {
+     "state": 11,
+     "attack_rows": [
+      26
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       26,
+       26,
+       241
+      ]
+     ]
+    },
+    {
+     "state": 12,
+     "attack_rows": [
+      70
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 13,
+     "attack_rows": [
+      70
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      63
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      65
+     ],
+     "spells": [],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "address": "C2:E82E",
+   "flags": 39937,
+   "init": 28135,
+   "chooser": 28155,
+   "action": 28290,
+   "hurt": 28346,
+   "state_table": "C2:E896",
+   "attack_rows": [
+    14,
+    15,
+    59,
+    64,
+    71,
+    73,
+    74,
+    76,
+    110
+   ],
+   "spells": [
+    {
+     "spell_id": 0,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 6,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 8,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 19,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 36,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 37,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 38,
+     "area": false,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 8,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 36,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 9,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 8,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 10,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 37,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 11,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 38,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 12,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 19,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 13,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 0,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 14,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 6,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 15,
+     "attack_rows": [
+      64
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       9,
+       0,
+       240
+      ]
+     ]
+    },
+    {
+     "state": 16,
+     "attack_rows": [
+      59
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       8,
+       0,
+       240
+      ]
+     ]
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      76
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       23,
+       0,
+       228
+      ]
+     ]
+    },
+    {
+     "state": 18,
+     "attack_rows": [
+      15
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       15,
+       0,
+       228
+      ]
+     ]
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      74
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       22,
+       0,
+       228
+      ]
+     ]
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      71
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       16,
+       0,
+       228
+      ]
+     ]
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      73
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       18,
+       0,
+       228
+      ]
+     ]
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      14
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       14,
+       0,
+       228
+      ]
+     ]
+    },
+    {
+     "state": 23,
+     "attack_rows": [
+      15
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       15,
+       0,
+       228
+      ]
+     ]
+    },
+    {
+     "state": 30,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 31,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 32,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 33,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 34,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 35,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 36,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 38,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 39,
+     "attack_rows": [
+      110
+     ],
+     "spells": [],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "address": "C2:E120",
+   "flags": 7185,
+   "init": 25857,
+   "chooser": 25888,
+   "action": 25931,
+   "hurt": 0,
+   "state_table": "C2:E173",
+   "attack_rows": [
+    22,
+    100
+   ],
+   "spells": [
+    {
+     "spell_id": 0,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 1,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 6,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 7,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 12,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 14,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 18,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 20,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 38,
+     "area": false,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 11,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 38,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 12,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 12,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 13,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 0,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 14,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 6,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 15,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 18,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 16,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 14,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 1,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 18,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 7,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 19,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 20,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 12,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 21,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 0,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 6,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 18,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 24,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 14,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 25,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 1,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 26,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 7,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 27,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 20,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 28,
+     "attack_rows": [
+      22
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       22,
+       0,
+       230
+      ]
+     ]
+    },
+    {
+     "state": 29,
+     "attack_rows": [
+      100
+     ],
+     "spells": [],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "address": "C2:ECFD",
+   "flags": 6161,
+   "init": 29945,
+   "chooser": 30213,
+   "action": 30305,
+   "hurt": 30417,
+   "state_table": "C2:ED65",
+   "attack_rows": [
+    18,
+    58,
+    60,
+    61,
+    62
+   ],
+   "spells": [
+    {
+     "spell_id": 0,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 1,
+     "area": false,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 0,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 1,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 2,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 3,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 8,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 9,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 10,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 11,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 12,
+     "attack_rows": [
+      60
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      18
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       18,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 18,
+     "attack_rows": [
+      58
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       7,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 19,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 0,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      61
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      61
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      61
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [
+      61
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 25,
+     "attack_rows": [
+      62
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 26,
+     "attack_rows": [
+      62
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 27,
+     "attack_rows": [
+      62
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 28,
+     "attack_rows": [
+      62
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 29,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 1,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "address": "C2:F00C",
+   "flags": 6145,
+   "init": 35580,
+   "chooser": 35633,
+   "action": 35872,
+   "hurt": 0,
+   "state_table": "C2:F056",
+   "attack_rows": [
+    2,
+    16,
+    18,
+    20,
+    54,
+    55,
+    103,
+    109
+   ],
+   "spells": [
+    {
+     "spell_id": 6,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 13,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 19,
+     "area": false,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 4,
+     "attack_rows": [
+      55
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       1,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 5,
+     "attack_rows": [
+      55
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       1,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 6,
+     "attack_rows": [
+      54
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       0,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 7,
+     "attack_rows": [
+      54
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       0,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 8,
+     "attack_rows": [
+      2
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       2,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 9,
+     "attack_rows": [
+      2
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       2,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 10,
+     "attack_rows": [
+      18
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       18,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 11,
+     "attack_rows": [
+      20
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       20,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 12,
+     "attack_rows": [
+      16
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       16,
+       236,
+       24
+      ]
+     ]
+    },
+    {
+     "state": 13,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 6,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 14,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 13,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 15,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 19,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 16,
+     "attack_rows": [
+      109
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       29,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      109
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       29,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 18,
+     "attack_rows": [
+      109
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       29,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      109
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       29,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      109
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       29,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      109
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       29,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "state": 24,
+     "attack_rows": [
+      103
+     ],
+     "spells": [],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "address": "C2:DAEA",
+   "flags": 39953,
+   "init": 21489,
+   "chooser": 21516,
+   "action": 21550,
+   "hurt": 21869,
+   "state_table": "C2:DB4D",
+   "attack_rows": [
+    0,
+    5,
+    21,
+    33,
+    34,
+    35
+   ],
+   "spells": [
+    {
+     "spell_id": 12,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 16,
+     "area": false,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 6,
+     "attack_rows": [
+      0
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       0,
+       16,
+       254
+      ]
+     ]
+    },
+    {
+     "state": 7,
+     "attack_rows": [
+      5
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       5,
+       16,
+       254
+      ]
+     ]
+    },
+    {
+     "state": 10,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 16,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 11,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 12,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      34
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      33
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      35
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 26,
+     "attack_rows": [
+      21
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       21,
+       16,
+       238
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "address": "C2:E2F5",
+   "flags": 6145,
+   "init": 26272,
+   "chooser": 26329,
+   "action": 26458,
+   "hurt": 0,
+   "state_table": "C2:E37D",
+   "attack_rows": [
+    8,
+    17,
+    56,
+    57
+   ],
+   "spells": [
+    {
+     "spell_id": 12,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 14,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 16,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 22,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 18,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 19,
+     "area": true,
+     "own_side": false
+    },
+    {
+     "spell_id": 20,
+     "area": true,
+     "own_side": false
+    }
+   ],
+   "states": [
+    {
+     "state": 0,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 1,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 2,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 3,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 4,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 18,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 5,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 20,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 6,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 22,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 7,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 19,
+       "area": true,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 8,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 12,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 9,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 16,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 10,
+     "attack_rows": [
+      56
+     ],
+     "spells": [
+      {
+       "spell_id": 14,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 11,
+     "attack_rows": [
+      17
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       17,
+       14,
+       6
+      ]
+     ]
+    },
+    {
+     "state": 12,
+     "attack_rows": [
+      8,
+      56
+     ],
+     "spells": [],
+     "spawns": [
+      [
+       8,
+       14,
+       6
+      ]
+     ]
+    },
+    {
+     "state": 19,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 20,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 21,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 23,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 24,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 25,
+     "attack_rows": [
+      56
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 29,
+     "attack_rows": [
+      57
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 30,
+     "attack_rows": [
+      57
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 32,
+     "attack_rows": [
+      57
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 33,
+     "attack_rows": [
+      57
+     ],
+     "spells": [],
+     "spawns": []
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "address": "C2:D8D8",
+   "flags": 7193,
+   "init": 20816,
+   "chooser": 20883,
+   "action": 20941,
+   "hurt": 21098,
+   "state_table": "C2:D91A",
+   "attack_rows": [
+    79,
+    92,
+    93,
+    95
+   ],
+   "spells": [
+    {
+     "spell_id": 30,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 31,
+     "area": false,
+     "own_side": false
+    },
+    {
+     "spell_id": 34,
+     "area": false,
+     "own_side": true
+    }
+   ],
+   "states": [
+    {
+     "state": 5,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 31,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 6,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 30,
+       "area": false,
+       "own_side": false
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 7,
+     "attack_rows": [],
+     "spells": [
+      {
+       "spell_id": 34,
+       "area": false,
+       "own_side": true
+      }
+     ],
+     "spawns": []
+    },
+    {
+     "state": 12,
+     "attack_rows": [
+      92
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 13,
+     "attack_rows": [
+      93
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 14,
+     "attack_rows": [
+      95
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 17,
+     "attack_rows": [
+      92
+     ],
+     "spells": [],
+     "spawns": []
+    },
+    {
+     "state": 22,
+     "attack_rows": [
+      79
+     ],
+     "spells": [],
+     "spawns": []
+    }
+   ]
+  }
+ ],
+ "bosses": [
+  {
+   "boss_id": 87,
+   "flags_98": 7185,
+   "init_handler": 15688,
+   "record_index": 0,
+   "observed_attack_rows": {
+    "68": 39,
+    "99": 1
+   },
+   "observed_spells": {
+    "1": 1
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 88,
+   "flags_98": 6161,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "10": 5,
+    "23": 10
+   },
+   "observed_spells": {
+    "6": 5,
+    "8": 6,
+    "11": 2
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 89,
+   "flags_98": 6161,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "28": 52,
+    "30": 4
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 90,
+   "flags_98": 39937,
+   "init_handler": 17121,
+   "record_index": 1,
+   "observed_attack_rows": {
+    "39": 23,
+    "40": 20
+   },
+   "observed_spells": {
+    "5": 1
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 91,
+   "flags_98": 39953,
+   "init_handler": 21489,
+   "record_index": 12,
+   "observed_attack_rows": {
+    "34": 2
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 92,
+   "flags_98": 6161,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "96": 3,
+    "97": 1
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 93,
+   "flags_98": 6145,
+   "init_handler": 26272,
+   "record_index": 13,
+   "observed_attack_rows": {
+    "56": 7
+   },
+   "observed_spells": {
+    "19": 2
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 94,
+   "flags_98": 39953,
+   "init_handler": 25272,
+   "record_index": 3,
+   "observed_attack_rows": {
+    "1": 1,
+    "72": 14
+   },
+   "observed_spells": {
+    "6": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 95,
+   "flags_98": 39953,
+   "init_handler": 24635,
+   "record_index": 5,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 96,
+   "flags_98": 39937,
+   "init_handler": 28851,
+   "record_index": 7,
+   "observed_attack_rows": {
+    "63": 28
+   },
+   "observed_spells": {
+    "4": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 97,
+   "flags_98": 6161,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "16": 5,
+    "23": 8
+   },
+   "observed_spells": {
+    "8": 5,
+    "11": 2,
+    "19": 5
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 98,
+   "flags_98": 39938,
+   "init_handler": 27419,
+   "record_index": 4,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 99,
+   "flags_98": 7185,
+   "init_handler": 15688,
+   "record_index": 0,
+   "observed_attack_rows": {
+    "68": 41,
+    "99": 1
+   },
+   "observed_spells": {
+    "1": 2
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 100,
+   "flags_98": 39937,
+   "init_handler": 28851,
+   "record_index": 7,
+   "observed_attack_rows": {
+    "63": 20,
+    "65": 8,
+    "66": 5
+   },
+   "observed_spells": {
+    "4": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 101,
+   "flags_98": 7185,
+   "init_handler": 16248,
+   "record_index": 2,
+   "observed_attack_rows": {
+    "47": 9,
+    "48": 13,
+    "49": 13
+   },
+   "observed_spells": {
+    "28": 2
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 102,
+   "flags_98": 39937,
+   "init_handler": 17121,
+   "record_index": 1,
+   "observed_attack_rows": {
+    "39": 26,
+    "40": 13
+   },
+   "observed_spells": {
+    "5": 1
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 103,
+   "flags_98": 6161,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "28": 52,
+    "30": 4
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 104,
+   "flags_98": 6161,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "29": 34,
+    "30": 4
+   },
+   "observed_spells": {
+    "30": 5,
+    "31": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 105,
+   "flags_98": 6161,
+   "init_handler": 29945,
+   "record_index": 10,
+   "observed_attack_rows": {
+    "60": 123
+   },
+   "observed_spells": {
+    "1": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 106,
+   "flags_98": 39953,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "83": 9,
+    "84": 12,
+    "85": 10,
+    "86": 8
+   },
+   "observed_spells": {
+    "36": 4,
+    "37": 4,
+    "38": 2,
+    "144": 1
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 107,
+   "flags_98": 39953,
+   "init_handler": 21489,
+   "record_index": 12,
+   "observed_attack_rows": {
+    "34": 2
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 108,
+   "flags_98": null,
+   "init_handler": null,
+   "record_index": null,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 109,
+   "flags_98": 6161,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "96": 3,
+    "97": 1
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 110,
+   "flags_98": 7193,
+   "init_handler": 20816,
+   "record_index": 14,
+   "observed_attack_rows": {
+    "95": 2
+   },
+   "observed_spells": {
+    "31": 3,
+    "34": 1
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 111,
+   "flags_98": 7185,
+   "init_handler": 25857,
+   "record_index": 9,
+   "observed_attack_rows": {
+    "22": 18,
+    "100": 20
+   },
+   "observed_spells": {
+    "38": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 112,
+   "flags_98": 7185,
+   "init_handler": 16888,
+   "record_index": 6,
+   "observed_attack_rows": {
+    "50": 5,
+    "52": 11
+   },
+   "observed_spells": {
+    "28": 2,
+    "41": 3
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 113,
+   "flags_98": 39953,
+   "init_handler": 24635,
+   "record_index": 5,
+   "observed_attack_rows": {
+    "36": 2
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 114,
+   "flags_98": 39937,
+   "init_handler": 28851,
+   "record_index": 7,
+   "observed_attack_rows": {
+    "63": 14,
+    "65": 18,
+    "66": 12
+   },
+   "observed_spells": {
+    "34": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 115,
+   "flags_98": 6145,
+   "init_handler": 35580,
+   "record_index": 11,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 116,
+   "flags_98": 39953,
+   "init_handler": 25272,
+   "record_index": 3,
+   "observed_attack_rows": {
+    "53": 1,
+    "72": 14
+   },
+   "observed_spells": {
+    "13": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 117,
+   "flags_98": 6145,
+   "init_handler": 35580,
+   "record_index": 11,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 118,
+   "flags_98": 6145,
+   "init_handler": 26272,
+   "record_index": 13,
+   "observed_attack_rows": {
+    "56": 6,
+    "57": 1
+   },
+   "observed_spells": {
+    "14": 2
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 119,
+   "flags_98": 6145,
+   "init_handler": 35580,
+   "record_index": 11,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 120,
+   "flags_98": 39938,
+   "init_handler": 27419,
+   "record_index": 4,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 121,
+   "flags_98": 39937,
+   "init_handler": 28135,
+   "record_index": 8,
+   "observed_attack_rows": {
+    "14": 1,
+    "15": 1,
+    "59": 3,
+    "64": 1,
+    "76": 2,
+    "110": 34
+   },
+   "observed_spells": {
+    "36": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 122,
+   "flags_98": 39953,
+   "init_handler": 24635,
+   "record_index": 5,
+   "observed_attack_rows": {
+    "36": 2
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 123,
+   "flags_98": 6161,
+   "init_handler": 29945,
+   "record_index": 10,
+   "observed_attack_rows": {
+    "18": 13,
+    "58": 12,
+    "60": 83
+   },
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 124,
+   "flags_98": 39953,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {},
+   "observed_spells": {
+    "7": 2
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 125,
+   "flags_98": 39953,
+   "init_handler": 25272,
+   "record_index": 3,
+   "observed_attack_rows": {
+    "2": 1,
+    "72": 14
+   },
+   "observed_spells": {
+    "19": 4
+   },
+   "runs": 2
+  },
+  {
+   "boss_id": 126,
+   "flags_98": null,
+   "init_handler": null,
+   "record_index": null,
+   "observed_attack_rows": {},
+   "observed_spells": {},
+   "runs": 2
+  },
+  {
+   "boss_id": 127,
+   "flags_98": 6157,
+   "init_handler": 0,
+   "record_index": null,
+   "observed_attack_rows": {
+    "113": 4,
+    "114": 4
+   },
+   "observed_spells": {
+    "34": 4,
+    "40": 4
+   },
+   "runs": 4
+  }
+ ]
+}

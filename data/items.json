@@ -1,0 +1,53 @@
+{
+ "source": "effect byte at 0x104152 + id*16 (read as HP for ids 0-1 and MP for id 3, see docs/rom-combat.md section 16)",
+ "rows": [
+  {
+   "id": 0,
+   "effect_value": 100
+  },
+  {
+   "id": 1,
+   "effect_value": 250
+  },
+  {
+   "id": 2,
+   "effect_value": 1
+  },
+  {
+   "id": 3,
+   "effect_value": 50
+  },
+  {
+   "id": 4,
+   "effect_value": 1
+  },
+  {
+   "id": 5,
+   "effect_value": 250
+  },
+  {
+   "id": 6,
+   "effect_value": 1
+  },
+  {
+   "id": 7,
+   "effect_value": 1
+  },
+  {
+   "id": 8,
+   "effect_value": 1
+  },
+  {
+   "id": 9,
+   "effect_value": 1
+  },
+  {
+   "id": 10,
+   "effect_value": 1
+  },
+  {
+   "id": 11,
+   "effect_value": 1
+  }
+ ]
+}

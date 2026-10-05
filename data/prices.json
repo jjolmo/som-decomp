@@ -1,0 +1,113 @@
+{
+ "consumable": {
+  "first_item_event_id": 186,
+  "first_armor_row": null,
+  "prices": [
+   10,
+   30,
+   100,
+   500,
+   10,
+   150,
+   65535,
+   65535,
+   65535,
+   65535,
+   450,
+   65535
+  ]
+ },
+ "armor_accessory": {
+  "first_item_event_id": 165,
+  "first_armor_row": 42,
+  "prices": [
+   0,
+   55000,
+   90,
+   150,
+   280,
+   400,
+   525,
+   750,
+   1200,
+   1875,
+   3750,
+   5100,
+   8800,
+   12500,
+   18750,
+   24000,
+   31000,
+   37500,
+   42500,
+   48000,
+   45
+  ]
+ },
+ "armor_body": {
+  "first_item_event_id": 144,
+  "first_armor_row": 21,
+  "prices": [
+   0,
+   20,
+   25,
+   22,
+   120,
+   260,
+   350,
+   675,
+   1000,
+   2250,
+   4500,
+   6375,
+   7100,
+   11500,
+   14850,
+   21000,
+   30000,
+   32750,
+   47000,
+   53000,
+   65000
+  ]
+ },
+ "armor_head": {
+  "first_item_event_id": 123,
+  "first_armor_row": 0,
+  "prices": [
+   0,
+   50,
+   55,
+   45,
+   70,
+   110,
+   180,
+   350,
+   550,
+   700,
+   1100,
+   2300,
+   3400,
+   5625,
+   7500,
+   11250,
+   15000,
+   22500,
+   36000,
+   44500,
+   58000
+  ]
+ },
+ "orb_by_level": [
+  200,
+  400,
+  800,
+  1600,
+  3000,
+  6500,
+  12500,
+  25000,
+  65535
+ ],
+ "note": "range table at D8:FB84 (start id, base row, pointer); price = word at pointer + (id - start)*2; 65535 = not for sale; orb price indexed by the orb level already bought"
+}

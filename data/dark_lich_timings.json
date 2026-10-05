@@ -1,0 +1,138 @@
+{
+ "source": "tools/lich_stats.py / lich_sim.py / lich_walk_test.py / lich_hit_test.py runs on the whole game frame, 8 seeds x 12,020 frames; tick = 5 frames (12.02 Hz, engine called for $56=0,1,2 only); state ids as in docs/dark-lich.md",
+ "tick_rate_hz": 12.02,
+ "frames_per_tick": 5,
+ "action_threshold_ticks": 49,
+ "action_threshold_seconds": 4.08,
+ "first_chooser_seconds": 3.08,
+ "first_action_seconds": 4.18,
+ "walk_px_per_second": 12.02,
+ "hands_move_px_per_second": 60.1,
+ "states": {
+  "stand_walk_full": {
+   "ticks": 37,
+   "frames": 185,
+   "seconds": 3.08
+  },
+  "spell_08": {
+   "ticks": 11,
+   "frames": 55,
+   "seconds": 0.92
+  },
+  "spell_09": {
+   "ticks": 14,
+   "frames": 70,
+   "seconds": 1.16
+  },
+  "spell_0A": {
+   "ticks": 13,
+   "frames": 65,
+   "seconds": 1.08
+  },
+  "spell_0B": {
+   "ticks": 14,
+   "frames": 70,
+   "seconds": 1.16
+  },
+  "spell_0C": {
+   "ticks": 12,
+   "frames": 60,
+   "seconds": 1.0
+  },
+  "spell_0D": {
+   "ticks": 17,
+   "frames": 85,
+   "seconds": 1.41
+  },
+  "spell_0E": {
+   "ticks": 15,
+   "frames": 75,
+   "seconds": 1.25
+  },
+  "projectile_0F_17": {
+   "ticks": 37,
+   "frames": 185,
+   "seconds": 3.08
+  },
+  "transition_18": {
+   "ticks": 37,
+   "frames": 185,
+   "seconds": 3.08
+  },
+  "transition_19": {
+   "ticks": 37,
+   "frames": 185,
+   "seconds": 3.08
+  },
+  "transition_1A": {
+   "ticks": 1,
+   "frames": 5,
+   "seconds": 0.08
+  },
+  "transition_1B": {
+   "ticks": 37,
+   "frames": 185,
+   "seconds": 3.08
+  },
+  "transition_1C": {
+   "ticks": 37,
+   "frames": 185,
+   "seconds": 3.08
+  },
+  "transition_1D": {
+   "ticks": 1,
+   "frames": 5,
+   "seconds": 0.08
+  },
+  "hands_1F": {
+   "ticks": 25,
+   "frames": 125,
+   "seconds": 2.08
+  },
+  "hands_26": {
+   "ticks": 25,
+   "frames": 125,
+   "seconds": 2.08
+  },
+  "hands_20": {
+   "ticks": 4,
+   "frames": 20,
+   "seconds": 0.33
+  },
+  "hands_slam_24": {
+   "ticks": 17,
+   "frames": 85,
+   "seconds": 1.41
+  },
+  "hurt_07_injected_hit": {
+   "ticks": 1,
+   "frames": 5,
+   "seconds": 0.08
+  }
+ },
+ "phases_seconds": {
+  "body": {
+   "min": 9.3,
+   "max": 64.6,
+   "mean": 23.5,
+   "n": 37
+  },
+  "hands": {
+   "min": 7.7,
+   "max": 37.6,
+   "mean": 15.4,
+   "n": 33
+  }
+ },
+ "action_gap_seconds": {
+  "after_spell": [
+   5.07,
+   5.57
+  ],
+  "after_projectile": 7.24,
+  "after_slam": [
+   5.57,
+   5.91
+  ]
+ }
+}

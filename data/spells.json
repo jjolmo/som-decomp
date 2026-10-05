@@ -1,0 +1,425 @@
+{
+ "source": "row = 0x102AD0 + id*64; handler = 16-bit address in bank C8 from table 0x08E801",
+ "rows": [
+  {
+   "id": 0,
+   "power": 61,
+   "accuracy": 75,
+   "element": 1,
+   "status": 0,
+   "mp_cost": 3,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 1,
+   "power": 43,
+   "accuracy": 75,
+   "element": 1,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 2,
+   "power": 61,
+   "accuracy": 75,
+   "element": 1,
+   "status": 4,
+   "mp_cost": 1,
+   "target_flags": 129,
+   "handler": 60055
+  },
+  {
+   "id": 3,
+   "power": 61,
+   "accuracy": 75,
+   "element": 1,
+   "status": 64,
+   "mp_cost": 4,
+   "target_flags": 1,
+   "handler": 60067
+  },
+  {
+   "id": 4,
+   "power": 61,
+   "accuracy": 75,
+   "element": 1,
+   "status": 0,
+   "mp_cost": 3,
+   "target_flags": 1,
+   "handler": 60164
+  },
+  {
+   "id": 5,
+   "power": 61,
+   "accuracy": 75,
+   "element": 1,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 1,
+   "handler": 60192
+  },
+  {
+   "id": 6,
+   "power": 61,
+   "accuracy": 75,
+   "element": 4,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 7,
+   "power": 43,
+   "accuracy": 75,
+   "element": 4,
+   "status": 8192,
+   "mp_cost": 3,
+   "target_flags": 129,
+   "handler": 60217
+  },
+  {
+   "id": 8,
+   "power": 43,
+   "accuracy": 75,
+   "element": 4,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60244
+  },
+  {
+   "id": 9,
+   "power": 61,
+   "accuracy": 75,
+   "element": 4,
+   "status": 32,
+   "mp_cost": 2,
+   "target_flags": 1,
+   "handler": 60072
+  },
+  {
+   "id": 10,
+   "power": 61,
+   "accuracy": 75,
+   "element": 4,
+   "status": 0,
+   "mp_cost": 1,
+   "target_flags": 1,
+   "handler": 60319
+  },
+  {
+   "id": 11,
+   "power": 61,
+   "accuracy": 75,
+   "element": 4,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 1,
+   "handler": 60339
+  },
+  {
+   "id": 12,
+   "power": 52,
+   "accuracy": 75,
+   "element": 8,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 13,
+   "power": 61,
+   "accuracy": 75,
+   "element": 8,
+   "status": 0,
+   "mp_cost": 4,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 14,
+   "power": 43,
+   "accuracy": 75,
+   "element": 8,
+   "status": 0,
+   "mp_cost": 3,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 15,
+   "power": 61,
+   "accuracy": 75,
+   "element": 8,
+   "status": 16384,
+   "mp_cost": 2,
+   "target_flags": 1,
+   "handler": 60077
+  },
+  {
+   "id": 16,
+   "power": 43,
+   "accuracy": 75,
+   "element": 8,
+   "status": 0,
+   "mp_cost": 3,
+   "target_flags": 129,
+   "handler": 60362
+  },
+  {
+   "id": 17,
+   "power": 32,
+   "accuracy": 75,
+   "element": 8,
+   "status": 16384,
+   "mp_cost": 4,
+   "target_flags": 129,
+   "handler": 60389
+  },
+  {
+   "id": 18,
+   "power": 43,
+   "accuracy": 75,
+   "element": 2,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 19,
+   "power": 61,
+   "accuracy": 75,
+   "element": 2,
+   "status": 0,
+   "mp_cost": 4,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 20,
+   "power": 61,
+   "accuracy": 75,
+   "element": 2,
+   "status": 128,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60404
+  },
+  {
+   "id": 21,
+   "power": 61,
+   "accuracy": 75,
+   "element": 2,
+   "status": 0,
+   "mp_cost": 3,
+   "target_flags": 1,
+   "handler": 60082
+  },
+  {
+   "id": 22,
+   "power": 61,
+   "accuracy": 75,
+   "element": 2,
+   "status": 256,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60404
+  },
+  {
+   "id": 23,
+   "power": 61,
+   "accuracy": 75,
+   "element": 2,
+   "status": 0,
+   "mp_cost": 1,
+   "target_flags": 160,
+   "handler": 60416
+  },
+  {
+   "id": 24,
+   "power": 61,
+   "accuracy": 75,
+   "element": 64,
+   "status": 2048,
+   "mp_cost": 5,
+   "target_flags": 129,
+   "handler": 60404
+  },
+  {
+   "id": 25,
+   "power": 43,
+   "accuracy": 75,
+   "element": 64,
+   "status": 0,
+   "mp_cost": 1,
+   "target_flags": 129,
+   "handler": 60475
+  },
+  {
+   "id": 26,
+   "power": 61,
+   "accuracy": 75,
+   "element": 64,
+   "status": 0,
+   "mp_cost": 8,
+   "target_flags": 129,
+   "handler": 61173
+  },
+  {
+   "id": 27,
+   "power": 61,
+   "accuracy": 75,
+   "element": 64,
+   "status": 0,
+   "mp_cost": 3,
+   "target_flags": 1,
+   "handler": 60092
+  },
+  {
+   "id": 28,
+   "power": 61,
+   "accuracy": 75,
+   "element": 64,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 1,
+   "handler": 60597
+  },
+  {
+   "id": 29,
+   "power": 61,
+   "accuracy": 75,
+   "element": 64,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 0,
+   "handler": 60625
+  },
+  {
+   "id": 30,
+   "power": 61,
+   "accuracy": 75,
+   "element": 128,
+   "status": 16,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60404
+  },
+  {
+   "id": 31,
+   "power": 100,
+   "accuracy": 75,
+   "element": 128,
+   "status": 0,
+   "mp_cost": 4,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 32,
+   "power": 250,
+   "accuracy": 75,
+   "element": 128,
+   "status": 0,
+   "mp_cost": 1,
+   "target_flags": 64,
+   "handler": 60650
+  },
+  {
+   "id": 33,
+   "power": 61,
+   "accuracy": 75,
+   "element": 128,
+   "status": 32768,
+   "mp_cost": 10,
+   "target_flags": 1,
+   "handler": 60676
+  },
+  {
+   "id": 34,
+   "power": 61,
+   "accuracy": 75,
+   "element": 128,
+   "status": 0,
+   "mp_cost": 6,
+   "target_flags": 1,
+   "handler": 60755
+  },
+  {
+   "id": 35,
+   "power": 250,
+   "accuracy": 75,
+   "element": 128,
+   "status": 0,
+   "mp_cost": 1,
+   "target_flags": 64,
+   "handler": 60776
+  },
+  {
+   "id": 36,
+   "power": 61,
+   "accuracy": 75,
+   "element": 16,
+   "status": 0,
+   "mp_cost": 8,
+   "target_flags": 129,
+   "handler": 60802
+  },
+  {
+   "id": 37,
+   "power": 61,
+   "accuracy": 75,
+   "element": 16,
+   "status": 0,
+   "mp_cost": 2,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 38,
+   "power": 61,
+   "accuracy": 75,
+   "element": 16,
+   "status": 0,
+   "mp_cost": 4,
+   "target_flags": 129,
+   "handler": 60875
+  },
+  {
+   "id": 39,
+   "power": 61,
+   "accuracy": 75,
+   "element": 32,
+   "status": 0,
+   "mp_cost": 5,
+   "target_flags": 1,
+   "handler": 60087
+  },
+  {
+   "id": 40,
+   "power": 61,
+   "accuracy": 75,
+   "element": 32,
+   "status": 0,
+   "mp_cost": 8,
+   "target_flags": 129,
+   "handler": 60043
+  },
+  {
+   "id": 41,
+   "power": 61,
+   "accuracy": 75,
+   "element": 32,
+   "status": 0,
+   "mp_cost": 4,
+   "target_flags": 1,
+   "handler": 61111
+  }
+ ]
+}
