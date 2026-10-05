@@ -49,7 +49,7 @@ Ops used by the Rabite script (33 opcodes, all executed by `tools/ai_ops.py`; le
 | 30 a b imm off | 5-6 | jump if that byte > imm |
 | BD a b lo hi off | 6-7 | jump if word(object a, offset 0x180+b) > imm (word) |
 | 31 / 49 / 4E / 53 / 58 off | 2-3 | jump if there is NO valid hero within 16 / 32 / 48 / 64 px / anywhere on screen |
-| 4C / 51 / 56 off | 2-3 | jump unless the current target is valid and within 32 / 48 / 64 px |
+| 4C / 51 / 56 off | 2-3 | jump unless the current target is valid and within 32 / 48 / 64 px ("valid" here: active and on screen, the status word is not tested; see section 4) |
 | A5 / B1 / B4 / B7 | 1 | target = first valid hero (slot order 0,1,2) within 16 / 32 / 48 / 64 px, FF if none |
 | 5D | 1 | target = first valid hero farther than 64 px, FF if none |
 | 9F | 1 | save own screen position |
@@ -62,13 +62,16 @@ Ops used by the Rabite script (33 opcodes, all executed by `tools/ai_ops.py`; le
 | E6 a b / FE a b | 3 | like E4 / FD but away from the target |
 | E8 | 1 | attack swing (command 02) if `obj+0x1ED` = 0 (yield), else no-op |
 
+The flag byte of the command ops (`c` of E0, `b` of E3 / E4 / FD / E6 / FE) is the requested length of the command in frames: 0 = the natural length of the animation, otherwise the command lasts `ceil(c / 5) * 5` frames and the movement of the animation repeats while it lasts [V, `docs/monster-3.md` section 6]; the Rabite script only uses 0.
+
 Object reference byte `a`: 0x00-0x7F object slot, 0x80 self, 0x81 / 0x82 the slot in `obj+0x1AC` / `obj+0x1AD` [C]; the Rabite uses 0x80 only (self+0x182 = HP word, self+0x1ED = cooldown gauge, self+0x1AC = target).
 Direction codes of E4 / FD / E6 / FE (`$C1:0404`, executed for every whole angle with the hero at 40 px; angle 0 = hero to the right, 90 = above, counter-clockwise): primary code (E4) = 8-way direction toward the hero: 1 for 338..22 degrees, 9 for 23..67, 8 for 68..112, 10 for 113..157, 2 for 158..202, 6 for 203..247, 4 for 248..292, 5 for 293..337; alternate code (FD) = the diagonal of the quadrant: 9 for 1..90, 10 for 91..179, 6 for 180..269, 5 for 270..360 (0 included). E6 / FE give the codes for the opposite direction (E6 = 2 where E4 = 1) [V].
 
 ## 4. Targets, distance classes, "aggro" [V]
 
 - A hero is a **valid target** if its object is active, its status word `obj+0x190` has none of the bits `0x8460`, and its screen position is inside the screen: `obj+0x20 < 256` and `obj+0x22 - obj+0x45 < 224` (`$C1:054A`) [C; executed with status 0x0020 (invalid) and with positions on and off the screen].
-- Distance classes (`$C1:0358`, Euclidean distance between the screen positions of the two actors, thresholds inclusive): <= 16 px, <= 32, <= 48, <= 64, <= 96, farther [V: all boundaries 16/17, 32/33, 48/49, 64/65, 96/97 executed]. If the horizontal or vertical difference is 256 or more (a monster that is off screen) the class is "<= 64 px" whatever the real distance [V: a Rabite with screen x 0xFFFF chose the 49-64 px routine and approached the hero].
+- The ops that test the **current** target (4C, 51, 56 and the command ops E4 / FD / E6 / FE) use the weaker test `$C1:0526` (object active and on screen); the status test of `$C1:054A` is applied only when a target is **acquired** (A5, B1, B4, B7, 5D, 31 .. 58) [V: `tools/monster_model.py`, 9,000 random AI steps per script, 0 mismatches against the model that uses this split]. So a hero that becomes disabled after it was chosen stays the target until it leaves the screen or another acquisition picks someone else.
+- Distance classes (`$C1:0358`, Euclidean distance between the screen positions of the two actors, thresholds inclusive): <= 16 px, <= 32, <= 48, <= 64, <= 96, farther [V: all boundaries 16/17, 32/33, 48/49, 64/65, 96/97 executed]. If the horizontal or vertical difference is 256 or more (a monster that is off screen) the class is "<= 64 px" whatever the real distance [V: a Rabite with screen x 0xFFFF chose the 49-64 px routine and approached the hero]. The sum of the two squares is a 16-bit sum without carry: a pair with horizontal and vertical differences such that the sum is 65,536 or more wraps to a small number and is classified as near (for example differences of 200 and 160 px give 65,600 -> 64 -> class "<= 16 px") [V: `tools/monster_model.py` model and real handlers agree on such pairs; the case needs a hero about 256 px away, diagonally].
 - **There is no detection radius.** Target acquisition (subroutine pc 0x6AE1, called by all ids): take the first valid hero in slot order within the tightest band that contains one of: <= 16, <= 32, <= 48, <= 64, anywhere on screen (op 5D). If no hero is valid at all (all off screen, dead or disabled) the monster runs a wander hop (subroutine 0x67DF) and tries again [V: run with hero 0 disabled; every hero distance from 10 to 200 px gave a target].
 - Therefore the Rabite always engages a hero that is on the screen; the distance only chooses what it does (section 5.2).
 

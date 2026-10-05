@@ -15,13 +15,14 @@ SCRIPT_BASE = 0x104F15
 
 
 class Sim:
-    def __init__(self, rom, state, mid=0, tile=(20, 25), seed=None, hero_ai=False, hero=None, only_hero0=True, slot=3):
+    def __init__(self, rom, state, mid=0, tile=(20, 25), seed=None, hero_ai=False, hero=None, only_hero0=True, slot=3, cpu_class=None):
         self.rom = rom
-        self.env = env = combat_env.Env(rom, state)
+        self.env = env = combat_env.Env(rom, state, cpu_class=cpu_class)
         self.c = c = env.c
         self.mid = mid
         self.f = 0
         self.tick_ops = []
+        self.sounds = []         # (frame, $1E00, $1E01, $1E02, $1E03) at every call of the sound driver entry $C3:0004 (the driver itself is not emulated)
         self.steps = []          # one entry per AI step: (frame, [(pc, op)], command bytes issued)
         self.hero_ai = hero_ai
         self.pin = None
@@ -29,6 +30,10 @@ class Sim:
             cp.PC = (cp.pull16() + 1) & 0xFFFF; return True
         for a in (0xE0F9, 0xE6AC):                 # waits for NMI (flag $EC bit 1), stubbed
             c.hooks[0xC10000 | a] = rts; c.hooks[0x010000 | a] = rts
+        def snd(cp):
+            self.sounds.append((self.f, c.wram[0x1E00], c.wram[0x1E01], c.wram[0x1E02], c.wram[0x1E03]))
+            cp.PC = (cp.pull16() + 1) & 0xFFFF; cp.PB = cp.pull8(); return True
+        c.hooks[0xC30004] = snd
         if seed is not None:
             c.wram[0x33D] = seed
         if only_hero0:

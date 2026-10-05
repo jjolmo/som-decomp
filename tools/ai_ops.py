@@ -1,5 +1,5 @@
 """Run the real AI bytecode handlers ($C1:251A -> table $C1:2257) on synthetic scripts and print what each opcode does.
-usage: ai_ops.py ROM STATE
+usage: ai_ops.py ROM STATE [--new]      (--new: only the opcodes added for docs/monster-3.md and docs/monster-13.md: 34, 6A, 73, BE, BF, DC)
 Each case patches a few script bytes into an in-memory copy of the ROM (script base 0x104F15, never written to disk), builds a monster in slot 3
 with the game's spawner, runs one handler and prints: return value (FF = continue with the next op, 00 = yield until the next tick),
 script-pointer advance, and the object fields that changed. Lengths of conditional ops include the 1- or 2-byte jump offset.
@@ -59,10 +59,59 @@ def show(name, r):
     print('%-44s A=%02X adv=%+d depth=%d %s' % (name, r['A'], r['adv'], r['depth'], r['diff']))
 
 
+def new_ops(b):
+    """Exhaustive checks of the opcodes the Chobin Hood (id 3) and Polter Chair (id 0x0D) scripts use beyond the Rabite's 33:
+    34 (target within 16 px), 6A / 73 (target in a vertical / horizontal lane), BE / BF (cardinal turn toward / away), DC (set byte).
+    Each model is compared with the real handler over every case listed; the result is printed as 'cases / mismatches'."""
+    h, o = b.h, b.o
+    h.sw(0x190, 0)
+    print('--- 34: jump unless the current target is valid and within 16 px (distance class 1)')
+    bad = n = 0
+    for d in range(0, 40):
+        b.place(d); r = b.run(bytes([0x34, 0x85]), tgt=0); n += 1
+        bad += (r['adv'] == 2) != (d <= 16)
+    b.place(10); r = b.run(bytes([0x34, 0x85]), tgt=0xFF); n += 1; bad += r['adv'] == 2
+    print('34: %d cases, %d mismatches (d <= 16 falls through; no target jumps)' % (n, bad))
+    print('--- 6A / 73: dx, dy = hero - monster on screen (dy uses obj+0x22 - obj+0x45)')
+    for op in (0x6A, 0x73):
+        bad = n = 0
+        for oth in range(-60, 61):
+            for v in range(-30, 31):
+                dx, dy = (v, oth) if op == 0x6A else (oth, v)
+                if not (0 <= 128 + dx < 256 and 0 <= 112 + dy < 224): continue
+                b.place(dx, dy); r = b.run(bytes([op, 0x85]), tgt=0); n += 1
+                pred = (abs(dx) <= 15 and abs(dx) < abs(dy)) if op == 0x6A else (abs(dy) <= 15 and abs(dy) <= abs(dx))
+                bad += (r['adv'] == 2) != pred
+        print('%02X: %d cases, %d mismatches (falls through iff %s)' % (op, n, bad, '|dx| <= 15 and |dx| < |dy|' if op == 0x6A else '|dy| <= 15 and |dy| <= |dx|'))
+        b.place(30, 0); r = b.run(bytes([op, 0x85]), tgt=0xFF); print('%02X with no target: %s' % (op, 'jump' if r['adv'] != 2 else 'fall'))
+    print('--- BE / BF: command C1 with a cardinal code, animation arg1, flag arg2 (no-op when there is no valid target)')
+    for op in (0xBE, 0xBF):
+        bad = n = 0
+        for dx in range(-60, 61, 3):
+            for dy in range(-60, 61, 3):
+                if dx == 0 and dy == 0: continue
+                if not (0 <= 128 + dx < 256 and 0 <= 112 + dy < 224): continue
+                b.place(dx, dy); b.o.sb(0x140, 0); b.o.sb(0x141, 0)
+                r = b.run(bytes([op, 3, 5]), tgt=0); n += 1
+                toward = (1 if dx >= 0 else 2) if abs(dx) >= abs(dy) else (4 if dy > 0 else 8)
+                want = toward if op == 0xBE else {1: 2, 2: 1, 4: 8, 8: 4}[toward]
+                ok = b.o.b(0x140) == 0xC1 and b.o.b(0x141) == want and b.o.b(0x142) == 3 and b.o.b(0x143) == 5 and r['A'] == 0 and r['adv'] == 3
+                bad += not ok
+        print('%02X: %d cases, %d mismatches (code = %s; |dx| >= |dy| is horizontal)' % (op, n, bad, 'toward' if op == 0xBE else 'away'))
+        b.place(30, 0); b.o.sb(0x140, 0); r = b.run(bytes([op, 3, 5]), tgt=0xFF); print('%02X with no target: A=%02X adv=%d cmd=%02X' % (op, r['A'], r['adv'], b.o.b(0x140)))
+    print('--- DC a b v: byte(object a, offset b + 0x180) = v, continue')
+    b.place(40)
+    r = b.run(bytes([0xDC, 0x80, 0x6D, 0x00]), gauge=50); show('DC 80 6D 00 (self+0x1ED = 0)', r); print('self+0x1ED =', b.o.b(0x1ED))
+    r = b.run(bytes([0xDC, 0x80, 0x6D, 0x07]), gauge=50); show('DC 80 6D 07', r); print('self+0x1ED =', b.o.b(0x1ED))
+    h.sb(0x1ED, 50); r = b.run(bytes([0xDC, 0x00, 0x6D, 0x09]), gauge=50); print('DC 00 6D 09 sets hero 0 +0x1ED =', h.b(0x1ED), ' (object ref 0 = slot 0)')
+
+
 def main():
     rom = romio.rom_from_argv(); state = sys.argv[1]
     b = Bench(rom, state)
     b.env.obj(0).sw(0x190, 0)
+    if '--new' in sys.argv:
+        new_ops(b); return
     print('--- control flow')
     r = b.run(bytes([0x01, 0x85])); show('01 JMP +5 (1-byte offset 0x85)', r)
     r = b.run(bytes([0x01, 0x00, 0x20])); show('01 JMP 2-byte offset 0x0020', r)
@@ -131,6 +180,7 @@ def main():
     r = b.run(bytes([0xE3, 0x00, 0x00])); show('E3 00 00 facing 1, no velocity', r)
     b.o.sb(0x10, 0)
     r = b.run(bytes([0xE3, 0x00, 0x00])); show('E3 00 00 facing 0, no velocity', r)
+    new_ops(b)
 
 
 if __name__ == '__main__':

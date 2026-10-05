@@ -1,6 +1,6 @@
 """AI bytecode lister. usage: aidis.py ROM HEXPC [HEXLEN] [--text]   (PC relative to ROM 0x104F15)
 Lengths verified by reading handler code ($C1:2257 table) and by running handlers in cpu65816. With --text the opcodes whose handlers were
-executed by tools/ai_ops.py (the ones the Rabite script uses) get a one-line description; the others are printed as opNN.
+executed by tools/ai_ops.py (the ones the Rabite, Chobin Hood and Polter Chair scripts use) get a one-line description; the others are printed as opNN.
 Conditional ops are written IFxx args -> target: the jump is taken when the condition described for the op holds."""
 import sys, romio
 BASE = 0x104F15
@@ -64,6 +64,12 @@ DESC = {
     0xFE: 'if target valid: command C1 away from the target (alternate direction); yield',
     0xE8: 'attack swing (command 02) if the cooldown gauge obj+0x1ED is 0, otherwise no-op',
     0xFF: 'call (pushes the return address, depth limit 16)',
+    0x34: 'jump unless the current target is valid and within 16 px',
+    0x6A: 'jump unless the current target is valid, |dx| <= 15 and |dx| < |dy| (vertical lane)',
+    0x73: 'jump unless the current target is valid, |dy| <= 15 and |dy| <= |dx| (horizontal lane)',
+    0xBE: 'if target valid: command C1 toward the target (cardinal code: horizontal when |dx| >= |dy|), animation arg1, flag arg2; yield',
+    0xBF: 'if target valid: command C1 away from the target (cardinal code), animation arg1, flag arg2; yield',
+    0xDC: 'byte(objref arg1, offset arg2 + 0x180) = arg3',
 }
 def listing(d, pc, n, text=False):
     p = pc; out = []

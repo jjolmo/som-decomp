@@ -11,10 +11,10 @@ class Obj:
     def sb(s, o, v): s.e.c.wram[s.base + o] = v & 0xFF
     def sw(s, o, v): s.sb(o, v); s.sb(o + 1, v >> 8)
 class Env:
-    def __init__(s, rom, state_path=None, rng_index=None):
+    def __init__(s, rom, state_path=None, rng_index=None, cpu_class=None):
         cpu.set_rom(rom)
         s.rom = rom
-        s.c = c = cpu.CPU()
+        s.c = c = (cpu_class or cpu.CPU)()
         if state_path: c.wram[:] = zsnes_state.load_wram(state_path)
         def rtl(cp):
             cp.PC = (cp.pull16() + 1) & 0xFFFF; cp.PB = cp.pull8(); return True

@@ -1,0 +1,1461 @@
+{
+ "source": "tools/monster_survey.py: 8 s of the real frame loop per id, hero 0 pinned, monster 60 px to its right, seed 1; static numbers from tools/aidis.py",
+ "monsters": [
+  {
+   "id": 0,
+   "name_block_index": 207,
+   "level": 1,
+   "hp": 20,
+   "str": 3,
+   "agi": 1,
+   "element": 0,
+   "exp": 1,
+   "gold": 2,
+   "weapons": [
+    72,
+    72
+   ],
+   "script_entry": 0,
+   "instructions": 215,
+   "opcodes": 33,
+   "new_opcodes": [],
+   "effort": "low",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 3,
+     "turn": 5,
+     "move": 9,
+     "swing": 1
+    },
+    "projectile_used": false,
+    "frames_with_movement": 109,
+    "final_offset_from_start": [
+     -33,
+     -10
+    ]
+   }
+  },
+  {
+   "id": 1,
+   "name_block_index": 208,
+   "level": 4,
+   "hp": 65,
+   "str": 8,
+   "agi": 8,
+   "element": 128,
+   "exp": 4,
+   "gold": 11,
+   "weapons": [
+    73,
+    74
+   ],
+   "script_entry": 185,
+   "instructions": 254,
+   "opcodes": 36,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "66",
+    "77",
+    "BE",
+    "FC"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "move": 41,
+     "turn": 1,
+     "swing": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 241,
+    "final_offset_from_start": [
+     -70,
+     -24
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "name_block_index": 209,
+   "level": 3,
+   "hp": 60,
+   "str": 7,
+   "agi": 5,
+   "element": 128,
+   "exp": 3,
+   "gold": 7,
+   "weapons": [
+    75,
+    76
+   ],
+   "script_entry": 452,
+   "instructions": 216,
+   "opcodes": 37,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "9E",
+    "BA",
+    "FC"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "move": 22,
+     "turn": 6,
+     "swing": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 149,
+    "final_offset_from_start": [
+     -9,
+     0
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "name_block_index": 210,
+   "level": 7,
+   "hp": 60,
+   "str": 12,
+   "agi": 2,
+   "element": 0,
+   "exp": 12,
+   "gold": 17,
+   "weapons": [
+    77,
+    77
+   ],
+   "script_entry": 609,
+   "instructions": 183,
+   "opcodes": 34,
+   "new_opcodes": [
+    "6A",
+    "73",
+    "BE",
+    "DC"
+   ],
+   "effort": "low",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "swing": 6,
+     "move": 1,
+     "turn": 63
+    },
+    "projectile_used": true,
+    "frames_with_movement": 30,
+    "final_offset_from_start": [
+     -10,
+     25
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "name_block_index": 211,
+   "level": 2,
+   "hp": 36,
+   "str": 5,
+   "agi": 3,
+   "element": 128,
+   "exp": 3,
+   "gold": 8,
+   "weapons": [
+    78,
+    78
+   ],
+   "script_entry": 731,
+   "instructions": 226,
+   "opcodes": 42,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "34",
+    "5F",
+    "9E",
+    "BA",
+    "C0",
+    "C1",
+    "E9"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 96
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "name_block_index": 212,
+   "level": 10,
+   "hp": 140,
+   "str": 17,
+   "agi": 17,
+   "element": 4,
+   "exp": 35,
+   "gold": 29,
+   "weapons": [
+    79,
+    80
+   ],
+   "script_entry": 914,
+   "instructions": 257,
+   "opcodes": 40,
+   "new_opcodes": [
+    "34",
+    "5F",
+    "66",
+    "6F",
+    "C0",
+    "C1",
+    "E9",
+    "FC"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 15,
+     "move": 6,
+     "swing": 3
+    },
+    "projectile_used": false,
+    "frames_with_movement": 90,
+    "final_offset_from_start": [
+     -100,
+     15
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "name_block_index": 213,
+   "level": 5,
+   "hp": 64,
+   "str": 15,
+   "agi": 5,
+   "element": 1,
+   "exp": 8,
+   "gold": 14,
+   "weapons": [
+    81,
+    82
+   ],
+   "script_entry": 1210,
+   "instructions": 248,
+   "opcodes": 39,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "46",
+    "5A",
+    "9E",
+    "FC"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 11
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "name_block_index": 214,
+   "level": 8,
+   "hp": 100,
+   "str": 13,
+   "agi": 1,
+   "element": 4,
+   "exp": 28,
+   "gold": 30,
+   "weapons": [
+    83,
+    83
+   ],
+   "script_entry": 1468,
+   "instructions": 194,
+   "opcodes": 40,
+   "new_opcodes": [
+    "17",
+    "1F",
+    "26",
+    "54",
+    "5F",
+    "68",
+    "71",
+    "BB",
+    "BE",
+    "C0",
+    "D8",
+    "E9",
+    "ED",
+    "F5"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 3,
+     "turn": 60,
+     "other43": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "name_block_index": 215,
+   "level": 6,
+   "hp": 40,
+   "str": 12,
+   "agi": 4,
+   "element": 0,
+   "exp": 10,
+   "gold": 12,
+   "weapons": [
+    84,
+    84
+   ],
+   "script_entry": 1623,
+   "instructions": 223,
+   "opcodes": 40,
+   "new_opcodes": [
+    "04",
+    "17",
+    "1F",
+    "20",
+    "26",
+    "27",
+    "34",
+    "5F",
+    "9E",
+    "ED",
+    "F5"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 2,
+     "other43": 1,
+     "turn": 8,
+     "move": 14,
+     "swing": 1
+    },
+    "projectile_used": false,
+    "frames_with_movement": 69,
+    "final_offset_from_start": [
+     -29,
+     0
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "name_block_index": 216,
+   "level": 27,
+   "hp": 200,
+   "str": 12,
+   "agi": 26,
+   "element": 16,
+   "exp": 330,
+   "gold": 213,
+   "weapons": [
+    85,
+    85
+   ],
+   "script_entry": 1789,
+   "instructions": 209,
+   "opcodes": 40,
+   "new_opcodes": [
+    "03",
+    "04",
+    "0B",
+    "20",
+    "26",
+    "27",
+    "34",
+    "5F",
+    "9E",
+    "BE",
+    "C0",
+    "C1",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 96
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "name_block_index": 217,
+   "level": 5,
+   "hp": 55,
+   "str": 6,
+   "agi": 10,
+   "element": 0,
+   "exp": 7,
+   "gold": 10,
+   "weapons": [
+    86,
+    86
+   ],
+   "script_entry": 1972,
+   "instructions": 390,
+   "opcodes": 49,
+   "new_opcodes": [
+    "02",
+    "03",
+    "04",
+    "1E",
+    "1F",
+    "20",
+    "25",
+    "26",
+    "27",
+    "34",
+    "5F",
+    "9E",
+    "BA",
+    "BE",
+    "C0",
+    "C1",
+    "DC",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 10,
+     "move": 9
+    },
+    "projectile_used": false,
+    "frames_with_movement": 45,
+    "final_offset_from_start": [
+     -5,
+     0
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "name_block_index": 218,
+   "level": 12,
+   "hp": 130,
+   "str": 21,
+   "agi": 1,
+   "element": 1,
+   "exp": 42,
+   "gold": 60,
+   "weapons": [
+    87,
+    88
+   ],
+   "script_entry": 2224,
+   "instructions": 286,
+   "opcodes": 52,
+   "new_opcodes": [
+    "04",
+    "17",
+    "1F",
+    "20",
+    "26",
+    "27",
+    "54",
+    "5F",
+    "66",
+    "6A",
+    "6F",
+    "73",
+    "9E",
+    "BE",
+    "C0",
+    "C1",
+    "D8",
+    "E9",
+    "ED",
+    "F5",
+    "FC"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 3,
+     "other43": 2,
+     "move": 2,
+     "turn": 15,
+     "swing": 3,
+     "other44": 1
+    },
+    "projectile_used": true,
+    "frames_with_movement": 100,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "name_block_index": 219,
+   "level": 16,
+   "hp": 145,
+   "str": 24,
+   "agi": 1,
+   "element": 4,
+   "exp": 77,
+   "gold": 65,
+   "weapons": [
+    89,
+    89
+   ],
+   "script_entry": 2538,
+   "instructions": 293,
+   "opcodes": 46,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "34",
+    "54",
+    "5F",
+    "6A",
+    "73",
+    "9E",
+    "BE",
+    "BF",
+    "C0",
+    "C1",
+    "D8",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 47,
+     "swing": 4,
+     "move": 8
+    },
+    "projectile_used": true,
+    "frames_with_movement": 40,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "name_block_index": 220,
+   "level": 8,
+   "hp": 128,
+   "str": 12,
+   "agi": 10,
+   "element": 128,
+   "exp": 21,
+   "gold": 22,
+   "weapons": [
+    90,
+    90
+   ],
+   "script_entry": 2878,
+   "instructions": 232,
+   "opcodes": 33,
+   "new_opcodes": [
+    "34",
+    "BE",
+    "BF"
+   ],
+   "effort": "low",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "turn": 96
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "name_block_index": 221,
+   "level": 11,
+   "hp": 150,
+   "str": 24,
+   "agi": 1,
+   "element": 1,
+   "exp": 38,
+   "gold": 36,
+   "weapons": [
+    91,
+    92
+   ],
+   "script_entry": 3100,
+   "instructions": 268,
+   "opcodes": 44,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "34",
+    "66",
+    "6A",
+    "6F",
+    "73",
+    "9E",
+    "BE",
+    "C0",
+    "C4",
+    "DC",
+    "E9",
+    "FC"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 36,
+     "swing": 4,
+     "move": 26
+    },
+    "projectile_used": true,
+    "frames_with_movement": 172,
+    "final_offset_from_start": [
+     -87,
+     15
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "name_block_index": 222,
+   "level": 25,
+   "hp": 100,
+   "str": 23,
+   "agi": 12,
+   "element": 8,
+   "exp": 268,
+   "gold": 192,
+   "weapons": [
+    93,
+    93
+   ],
+   "script_entry": 3370,
+   "instructions": 227,
+   "opcodes": 42,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "5F",
+    "71",
+    "9E",
+    "BA",
+    "BE",
+    "C0",
+    "C1",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "move": 3,
+     "turn": 9
+    },
+    "projectile_used": false,
+    "frames_with_movement": 22,
+    "final_offset_from_start": [
+     -22,
+     0
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "name_block_index": 223,
+   "level": 19,
+   "hp": 100,
+   "str": 27,
+   "agi": 13,
+   "element": 128,
+   "exp": 124,
+   "gold": 97,
+   "weapons": [
+    94,
+    95
+   ],
+   "script_entry": 3550,
+   "instructions": 258,
+   "opcodes": 40,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "34",
+    "5F",
+    "9E",
+    "BA",
+    "BB",
+    "BE",
+    "C0",
+    "C1",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "move": 14,
+     "turn": 35
+    },
+    "projectile_used": false,
+    "frames_with_movement": 150,
+    "final_offset_from_start": [
+     -51,
+     9
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "name_block_index": 224,
+   "level": 57,
+   "hp": 440,
+   "str": 57,
+   "agi": 49,
+   "element": 4,
+   "exp": 2680,
+   "gold": 2850,
+   "weapons": [
+    96,
+    96
+   ],
+   "script_entry": 3823,
+   "instructions": 297,
+   "opcodes": 46,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "34",
+    "54",
+    "5F",
+    "66",
+    "6A",
+    "6F",
+    "73",
+    "9E",
+    "BE",
+    "C0",
+    "C1",
+    "D8",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 74,
+     "swing": 3
+    },
+    "projectile_used": true,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "name_block_index": 225,
+   "level": 13,
+   "hp": 150,
+   "str": 12,
+   "agi": 8,
+   "element": 16,
+   "exp": 50,
+   "gold": 48,
+   "weapons": [
+    97,
+    98
+   ],
+   "script_entry": 4163,
+   "instructions": 260,
+   "opcodes": 44,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "34",
+    "5A",
+    "5F",
+    "6A",
+    "73",
+    "9E",
+    "BA",
+    "BE",
+    "C0",
+    "C1",
+    "E9",
+    "FC"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "turn": 10,
+     "move": 12,
+     "swing": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 60,
+    "final_offset_from_start": [
+     -40,
+     -20
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "name_block_index": 226,
+   "level": 20,
+   "hp": 160,
+   "str": 17,
+   "agi": 25,
+   "element": 2,
+   "exp": 145,
+   "gold": 120,
+   "weapons": [
+    99,
+    99
+   ],
+   "script_entry": 4435,
+   "instructions": 232,
+   "opcodes": 41,
+   "new_opcodes": [
+    "04",
+    "17",
+    "1F",
+    "20",
+    "26",
+    "27",
+    "5F",
+    "9E",
+    "BA",
+    "BE",
+    "C0",
+    "C1",
+    "E9",
+    "ED",
+    "F5"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 3,
+     "turn": 28,
+     "other43": 2,
+     "other44": 1
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     -3,
+     0
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "name_block_index": 227,
+   "level": 17,
+   "hp": 130,
+   "str": 21,
+   "agi": 36,
+   "element": 0,
+   "exp": 91,
+   "gold": 79,
+   "weapons": [
+    100,
+    100
+   ],
+   "script_entry": 4629,
+   "instructions": 252,
+   "opcodes": 38,
+   "new_opcodes": [
+    "54",
+    "5F",
+    "C0",
+    "C1",
+    "C4",
+    "D8",
+    "E9"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 6,
+     "move": 5,
+     "swing": 1,
+     "other44": 1
+    },
+    "projectile_used": false,
+    "frames_with_movement": 90,
+    "final_offset_from_start": [
+     -20,
+     0
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "name_block_index": 228,
+   "level": 18,
+   "hp": 122,
+   "str": 21,
+   "agi": 21,
+   "element": 2,
+   "exp": 100,
+   "gold": 88,
+   "weapons": [
+    101,
+    101
+   ],
+   "script_entry": 4922,
+   "instructions": 405,
+   "opcodes": 40,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "5F",
+    "9E",
+    "BA",
+    "BB",
+    "C0",
+    "C1",
+    "DC",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 50,
+     "other44": 1
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "name_block_index": 229,
+   "level": 19,
+   "hp": 186,
+   "str": 28,
+   "agi": 30,
+   "element": 1,
+   "exp": 125,
+   "gold": 96,
+   "weapons": [
+    102,
+    103
+   ],
+   "script_entry": 5257,
+   "instructions": 289,
+   "opcodes": 36,
+   "new_opcodes": [
+    "34",
+    "66",
+    "6F",
+    "BE",
+    "FC"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 16,
+     "swing": 1,
+     "move": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 73,
+    "final_offset_from_start": [
+     39,
+     0
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "name_block_index": 230,
+   "level": 21,
+   "hp": 160,
+   "str": 22,
+   "agi": 5,
+   "element": 128,
+   "exp": 1,
+   "gold": 12,
+   "weapons": [
+    104,
+    104
+   ],
+   "script_entry": 5420,
+   "instructions": 156,
+   "opcodes": 30,
+   "new_opcodes": [
+    "34",
+    "BE",
+    "C0",
+    "C1",
+    "E9",
+    "EF"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 3,
+     "move": 5,
+     "other44": 1,
+     "other81": 1,
+     "turn": 1
+    },
+    "projectile_used": false,
+    "frames_with_movement": 50,
+    "final_offset_from_start": [
+     -50,
+     0
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "name_block_index": 231,
+   "level": 18,
+   "hp": 110,
+   "str": 20,
+   "agi": 20,
+   "element": 0,
+   "exp": 110,
+   "gold": 180,
+   "weapons": [
+    105,
+    106
+   ],
+   "script_entry": 5481,
+   "instructions": 242,
+   "opcodes": 40,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "79",
+    "7B",
+    "9E",
+    "BF",
+    "C0",
+    "C4",
+    "E9",
+    "FC"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 2,
+     "other44": 1,
+     "swing": 1
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "name_block_index": 232,
+   "level": 12,
+   "hp": 135,
+   "str": 22,
+   "agi": 20,
+   "element": 128,
+   "exp": 36,
+   "gold": 38,
+   "weapons": [
+    107,
+    107
+   ],
+   "script_entry": 5712,
+   "instructions": 261,
+   "opcodes": 36,
+   "new_opcodes": [
+    "0B",
+    "17",
+    "1F",
+    "26",
+    "5A",
+    "BE",
+    "C0",
+    "C4",
+    "DC",
+    "E9"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "turn": 8,
+     "pose": 2,
+     "move": 2,
+     "other44": 1,
+     "swing": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 40,
+    "final_offset_from_start": [
+     -50,
+     0
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "name_block_index": 233,
+   "level": 32,
+   "hp": 200,
+   "str": 35,
+   "agi": 22,
+   "element": 4,
+   "exp": 530,
+   "gold": 504,
+   "weapons": [
+    108,
+    108
+   ],
+   "script_entry": 6050,
+   "instructions": 216,
+   "opcodes": 44,
+   "new_opcodes": [
+    "17",
+    "1F",
+    "26",
+    "54",
+    "5F",
+    "66",
+    "68",
+    "6F",
+    "71",
+    "BB",
+    "BC",
+    "BE",
+    "C0",
+    "C1",
+    "D8",
+    "E9",
+    "ED",
+    "F5"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 3,
+     "turn": 28,
+     "other43": 2,
+     "swing": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 0,
+    "final_offset_from_start": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "name_block_index": 234,
+   "level": 24,
+   "hp": 190,
+   "str": 22,
+   "agi": 28,
+   "element": 0,
+   "exp": 240,
+   "gold": 180,
+   "weapons": [
+    109,
+    109
+   ],
+   "script_entry": 6266,
+   "instructions": 220,
+   "opcodes": 33,
+   "new_opcodes": [
+    "34",
+    "5F",
+    "C0",
+    "C1",
+    "E9"
+   ],
+   "effort": "medium",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "move": 11,
+     "turn": 19,
+     "swing": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 171,
+    "final_offset_from_start": [
+     -11,
+     7
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "name_block_index": 235,
+   "level": 28,
+   "hp": 125,
+   "str": 32,
+   "agi": 35,
+   "element": 0,
+   "exp": 368,
+   "gold": 240,
+   "weapons": [
+    110,
+    110
+   ],
+   "script_entry": 6471,
+   "instructions": 227,
+   "opcodes": 44,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "66",
+    "6A",
+    "6F",
+    "73",
+    "9E",
+    "BE",
+    "BF",
+    "C0",
+    "C4",
+    "DC",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "swing": 3,
+     "move": 15,
+     "turn": 40
+    },
+    "projectile_used": true,
+    "frames_with_movement": 100,
+    "final_offset_from_start": [
+     -58,
+     53
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "name_block_index": 236,
+   "level": 25,
+   "hp": 100,
+   "str": 23,
+   "agi": 12,
+   "element": 4,
+   "exp": 265,
+   "gold": 190,
+   "weapons": [
+    111,
+    111
+   ],
+   "script_entry": 6661,
+   "instructions": 241,
+   "opcodes": 44,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "5F",
+    "71",
+    "9E",
+    "BE",
+    "C0",
+    "C1",
+    "E9",
+    "ED",
+    "EF"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "turn": 6,
+     "move": 3
+    },
+    "projectile_used": false,
+    "frames_with_movement": 22,
+    "final_offset_from_start": [
+     -22,
+     0
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "name_block_index": 237,
+   "level": 30,
+   "hp": 210,
+   "str": 32,
+   "agi": 38,
+   "element": 16,
+   "exp": 446,
+   "gold": 258,
+   "weapons": [
+    112,
+    112
+   ],
+   "script_entry": 6798,
+   "instructions": 404,
+   "opcodes": 51,
+   "new_opcodes": [
+    "02",
+    "03",
+    "04",
+    "0B",
+    "1E",
+    "1F",
+    "20",
+    "21",
+    "25",
+    "26",
+    "27",
+    "28",
+    "34",
+    "5F",
+    "9E",
+    "BC",
+    "C0",
+    "C1",
+    "DC",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "pose": 1,
+     "move": 3,
+     "turn": 12,
+     "swing": 2
+    },
+    "projectile_used": false,
+    "frames_with_movement": 80,
+    "final_offset_from_start": [
+     -20,
+     -20
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "name_block_index": 238,
+   "level": 9,
+   "hp": 140,
+   "str": 15,
+   "agi": 15,
+   "element": 64,
+   "exp": 30,
+   "gold": 36,
+   "weapons": [
+    113,
+    113
+   ],
+   "script_entry": 7034,
+   "instructions": 262,
+   "opcodes": 41,
+   "new_opcodes": [
+    "04",
+    "20",
+    "27",
+    "34",
+    "54",
+    "9E",
+    "C0",
+    "C4",
+    "D8",
+    "DC",
+    "E9"
+   ],
+   "effort": "high",
+   "observed_8s_hero_60px": {
+    "commands": {
+     "turn": 8,
+     "pose": 2,
+     "move": 18,
+     "swing": 4
+    },
+    "projectile_used": false,
+    "frames_with_movement": 222,
+    "final_offset_from_start": [
+     -12,
+     0
+    ]
+   }
+  }
+ ]
+}
