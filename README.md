@@ -42,6 +42,7 @@ Python 3, standard library only.
 - `hero-movement.md`: hero walking, running, charging and status speeds in pixels per second, diagonal and facing rules, wall collision box, party limit, knockback.
 - `damage-counter.md`: how the floating damage/heal numbers are created, sized, coloured and animated.
 - `graphics.md`: how the heroes are drawn (4bpp tile pools, palettes, sprite pieces, animation scripts) and the structure of the glove attack animations.
+- `audio.md`: how the game requests a sound effect (`$1E00-$1E03`, `JSL $C3:0004`, APU ports 0-3), the SPC700 driver, effect table and sample layout uploaded at boot, and how every effect id was rendered to WAV from the ROM (`tools/sfx_extract.py`, `tools/spc700.py`; needs libgme), with durations and the ids used by the attacks.
 - `sources.md`: public documentation and repositories about the game.
 
 ### `data/`
