@@ -35,8 +35,8 @@ OPS = {
     0x01: ('NOP', 1, 'advance one byte', 'C'),
     0x02: ('RETURN', 1, 'return from a called event: $D1/$D2/$D3 = $D6/$D7/$D8 (one level only)', 'V'),
     0x03: ('GATHER', 1, 'party gather: $4E = 0x80, state 0x80 (wait until the party AI clears $4E); heroes other than the actor $D4 are stopped first ($C1:CA6C)', 'V'),
-    0x04: ('TOGGLE_HERO_VIS', 1, 'toggle bit 7 of obj+0x0E for the three heroes (04 and 05 are identical)', 'C'),
-    0x05: ('TOGGLE_HERO_VIS', 1, 'same as 04', 'C'),
+    0x04: ('TOGGLE_HERO_VIS', 1, 'toggle bit 7 of obj+0x0E for the three heroes (04 and 05 are identical)', 'V'),
+    0x05: ('TOGGLE_HERO_VIS', 1, 'same as 04', 'V'),
     0x06: ('FREEZE', 1, 'set bit 7 of $F1 (the hero input handler returns at once), wait until no hero has a state flag obj+0x60 ($C2:B053), zero the heroes velocities and obj+0x1D', 'V'),
     0x07: ('UNFREEZE', 1, 'clear bit 7 of $F1', 'C'),
     0x08: ('WAIT_IDLE', 1, 'state 0x85: wait until every actor of slots 3.. (and heroes) has its busy flag obj+0x42 clear', 'V'),
@@ -50,29 +50,29 @@ OPS = {
     **{o: ('GOTO_EVENT', 2, 'continue with event (op & 7) * 256 + arg; no return', 'V') for o in range(0x10, 0x18)},
     **{o: ('MAP_CHANGE', 2, 'start map transition (op & 3) * 256 + arg (index into $C8:3000); the script continues in the new map', 'V') for o in range(0x18, 0x1C)},
     0x1C: ('WARP', 2, 'event 0xC00 + arg (table $C6:7A80), then END', 'C'),
-    0x1D: ('MAP_CHANGE_D', 2, 'event 0xD00 + (arg & 0x3F) (table $C6:7C80 loader), sets $E3', 'C'),
+    0x1D: ('MAP_CHANGE_D', 2, 'event 0xD00 + (arg & 0x3F) (table $C6:7C80), bit 6 of arg sets bit 0 of $E3, fade-out and $FF = 0x81: the game enters the world-map mode (docs/cutscene-engine.md 13.3)', 'V'),
     0x1E: ('HERO_CMD', 2, 'JSL $C0:0051 with A = arg', 'C'),
     0x1F: ('PARTY_CMD', 2, 'arg 0-2 hero init, 3-4 set mode, 6 JSL $C0:000C, 7 JML $00:8004, 8-0xB JSL $C0:005A, 0xC, 0x10, other', 'C'),
     **{o: ('CALL_EVENT', 2, 'call event (op & 7) * 256 + arg, return address kept in $D6-$D8 (one level)', 'V') for o in range(0x20, 0x28)},
     0x28: ('WAIT', 2, 'arg 0: wait for a button (state 0x83, any of A X L R B Y); arg n: wait n VM ticks (state 0x82, $4F = n, decremented each tick)', 'V'),
     0x29: ('FLAG_INC', 2, 'event flag nibble $CF00+arg: +1 (capped at 15); arg 0 is special', 'V'),
     0x2A: ('FLAG_DEC', 2, 'event flag nibble $CF00+arg: -1 (floored at 0)', 'V'),
-    0x2B: ('ACTOR_CLONE', 2, 'object slot (arg & 15) is made active at the position of object $3A with obj+0x0B/0x4C/0x8E copied from $D4 and the facing reversed', 'C'),
-    0x2C: ('ACTOR_DELETE', 2, 'remove actor in slot (arg & 15) (obj+0 = 0x80), release its pad binding', 'C'),
+    0x2B: ('ACTOR_CLONE', 2, 'object slot (arg & 15) is made active at the position of object $3A with obj+0x0B/0x4C/0x8E copied from $D4 and the facing reversed', 'V'),
+    0x2C: ('ACTOR_DELETE', 2, 'remove actor in slot (arg & 15) (obj+0 = 0x80), release its pad binding', 'V'),
     0x2D: ('SCREEN', None, 'arg 0: start flash (colour math alternates every frame, bit 2 of $E2); arg 1: end flash; 2/3/4 set $49 = 0xE0/0x60/0; '
            '5, 6, 0x80-0x8F: palette fade (length 4: + word $010C); 7: fade stop; 8: camera re-centre on $D4 and wait ($E2 bit 3, state 0x86)', 'V'),
     0x2E: ('ACTOR_FX', 2, 'JSL $C0:0048 with Y = arg on the current NPC', 'C'),
-    0x2F: ('HERO_REFILL', 2, 'copy obj+0x184 to obj+0x182 (arg bit 7 clear) or obj+0x187 to obj+0x186 (bit 7 set) for the hero selected by arg & 0x3F (0 = $D4, 1-3 = hero, more = all three)', 'C'),
-    0x30: ('FLAG_SET', 3, 'event flag nibble $CF00+arg = byte 2', 'C'),
+    0x2F: ('HERO_REFILL', 2, 'copy obj+0x184 to obj+0x182 (arg bit 7 clear) or obj+0x187 to obj+0x186 (bit 7 set) for the hero selected by arg & 0x3F (0 = $D4, 1-3 = hero, more = all three)', 'V'),
+    0x30: ('FLAG_SET', 3, 'event flag nibble $CF00+arg = byte 2', 'V'),
     0x31: ('ACTOR_ANIM', 3, 'actor arg: stop it, obj+0x1C = 0x40, obj+0x11 = byte 2 (animation code), obj+0x30 = 0xFF, obj+0x42 = 1 (busy until the animation ends)', 'V'),
     0x32: ('ACTOR_WALK', 3, 'actor arg: obj+0x0A = byte2 & 0x3F frames, direction byte2 >> 6 (0 up, 1 down, 2 right, 3 left), speed 2 px/frame (obj+0x06/07), obj+0x42 = 1; byte2 & 0x3F = 0 stops it', 'V'),
     0x33: ('SET_0600', 3, '$0600 = byte2 * 256 + arg', 'C'),
     0x34: ('ACTOR_ANIM_LOOP', 3, 'like 31 but obj+0x1C = 0x30 and not busy', 'V'),
-    0x35: ('CALL_E326', 1, 'JSR $C1:E326', 'C'),
+    0x35: ('CALL_E326', 1, 'JSR $C1:E326', 'V'),
     0x36: ('OBJ_CMD', 3, 'JSL $C0:0057 with X = arg word', 'C'),
     0x37: ('OBJ_CMD', 3, 'same as 36', 'C'),
     0x38: ('IF_ACTOR', 2, 'if the slot of $D4 (= $D5 >> 1) equals arg continue after 2 bytes, else skip the next 2-byte command (total 4)', 'C'),
-    0x39: ('SET_FIELD_BYTE', 4, 'actor arg: obj[0x100 + byte2] = byte3', 'C'),
+    0x39: ('SET_FIELD_BYTE', 4, 'actor arg: obj[0x100 + byte2] = byte3', 'V'),
     0x3A: ('SET_WORD_40', 4, 'actor arg: obj+0x40 (word) = bytes 2-3', 'C'),
     0x3B: ('IF_PARTY', 2, 'test on the pad bindings $D9-$DB selected by arg; continue after 2 bytes or skip the next 2-byte command (exact test not decoded)', 'C'),
     0x3C: ('IF_PARTY_SIZE', 2, 'number of leading non-zero pad bindings $D9-$DB == arg: continue after 2 bytes, else skip the next 2-byte command', 'C'),
@@ -121,9 +121,16 @@ def op_len(rom, bank, addr):
     op = rom[o]
     if op >= 0x50:
         n = 0
-        while rom[o + n] >= 0x50:
-            n += 2 if rom[o + n] in (0x57, 0x59) else 1
-        return n
+        while True:
+            c = rom[o + n]
+            if c == 0x7D:                          # credits segment: runs through the first 0x7E, its bytes may be < 0x50
+                n += 1
+                while rom[o + n] != 0x7E: n += 1
+                n += 1
+            elif c >= 0x50:
+                n += 2 if c in (0x57, 0x59) else 1
+            else:
+                return n
     if op == 0x2D:
         a = rom[o + 1]
         return 4 if a in (5, 6) or 0x80 <= a < 0x90 else 2
@@ -158,7 +165,10 @@ def op_params(op, a):
     if op == 0x30: return dict(flag=a[0], value=a[1])
     if op == 0x32: return dict(actor=a[0], direction=('up', 'down', 'right', 'left')[a[1] >> 6], frames=a[1] & 0x3F)
     if op in (0x31, 0x34): return dict(actor=a[0], anim=a[1])
-    if op == 0x2D: return dict(arg=a[0])
+    if op == 0x2D:
+        r = dict(arg=a[0])
+        if a[0] in (5, 6) or 0x80 <= a[0] < 0x90: r['word'] = a[1] | a[2] << 8
+        return r
     if op == 0x40: return dict(cmd=a[0], id=a[1], word=a[2] | a[3] << 8)
     if op == 0x42: return dict(flag=a[0], lo=a[1] >> 4, hi=a[1] & 15)
     return {}

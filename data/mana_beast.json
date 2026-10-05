@@ -306,7 +306,7 @@
    "ticks": 103,
    "frames": 514,
    "next": [],
-   "exit": "B0>=0x1000 after the B2 and B0 spin-up: object removed, event 0x042D started"
+   "exit": "B0>=0x1000 after the B2 and B0 spin-up: object removed, the record's event started (0x042F in map 253; 0x042D with the map-246 record used by the harness)"
   },
   {
    "id": 20,

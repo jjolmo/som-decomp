@@ -34,7 +34,7 @@ Phase 0x14 (handler `$C2:977B`) has no store of 0x14 into `$94` anywhere in the 
 | ph | handler | duration | what it does | exit |
 |---|---|---|---|---|
 | 0 | 8F7B | 1 tick | `$00`=1, `$94`=8, `$0B`=2, matrix, creates the two helper objects (section 9) | immediately -> 8 |
-| 8 | 924B | 59 ticks (295 f, 4.91 s) | stands at (0x120,0x150), targetable | `$96`>=0x3C: pos (0x108,0x160), `$B0`=0, anim 0x114, vx 0x3000/65536 px/f, vy 0x8000/65536 px/f, motion routine 8FED, 4 palette-effect objects, sound request 0xD6 -> 1 |
+| 8 | 924B | 59 ticks (295 f, 4.91 s) | stands at its spawn position, targetable (the map record's `16 * tile`: (0x120, 0x120) in the real map 253, [V] `docs/cutscene-mana-beast-intro.md`; (0x120, 0x150) in the harness run of this document, which spawned the boss with the Dark Lich record of map 246) | `$96`>=0x3C: pos (0x108,0x160), `$B0`=0, anim 0x114, vx 0x3000/65536 px/f, vy 0x8000/65536 px/f, motion routine 8FED, 4 palette-effect objects, sound request 0xD6 -> 1 |
 | 1 | 8FB3 | 64 ticks (320 f, 5.32 s) | `$B0` += 0x20 per tick; motion 8FED every frame (x +11.3 px/s, y rises then falls: vy -14.1 px/s^2) | `$B0`>=0x800: `$00`=0, `$90`=0, `$B0`=0x200, anim 0x111 -> 2 |
 | 2 | 9027 | 9 ticks (45 f, 0.75 s) | anim 0x111 plays (moves about -26 px in x) | `$9E`==0: anim 0x112 -> 3 |
 | 3 | 904E | 60 ticks (300 f, 4.99 s) | waits at (0x128,0x138) | `$96`==0x3C: `$B0`=0x300, anim 0x116, palettes 0x62-0x65 into 4-7, sound 0xD6 -> 4 |
@@ -52,7 +52,7 @@ Phase 0x14 (handler `$C2:977B`) has no store of 0x14 into `$94` anywhere in the 
 | 0x11 | 964B | 12 ticks (60 f, 1.00 s) | waits at x=0x20 | `$96`>=0xC: same set-up as the end of phase 8 (pos (0x108,0x160), anim 0x114, 8FED, palette-effect objects) -> **1** |
 | 0x12 | 96A5 | 1 tick | waits for the boss `$60` low byte == 0 (end of a cast) | `$60`=0x20, the four palette objects set to palette 0x87, graphics 0x27, command 0x8B00 via `$C2:3963`, sound request 0xF0 -> 0x13 |
 | 0x13 | 96F8 | 52 ticks (260 f, 4.33 s) | every 4th tick an explosion object (`$C2:0C33`, random offsets), palette rotation each tick, sound request 0x15 about every 20 frames | tick `$96`==0x18: `JSL $C0:006F`; `$96`>=0x34: `$B0`=`$B2`=0x80, 4 palette effects, command 0x8A00 -> 0x10 |
-| 0x10 | 95BD | 103 ticks (514 f, 8.55 s) | `$B2` accelerates (`$BA` += 3 per tick, until `$B2`>=0x1000), then `$B0` accelerates (`$B8` += 3 per tick) | `$B0`>=0x1000: event 0x042D started, object removed (section 8) |
+| 0x10 | 95BD | 103 ticks (514 f, 8.55 s) | `$B2` accelerates (`$BA` += 3 per tick, until `$B2`>=0x1000), then `$B0` accelerates (`$B8` += 3 per tick) | `$B0`>=0x1000: the event of the map record started (0x042D with the record of map 246 used by the harness, **0x042F** with the real record of map 253), object removed (section 8) |
 | 0x14 | 977B | never entered | - | - |
 
 One lap (phase 1 to the next phase 1) is 64+9+60+32+12+60+33+9+(121 or 120)+240+17+9+13+12 = 691 or 690 ticks, about 3,450 frames = 57.4 s (seed 1: phase 1 at frames 3,876 and 7,326; seed 2: 3,881 and 7,336) [V]. Phase 0xB of the first lap lasts 1,330 frames because of the Wall cast pause (section 7); later laps 1,200 frames.
@@ -95,7 +95,7 @@ One lap (phase 1 to the next phase 1) is 64+9+60+32+12+60+33+9+(121 or 120)+240+
 
 - Damage path: pending HP damage `$1F1` is applied by `$C0:4004` through the generic tick `$C0:3A79` (called every tick from `$C2:0F2F`). It is applied in every phase whenever `$60` & 0xE0 == 0 (injected 3-point hits were applied in phases 8, 1, 2, 3, 4, 9, 0xA, 5, 0xE, 0xD, 0xB, 0xC, 0xF, 7, 0x11 [forced injection]); during the boss's own cast (`$60`=0xC0) and during its hurt state (`$60`=0x40, which is not cleared while `obj+0` is 0) the damage waits.
 - At HP 0 the generic code sets the dead bit (`$190` = 0x8000, i.e. `$191` bit 7) at once [forced: HP 5, pending 50]; the phase machine does not react immediately. **Only phase 0xB reads `$190`** (`BMI` at `$C2:9386`). A dead bit set at frame 500 (phase 3 [forced]) did not change anything until the next entry into phase 0xB (frame 2,291), where the boss went to phase 0x12 on the first tick, without casting.
-- With the dead bit set during a phase 0xB at frame 2,400 [forced]: phase 0x12 (after the running cast ended) -> 0x13 (52 ticks, 4.33 s) -> 0x10 (103 ticks, 8.55 s). Total from the first tick of phase 0x12 to the removal: 156 ticks, about 13 s. At the end `$C2:0C11` loads `obj+0x72` (= 0x042D from the loader) into the event runner `$C1:8000` (`JSL $018000`, A = 0x042D) after setting bit 7 of the first nonzero byte of `$D9-$DB`; the object returns carry set and the dispatcher frees the slot (`$C2:0E25`).
+- With the dead bit set during a phase 0xB at frame 2,400 [forced]: phase 0x12 (after the running cast ended) -> 0x13 (52 ticks, 4.33 s) -> 0x10 (103 ticks, 8.55 s). Total from the first tick of phase 0x12 to the removal: 156 ticks, about 13 s. At the end `$C2:0C11` loads `obj+0x72` (= the event word of the map record: 0x042D with the record of map 246 that the harness used; **0x042F** with the real record of map 253, where the VM's first step comes 3 frames after the removal, `docs/cutscene-ending.md` section 2) into the event runner `$C1:8000` (`JSL $018000`, A = that event) after setting bit 7 of the first nonzero byte of `$D9-$DB`; the object returns carry set and the dispatcher frees the slot (`$C2:0E25`).
 - `JSL $C0:006F` at tick 0x18 of phase 0x13 (executed): changes `$1D04` (0x00 -> 0x44), clears the 0x20-word buffer area at `$7E:9C2D-9DFD`, rewrites `$0381-$0386`, `$0A17C-$0A1D0`, `$0E144-$0E154`; its purpose is not determined.
 - The only other end of the Mana Beast object is this one. No flag write other than those listed was found in the phase code [C].
 
@@ -127,7 +127,7 @@ No. The map-object table entry of id 0x7F points to an ordinary monster script, 
 
 - What the mode-7-style variables look like on screen, and the purpose of `$02D5/$02D7`, `$0FAE`, `$00211A`.
 - Meaning of the sound requests (ids 0xD6, 0xF0, 0x15) and graphics requests (0x1F, 0x20, 0x27) and of the commands 0x8A00/0x8B00.
-- Contents of event 0x042D and of `JSL $C0:006F`; who reads `$1D14/$1D16` set by the slot-4 object.
+- Contents of event 0x042F: decoded and run in `docs/cutscene-ending.md`. `JSL $C0:006F`: who reads `$1D14/$1D16` set by the slot-4 object.
 - How a hostile hero spell interacts with the boss's Wall, and whether the spell reflection returns damage to the caster; the full hero-side damage numbers (only injected damage and boss-to-hero damage were executed).
 - Whether `$C2:93DD` (entries 1-4 of the spell table) is ever reached by a path through indirect jumps.
 - Why the hurt state `$60`=0x40 is cleared only while `obj+0` is 1 (code that clears it not located).

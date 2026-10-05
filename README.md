@@ -26,6 +26,7 @@ Python 3, standard library only.
 - `weapon_attacks.py`, `weapon_report.py`, `rip_weapon_anims.py`: the glove experiments generalised to the sword, axe and spear (real chooser, swings, gauge, charge, the 24 charged attacks per weapon, boxes, damage, spawned objects); `weapon_report.py` merges the runs into `data/weapons_melee.json` and prints tables; `rip_weapon_anims.py` rips the attack animations of any weapon type.
 - `ranged_attacks.py`, `ranged_sim.py`, `ranged_report.py`, `rip_ranged_anims.py`: the same experiments for the whip, bow, boomerang and javelin, plus the projectile engine (launch, flight per stage, hit model, piercing and return of the boomerang, hit mask); `ranged_report.py merge` builds `data/weapons_ranged.json`; the ripper also writes the projectiles in flight and the projectile sprites.
 - `event_vm.py`: the event (cutscene) virtual machine `$C1:E8D3`: opcode table and static event decoder (no text is printed), and a harness that sends the party through a map transition with the game's own loader and steps the real code frame by frame (VM, text engine, actors, camera, fades, sound requests) from a save state with the three heroes; `dark-lich` writes the Dark Lich arena timeline.
+- `event_runs.py`: the cutscenes around the Mana Beast on top of `event_vm.py`: `intro` (event 0x429: maps 255 and 253, from the entry until control returns with the fight running), `ending` (the death sequence, event 0x42F and the whole ending script 0x4FD until the game restarts); it adds 12 object slots, flag and screen-effect observers, palette-fade runs, the world-map-mode loop, a restart hook, snapshots, `decode2` (static listing that knows the staff-roll text segments) and the report builder (`report`, `md`).
 - `names.py`, `monster_stats.py`: local decoding helpers (names are decoded at run time and never stored).
 - `example_damage.py`: Monte-Carlo examples with the physical model (needs no ROM).
 - `gfx_decode.py`, `rip_hero_anims.py`, `hero_frames.py`, `compare_sheet.py`: sprite graphics. Tile, palette and OAM decoding with a PNG writer; a ripper that runs the hero attack code from a save state and records every drawn frame into an output directory outside the repository; a static decoder of the hero animation tables; a pixel comparison of the frames with a sprite sheet you provide.
@@ -40,6 +41,8 @@ Python 3, standard library only.
 - `mana-beast.md`: the Mana Beast (boss id 0x7F): tick rate, phase graph with durations and movement, scripted hits, spell AI, hit windows, death and end of the fight.
 - `cutscene-engine.md`: the event VM: clock (12.02 Hz steps from the frame body), event id spaces and tables, state bytes, opcode table with lengths and effects, text blocks, actor commands, fades/flash/camera, map change sequence, how events are started.
 - `cutscene-dark-lich.md`: the cutscene that plays when the party enters the Dark Lich rooms (maps 245/246): triggers, actors and coordinates at entry, the complete timeline (movements, speeds, animations, camera, fades, flash, music and sound ids, dialog blocks), the Lich spawn and release, dependencies on the party, open questions.
+- `cutscene-mana-beast-intro.md`: the scene that starts event 0x429 (flag 0x4E >= 8): map 255 (rumble, red tint, dialog), the change to the Mana Beast arena (map 253), the entry walk, the boss freeze, the four dialog blocks and the instant control returns (frame 3,088, 51.4 s); actors and coordinates at entry, sounds, screen effects, party dependencies, validation against a ZSNES state taken inside the scene.
+- `cutscene-ending.md`: the Mana Beast's death sequence (780 frames), event 0x42F and the ending script 0x4FD (25,973 frames, 7 min 12 s): party reset, the world-map-mode interlude, 17 maps with the staff roll (38 text blocks, address and length only), music and sound requests, fades, flags, and how the game ends (`PARTY_CMD` 0x11, a software restart through the reset path).
 - `rabite.md`: the Rabite (monster id 0): AI engine tick rate, script opcodes, target acquisition, the full behavior as a state machine in seconds, hit reaction, death.
 - `spells-non-damage.md`: the exact effect of the spells that do more than damage: value formula, buff and status timers in seconds, saber, cure, drain, Wall, Lucid Barrier, the weapon change of spells 20 and 23, Lunar Magic, per-level tables.
 - `hero-movement.md`: hero walking, running, charging and status speeds in pixels per second, diagonal and facing rules, wall collision box, party limit, knockback.
@@ -58,6 +61,7 @@ Gameplay-number tables dumped from the ROM (numbers only: no graphics, no text).
 - `weapons_melee.json`: measured timelines of the sword, axe and spear swings, gauge, charge and charged attacks for the three heroes.
 - `weapons_ranged.json`: measured timelines of the whip, bow, boomerang and javelin attacks, projectile paths, hit model checks and probes for the three heroes.
 - `cutscene_dark_lich.json`: the Dark Lich arena cutscene as measured by `tools/event_vm.py dark-lich`: VM commands with decoded operands, dialog block positions and lengths (no text), sound ids, per-actor movement segments, camera and fade segments, Lich spawn and release instants.
+- `cutscene_mana_beast_intro.json`, `cutscene_ending.json`: the Mana Beast intro and the ending as measured by `tools/event_runs.py`: VM commands with decoded operands, dialog block positions and lengths (no text), sound ids, per-actor movement segments (scripted and autonomous), camera, fades, palette fades, flags, boss phases, map loads with sizes and start tiles, the world-map-mode interval, variants by controlled hero and weapon type.
 - `spell_effects.json`: per-level constants and value ranges of the non-damage spells, validation counts, timer lifetimes; `hero_movement.json`: measured per-frame displacements for walking, running, charging, statuses, collisions and knockback.
 - Decoded from routines that were executed or read: `drops.json`, `item_effects.json` (measured by running the item routine), `weapon_levels.json`, `status_effects.json` (bit masks with the spells, weapon rows and attack rows that set them), `boss_records.json` (static decode plus engine runs).
 
@@ -73,7 +77,7 @@ python3 tools/lich_dump.py    /path/to/rom.sfc
 python3 tools/aidis.py        /path/to/rom.sfc 0 60 --text
 ```
 
-Tools that execute ROM routines also need a save state as the second argument. They read the WRAM of a ZSNES v143 save state (file offset 0xC13); the state must come from the same ROM and be taken during play with the party on a map (`event_vm.py` needs the three heroes and no event running). The boss tools (`boss_sim.py`, `lich_*.py`, `validate_boss_attacks.py`) need a state taken in the map-246 arena. For example:
+Tools that execute ROM routines also need a save state as the second argument. They read the WRAM of a ZSNES v143 save state (file offset 0xC13); the state must come from the same ROM and be taken during play with the party on a map (`event_vm.py` needs the three heroes and no event running). The boss tools (`boss_sim.py`, `lich_*.py`, `validate_boss_attacks.py`) need a state taken in the map-246 arena; `event_runs.py intro` and `ending` need a state in map 246 after the Dark Lich's post-fight event (event flag 0x4E = 8). For example:
 
 ```
 python3 tools/validate_phys.py /path/to/rom.sfc /path/to/state.zs2 800
@@ -81,6 +85,9 @@ python3 tools/boss_sim.py      /path/to/rom.sfc /path/to/arena.zs3 3000 1,2 79,7
 python3 tools/hero_stats.py    /path/to/rom.sfc /path/to/states/*.zs?
 python3 tools/event_vm.py      /path/to/rom.sfc decode 4E1             # static listing of an event script (text blocks as lengths only)
 python3 tools/event_vm.py      /path/to/rom.sfc /path/to/state.zs3 dark-lich out.json leader=0 md=1
+python3 tools/event_runs.py    /path/to/rom.sfc /path/to/state.zs3 intro  out.json leader=0 after=900   # needs a state in map 246 with flag 0x4E = 8
+python3 tools/event_runs.py    /path/to/rom.sfc /path/to/state.zs3 ending out.json leader=0 frames=150000  # about 10 minutes
+python3 tools/event_runs.py    /path/to/rom.sfc decode2 4FD                                           # ending script, static
 ```
 
 Per topic (`$R` = your ROM, `$S` = a save state taken during play on a map with the party):

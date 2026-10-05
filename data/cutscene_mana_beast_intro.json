@@ -1,0 +1,4493 @@
+{
+ "source": "tools/event_runs.py intro (real 65816 code stepped frame by frame; PPU/APU not emulated)",
+ "clock": {
+  "frame_hz": 60.0988,
+  "vm_tick_frames": 5,
+  "vm_hz": 12.02
+ },
+ "conditions": {
+  "start_event": "0x429",
+  "start_state_map": 246,
+  "flags": {
+   "4E": 8
+  },
+  "leader": 0,
+  "hero_weapon_types": [
+   4,
+   1,
+   3
+  ],
+  "completed": true,
+  "t0": "frame in which event 0x429 was started in the map-246 state (the VM first steps in frame 3)"
+ },
+ "summary": {
+  "total_frames": 3088,
+  "total_s": 51.382,
+  "vm_ops": 130,
+  "dialogs": 32,
+  "map_loads": [
+   {
+    "t": 0,
+    "map": 246
+   },
+   {
+    "t": 60,
+    "map": 255,
+    "start_tile_x": 21,
+    "start_tile_y": 13,
+    "header_b8": 4,
+    "map_size_px": [
+     1536,
+     1024
+    ],
+    "via": "MAP_CHANGE transition 59",
+    "via_op_t": 3
+   },
+   {
+    "t": 2464,
+    "map": 253,
+    "start_tile_x": 18,
+    "start_tile_y": 22,
+    "header_b8": 248,
+    "map_size_px": [
+     576,
+     576
+    ],
+    "via": "MAP_CHANGE transition 188",
+    "via_op_t": 2349
+   }
+  ],
+  "leader": 0,
+  "end_op_t": 3088
+ },
+ "initial_state": {
+  "D0": 0,
+  "F1": 0,
+  "D9": 1,
+  "E2": 0,
+  "E6": 15,
+  "E7": 15,
+  "E8": 0,
+  "FF": 0,
+  "P52": 0,
+  "P4E": 0,
+  "P5C": 0,
+  "D4": 0,
+  "E0": 159,
+  "X2A": 0,
+  "cf4e": 8,
+  "T1D04": 0,
+  "CFFF": 0,
+  "X49": 224,
+  "X5E": 0,
+  "X5F": 0,
+  "E3": 64,
+  "E4": 1,
+  "W10A": 0,
+  "W10C": 32767,
+  "B1057": 0,
+  "P1D00": 0,
+  "P48": 0,
+  "P4F": 0,
+  "P3A": 0,
+  "P1D4": 0,
+  "DA": 0,
+  "DB": 0,
+  "P95": 38,
+  "P23": 0,
+  "P22": 0,
+  "P21": 23
+ },
+ "entries": [
+  {
+   "map": 246,
+   "t": 0,
+   "objects": {
+    "hero0_boy": {
+     "id": 128,
+     "x": 261,
+     "y": 437,
+     "face": "left",
+     "face_code": 130
+    },
+    "hero1_girl": {
+     "id": 129,
+     "x": 261,
+     "y": 469,
+     "face": "up",
+     "face_code": 0
+    },
+    "hero2_sprite": {
+     "id": 130,
+     "x": 261,
+     "y": 435,
+     "face": "down",
+     "face_code": 1
+    }
+   }
+  },
+  {
+   "map": 255,
+   "t": 60,
+   "objects": {
+    "hero0_boy": {
+     "id": 128,
+     "x": 344,
+     "y": 218,
+     "face": "down",
+     "face_code": 1
+    },
+    "hero1_girl": {
+     "id": 129,
+     "x": 344,
+     "y": 218,
+     "face": "down",
+     "face_code": 1
+    },
+    "hero2_sprite": {
+     "id": 130,
+     "x": 344,
+     "y": 218,
+     "face": "down",
+     "face_code": 1
+    }
+   }
+  },
+  {
+   "map": 253,
+   "t": 2464,
+   "objects": {
+    "hero0_boy": {
+     "id": 128,
+     "x": 296,
+     "y": 472,
+     "face": "up",
+     "face_code": 0
+    },
+    "hero1_girl": {
+     "id": 129,
+     "x": 296,
+     "y": 472,
+     "face": "up",
+     "face_code": 0
+    },
+    "hero2_sprite": {
+     "id": 130,
+     "x": 296,
+     "y": 472,
+     "face": "up",
+     "face_code": 0
+    },
+    "slot3": {
+     "id": 127,
+     "x": 0,
+     "y": 0,
+     "face": "down",
+     "face_code": 1,
+     "engine_x": 288,
+     "engine_y": 288,
+     "phase94": 0,
+     "flags98": "0x180D"
+    },
+    "slot6": {
+     "id": 0,
+     "x": 0,
+     "y": 0,
+     "face": "up",
+     "face_code": 0
+    }
+   }
+  }
+ ],
+ "vm": [
+  {
+   "t": 3,
+   "s": 0.05,
+   "event": "0x429",
+   "offset": 0,
+   "addr": "CA:0FC9",
+   "op": "42",
+   "name": "IF_FLAG_RANGE",
+   "d0": 1,
+   "params": {
+    "flag": 78,
+    "lo": 0,
+    "hi": 7
+   },
+   "length": 3
+  },
+  {
+   "t": 3,
+   "s": 0.05,
+   "event": "0x429",
+   "offset": 5,
+   "addr": "CA:0FCE",
+   "op": "18",
+   "name": "MAP_CHANGE",
+   "d0": 1,
+   "params": {
+    "transition": 59
+   },
+   "length": 2
+  },
+  {
+   "t": 79,
+   "s": 1.315,
+   "event": "0x429",
+   "offset": 7,
+   "addr": "CA:0FD0",
+   "op": "24",
+   "name": "CALL_EVENT",
+   "d0": 1,
+   "params": {
+    "target_event": 1148
+   },
+   "length": 2
+  },
+  {
+   "t": 79,
+   "s": 1.315,
+   "event": "0x47C",
+   "offset": 0,
+   "addr": "CA:1674",
+   "op": "06",
+   "name": "FREEZE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 84,
+   "s": 1.398,
+   "event": "0x47C",
+   "offset": 1,
+   "addr": "CA:1675",
+   "op": "03",
+   "name": "GATHER",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 89,
+   "s": 1.481,
+   "event": "0x47C",
+   "offset": 2,
+   "addr": "CA:1676",
+   "op": "2D",
+   "name": "SCREEN",
+   "d0": 1,
+   "params": {
+    "arg": 8
+   },
+   "length": 2
+  },
+  {
+   "t": 99,
+   "s": 1.647,
+   "event": "0x47C",
+   "offset": 4,
+   "addr": "CA:1678",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 1,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 99,
+   "s": 1.647,
+   "event": "0x47C",
+   "offset": 7,
+   "addr": "CA:167B",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "left",
+    "frames": 8
+   },
+   "length": 3
+  },
+  {
+   "t": 99,
+   "s": 1.647,
+   "event": "0x47C",
+   "offset": 10,
+   "addr": "CA:167E",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "right",
+    "frames": 8
+   },
+   "length": 3
+  },
+  {
+   "t": 99,
+   "s": 1.647,
+   "event": "0x47C",
+   "offset": 13,
+   "addr": "CA:1681",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 109,
+   "s": 1.814,
+   "event": "0x47C",
+   "offset": 14,
+   "addr": "CA:1682",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 1,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 109,
+   "s": 1.814,
+   "event": "0x47C",
+   "offset": 17,
+   "addr": "CA:1685",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 109,
+   "s": 1.814,
+   "event": "0x47C",
+   "offset": 20,
+   "addr": "CA:1688",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 109,
+   "s": 1.814,
+   "event": "0x47C",
+   "offset": 23,
+   "addr": "CA:168B",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 114,
+   "s": 1.897,
+   "event": "0x47C",
+   "offset": 24,
+   "addr": "CA:168C",
+   "op": "02",
+   "name": "RETURN",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 114,
+   "s": 1.897,
+   "event": "0x429",
+   "offset": 9,
+   "addr": "CA:0FD2",
+   "op": "27",
+   "name": "CALL_EVENT",
+   "d0": 1,
+   "params": {
+    "target_event": 1847
+   },
+   "length": 2
+  },
+  {
+   "t": 114,
+   "s": 1.897,
+   "event": "0x737",
+   "offset": 0,
+   "addr": "CA:942E",
+   "op": "40",
+   "name": "SOUND",
+   "d0": 1,
+   "params": {
+    "cmd": 1,
+    "id": 55,
+    "word": 36626
+   },
+   "length": 5
+  },
+  {
+   "t": 119,
+   "s": 1.98,
+   "event": "0x737",
+   "offset": 5,
+   "addr": "CA:9433",
+   "op": "02",
+   "name": "RETURN",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 119,
+   "s": 1.98,
+   "event": "0x429",
+   "offset": 11,
+   "addr": "CA:0FD4",
+   "op": "2D",
+   "name": "SCREEN",
+   "d0": 1,
+   "params": {
+    "arg": 6,
+    "word": 16
+   },
+   "length": 4
+  },
+  {
+   "t": 124,
+   "s": 2.063,
+   "event": "0x429",
+   "offset": 15,
+   "addr": "CA:0FD8",
+   "op": "2D",
+   "name": "SCREEN",
+   "d0": 1,
+   "params": {
+    "arg": 2
+   },
+   "length": 2
+  },
+  {
+   "t": 124,
+   "s": 2.063,
+   "event": "0x429",
+   "offset": 17,
+   "addr": "CA:0FDA",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 8,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 164,
+   "s": 2.729,
+   "event": "0x429",
+   "offset": 19,
+   "addr": "CA:0FDC",
+   "op": "2D",
+   "name": "SCREEN",
+   "d0": 1,
+   "params": {
+    "arg": 3
+   },
+   "length": 2
+  },
+  {
+   "t": 164,
+   "s": 2.729,
+   "event": "0x429",
+   "offset": 21,
+   "addr": "CA:0FDE",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 16,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 244,
+   "s": 4.06,
+   "event": "0x429",
+   "offset": 23,
+   "addr": "CA:0FE0",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 45
+  },
+  {
+   "t": 324,
+   "s": 5.391,
+   "event": "0x429",
+   "offset": 68,
+   "addr": "CA:100D",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 329,
+   "s": 5.474,
+   "event": "0x429",
+   "offset": 70,
+   "addr": "CA:100F",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 46
+  },
+  {
+   "t": 394,
+   "s": 6.556,
+   "event": "0x429",
+   "offset": 116,
+   "addr": "CA:103D",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 399,
+   "s": 6.639,
+   "event": "0x429",
+   "offset": 118,
+   "addr": "CA:103F",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 50
+  },
+  {
+   "t": 469,
+   "s": 7.804,
+   "event": "0x429",
+   "offset": 168,
+   "addr": "CA:1071",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 474,
+   "s": 7.887,
+   "event": "0x429",
+   "offset": 170,
+   "addr": "CA:1073",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 1
+  },
+  {
+   "t": 489,
+   "s": 8.137,
+   "event": "0x429",
+   "offset": 171,
+   "addr": "CA:1074",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "up",
+    "frames": 16
+   },
+   "length": 3
+  },
+  {
+   "t": 489,
+   "s": 8.137,
+   "event": "0x429",
+   "offset": 174,
+   "addr": "CA:1077",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "up",
+    "frames": 16
+   },
+   "length": 3
+  },
+  {
+   "t": 489,
+   "s": 8.137,
+   "event": "0x429",
+   "offset": 177,
+   "addr": "CA:107A",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 509,
+   "s": 8.469,
+   "event": "0x429",
+   "offset": 178,
+   "addr": "CA:107B",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 8,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 549,
+   "s": 9.135,
+   "event": "0x429",
+   "offset": 180,
+   "addr": "CA:107D",
+   "op": "20",
+   "name": "CALL_EVENT",
+   "d0": 1,
+   "params": {
+    "target_event": 83
+   },
+   "length": 2
+  },
+  {
+   "t": 549,
+   "s": 9.135,
+   "event": "0x053",
+   "offset": 0,
+   "addr": "C9:10E6",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 1,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 549,
+   "s": 9.135,
+   "event": "0x053",
+   "offset": 3,
+   "addr": "C9:10E9",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 549,
+   "s": 9.135,
+   "event": "0x053",
+   "offset": 6,
+   "addr": "C9:10EC",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 549,
+   "s": 9.135,
+   "event": "0x053",
+   "offset": 9,
+   "addr": "C9:10EF",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 554,
+   "s": 9.218,
+   "event": "0x053",
+   "offset": 10,
+   "addr": "C9:10F0",
+   "op": "02",
+   "name": "RETURN",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 554,
+   "s": 9.218,
+   "event": "0x429",
+   "offset": 182,
+   "addr": "CA:107F",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 19
+  },
+  {
+   "t": 599,
+   "s": 9.967,
+   "event": "0x429",
+   "offset": 201,
+   "addr": "CA:1092",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 604,
+   "s": 10.05,
+   "event": "0x429",
+   "offset": 203,
+   "addr": "CA:1094",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 1
+  },
+  {
+   "t": 609,
+   "s": 10.133,
+   "event": "0x429",
+   "offset": 204,
+   "addr": "CA:1095",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 1,
+    "direction": "up",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 609,
+   "s": 10.133,
+   "event": "0x429",
+   "offset": 207,
+   "addr": "CA:1098",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 614,
+   "s": 10.217,
+   "event": "0x429",
+   "offset": 208,
+   "addr": "CA:1099",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 54
+  },
+  {
+   "t": 689,
+   "s": 11.464,
+   "event": "0x429",
+   "offset": 262,
+   "addr": "CA:10CF",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 694,
+   "s": 11.548,
+   "event": "0x429",
+   "offset": 264,
+   "addr": "CA:10D1",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 40
+  },
+  {
+   "t": 754,
+   "s": 12.546,
+   "event": "0x429",
+   "offset": 304,
+   "addr": "CA:10F9",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 759,
+   "s": 12.629,
+   "event": "0x429",
+   "offset": 306,
+   "addr": "CA:10FB",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 8
+  },
+  {
+   "t": 779,
+   "s": 12.962,
+   "event": "0x429",
+   "offset": 314,
+   "addr": "CA:1103",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 16,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 859,
+   "s": 14.293,
+   "event": "0x429",
+   "offset": 316,
+   "addr": "CA:1105",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 60
+  },
+  {
+   "t": 944,
+   "s": 15.707,
+   "event": "0x429",
+   "offset": 376,
+   "addr": "CA:1141",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 949,
+   "s": 15.791,
+   "event": "0x429",
+   "offset": 378,
+   "addr": "CA:1143",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 1
+  },
+  {
+   "t": 954,
+   "s": 15.874,
+   "event": "0x429",
+   "offset": 379,
+   "addr": "CA:1144",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "right",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 954,
+   "s": 15.874,
+   "event": "0x429",
+   "offset": 382,
+   "addr": "CA:1147",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 9
+  },
+  {
+   "t": 979,
+   "s": 16.29,
+   "event": "0x429",
+   "offset": 391,
+   "addr": "CA:1150",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "up",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 979,
+   "s": 16.29,
+   "event": "0x429",
+   "offset": 394,
+   "addr": "CA:1153",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 984,
+   "s": 16.373,
+   "event": "0x429",
+   "offset": 396,
+   "addr": "CA:1155",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 44
+  },
+  {
+   "t": 1049,
+   "s": 17.455,
+   "event": "0x429",
+   "offset": 440,
+   "addr": "CA:1181",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 1,
+    "direction": "up",
+    "frames": 8
+   },
+   "length": 3
+  },
+  {
+   "t": 1049,
+   "s": 17.455,
+   "event": "0x429",
+   "offset": 443,
+   "addr": "CA:1184",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 1059,
+   "s": 17.621,
+   "event": "0x429",
+   "offset": 444,
+   "addr": "CA:1185",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1064,
+   "s": 17.704,
+   "event": "0x429",
+   "offset": 446,
+   "addr": "CA:1187",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 7
+  },
+  {
+   "t": 1089,
+   "s": 18.12,
+   "event": "0x429",
+   "offset": 453,
+   "addr": "CA:118E",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 32,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 1249,
+   "s": 20.782,
+   "event": "0x429",
+   "offset": 455,
+   "addr": "CA:1190",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 4
+  },
+  {
+   "t": 1264,
+   "s": 21.032,
+   "event": "0x429",
+   "offset": 459,
+   "addr": "CA:1194",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 1264,
+   "s": 21.032,
+   "event": "0x429",
+   "offset": 462,
+   "addr": "CA:1197",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 1269,
+   "s": 21.115,
+   "event": "0x429",
+   "offset": 463,
+   "addr": "CA:1198",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 47
+  },
+  {
+   "t": 1334,
+   "s": 22.197,
+   "event": "0x429",
+   "offset": 510,
+   "addr": "CA:11C7",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1339,
+   "s": 22.28,
+   "event": "0x429",
+   "offset": 512,
+   "addr": "CA:11C9",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 78
+  },
+  {
+   "t": 1444,
+   "s": 24.027,
+   "event": "0x429",
+   "offset": 590,
+   "addr": "CA:1217",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1449,
+   "s": 24.11,
+   "event": "0x429",
+   "offset": 592,
+   "addr": "CA:1219",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 72
+  },
+  {
+   "t": 1554,
+   "s": 25.857,
+   "event": "0x429",
+   "offset": 664,
+   "addr": "CA:1261",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1559,
+   "s": 25.941,
+   "event": "0x429",
+   "offset": 666,
+   "addr": "CA:1263",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 75
+  },
+  {
+   "t": 1664,
+   "s": 27.688,
+   "event": "0x429",
+   "offset": 741,
+   "addr": "CA:12AE",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1669,
+   "s": 27.771,
+   "event": "0x429",
+   "offset": 743,
+   "addr": "CA:12B0",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 1
+  },
+  {
+   "t": 1674,
+   "s": 27.854,
+   "event": "0x429",
+   "offset": 744,
+   "addr": "CA:12B1",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "down",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 1674,
+   "s": 27.854,
+   "event": "0x429",
+   "offset": 747,
+   "addr": "CA:12B4",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 1679,
+   "s": 27.937,
+   "event": "0x429",
+   "offset": 748,
+   "addr": "CA:12B5",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 74
+  },
+  {
+   "t": 1779,
+   "s": 29.601,
+   "event": "0x429",
+   "offset": 822,
+   "addr": "CA:12FF",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1784,
+   "s": 29.684,
+   "event": "0x429",
+   "offset": 824,
+   "addr": "CA:1301",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 70
+  },
+  {
+   "t": 1884,
+   "s": 31.348,
+   "event": "0x429",
+   "offset": 894,
+   "addr": "CA:1347",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1889,
+   "s": 31.432,
+   "event": "0x429",
+   "offset": 896,
+   "addr": "CA:1349",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 16
+  },
+  {
+   "t": 1924,
+   "s": 32.014,
+   "event": "0x429",
+   "offset": 912,
+   "addr": "CA:1359",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1929,
+   "s": 32.097,
+   "event": "0x429",
+   "offset": 914,
+   "addr": "CA:135B",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 17
+  },
+  {
+   "t": 1959,
+   "s": 32.596,
+   "event": "0x429",
+   "offset": 931,
+   "addr": "CA:136C",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 1964,
+   "s": 32.68,
+   "event": "0x429",
+   "offset": 933,
+   "addr": "CA:136E",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 1
+  },
+  {
+   "t": 1969,
+   "s": 32.763,
+   "event": "0x429",
+   "offset": 934,
+   "addr": "CA:136F",
+   "op": "20",
+   "name": "CALL_EVENT",
+   "d0": 1,
+   "params": {
+    "target_event": 90
+   },
+   "length": 2
+  },
+  {
+   "t": 1969,
+   "s": 32.763,
+   "event": "0x05A",
+   "offset": 0,
+   "addr": "C9:1136",
+   "op": "31",
+   "name": "ACTOR_ANIM",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "anim": 168
+   },
+   "length": 3
+  },
+  {
+   "t": 1969,
+   "s": 32.763,
+   "event": "0x05A",
+   "offset": 3,
+   "addr": "C9:1139",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 1994,
+   "s": 33.179,
+   "event": "0x05A",
+   "offset": 4,
+   "addr": "C9:113A",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 8,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 2034,
+   "s": 33.844,
+   "event": "0x05A",
+   "offset": 6,
+   "addr": "C9:113C",
+   "op": "02",
+   "name": "RETURN",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2034,
+   "s": 33.844,
+   "event": "0x429",
+   "offset": 936,
+   "addr": "CA:1371",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 14
+  },
+  {
+   "t": 2059,
+   "s": 34.26,
+   "event": "0x429",
+   "offset": 950,
+   "addr": "CA:137F",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "left",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 2059,
+   "s": 34.26,
+   "event": "0x429",
+   "offset": 953,
+   "addr": "CA:1382",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2064,
+   "s": 34.343,
+   "event": "0x429",
+   "offset": 954,
+   "addr": "CA:1383",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 11
+  },
+  {
+   "t": 2089,
+   "s": 34.759,
+   "event": "0x429",
+   "offset": 965,
+   "addr": "CA:138E",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "right",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 2089,
+   "s": 34.759,
+   "event": "0x429",
+   "offset": 968,
+   "addr": "CA:1391",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2094,
+   "s": 34.843,
+   "event": "0x429",
+   "offset": 969,
+   "addr": "CA:1392",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 32,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 2254,
+   "s": 37.505,
+   "event": "0x429",
+   "offset": 971,
+   "addr": "CA:1394",
+   "op": "20",
+   "name": "CALL_EVENT",
+   "d0": 1,
+   "params": {
+    "target_event": 89
+   },
+   "length": 2
+  },
+  {
+   "t": 2254,
+   "s": 37.505,
+   "event": "0x059",
+   "offset": 0,
+   "addr": "C9:112E",
+   "op": "31",
+   "name": "ACTOR_ANIM",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "anim": 168
+   },
+   "length": 3
+  },
+  {
+   "t": 2254,
+   "s": 37.505,
+   "event": "0x059",
+   "offset": 3,
+   "addr": "C9:1131",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2279,
+   "s": 37.921,
+   "event": "0x059",
+   "offset": 4,
+   "addr": "C9:1132",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 8,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 2319,
+   "s": 38.586,
+   "event": "0x059",
+   "offset": 6,
+   "addr": "C9:1134",
+   "op": "02",
+   "name": "RETURN",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2319,
+   "s": 38.586,
+   "event": "0x429",
+   "offset": 973,
+   "addr": "CA:1396",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 0,
+    "wait_press": true
+   },
+   "length": 2
+  },
+  {
+   "t": 2324,
+   "s": 38.67,
+   "event": "0x429",
+   "offset": 975,
+   "addr": "CA:1398",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 1
+  },
+  {
+   "t": 2339,
+   "s": 38.919,
+   "event": "0x429",
+   "offset": 976,
+   "addr": "CA:1399",
+   "op": "2D",
+   "name": "SCREEN",
+   "d0": 1,
+   "params": {
+    "arg": 6,
+    "word": 65535
+   },
+   "length": 4
+  },
+  {
+   "t": 2344,
+   "s": 39.002,
+   "event": "0x429",
+   "offset": 980,
+   "addr": "CA:139D",
+   "op": "27",
+   "name": "CALL_EVENT",
+   "d0": 1,
+   "params": {
+    "target_event": 1849
+   },
+   "length": 2
+  },
+  {
+   "t": 2344,
+   "s": 39.002,
+   "event": "0x739",
+   "offset": 0,
+   "addr": "CA:943C",
+   "op": "40",
+   "name": "SOUND",
+   "d0": 1,
+   "params": {
+    "cmd": 1,
+    "id": 57,
+    "word": 65300
+   },
+   "length": 5
+  },
+  {
+   "t": 2349,
+   "s": 39.086,
+   "event": "0x739",
+   "offset": 5,
+   "addr": "CA:9441",
+   "op": "02",
+   "name": "RETURN",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2349,
+   "s": 39.086,
+   "event": "0x429",
+   "offset": 982,
+   "addr": "CA:139F",
+   "op": "18",
+   "name": "MAP_CHANGE",
+   "d0": 1,
+   "params": {
+    "transition": 188
+   },
+   "length": 2
+  },
+  {
+   "t": 2503,
+   "s": 41.648,
+   "event": "0x429",
+   "offset": 984,
+   "addr": "CA:13A1",
+   "op": "29",
+   "name": "FLAG_INC",
+   "d0": 1,
+   "params": {
+    "flag": 255
+   },
+   "length": 2
+  },
+  {
+   "t": 2503,
+   "s": 41.648,
+   "event": "0x429",
+   "offset": 986,
+   "addr": "CA:13A3",
+   "op": "30",
+   "name": "FLAG_SET",
+   "d0": 1,
+   "params": {
+    "flag": 11,
+    "value": 15
+   },
+   "length": 3
+  },
+  {
+   "t": 2508,
+   "s": 41.731,
+   "event": "0x429",
+   "offset": 989,
+   "addr": "CA:13A6",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 1,
+    "direction": "up",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 2508,
+   "s": 41.731,
+   "event": "0x429",
+   "offset": 992,
+   "addr": "CA:13A9",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "left",
+    "frames": 8
+   },
+   "length": 3
+  },
+  {
+   "t": 2508,
+   "s": 41.731,
+   "event": "0x429",
+   "offset": 995,
+   "addr": "CA:13AC",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "right",
+    "frames": 8
+   },
+   "length": 3
+  },
+  {
+   "t": 2508,
+   "s": 41.731,
+   "event": "0x429",
+   "offset": 998,
+   "addr": "CA:13AF",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2518,
+   "s": 41.898,
+   "event": "0x429",
+   "offset": 999,
+   "addr": "CA:13B0",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 1,
+    "direction": "up",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 2518,
+   "s": 41.898,
+   "event": "0x429",
+   "offset": 1002,
+   "addr": "CA:13B3",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 2,
+    "direction": "up",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 2518,
+   "s": 41.898,
+   "event": "0x429",
+   "offset": 1005,
+   "addr": "CA:13B6",
+   "op": "32",
+   "name": "ACTOR_WALK",
+   "d0": 1,
+   "params": {
+    "actor": 3,
+    "direction": "up",
+    "frames": 0
+   },
+   "length": 3
+  },
+  {
+   "t": 2518,
+   "s": 41.898,
+   "event": "0x429",
+   "offset": 1008,
+   "addr": "CA:13B9",
+   "op": "08",
+   "name": "WAIT_IDLE",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  },
+  {
+   "t": 2523,
+   "s": 41.981,
+   "event": "0x429",
+   "offset": 1009,
+   "addr": "CA:13BA",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 19
+  },
+  {
+   "t": 2548,
+   "s": 42.397,
+   "event": "0x429",
+   "offset": 1028,
+   "addr": "CA:13CD",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 32,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 2708,
+   "s": 45.059,
+   "event": "0x429",
+   "offset": 1030,
+   "addr": "CA:13CF",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 29
+  },
+  {
+   "t": 2743,
+   "s": 45.642,
+   "event": "0x429",
+   "offset": 1059,
+   "addr": "CA:13EC",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 32,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 2903,
+   "s": 48.304,
+   "event": "0x429",
+   "offset": 1061,
+   "addr": "CA:13EE",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 24
+  },
+  {
+   "t": 2923,
+   "s": 48.637,
+   "event": "0x429",
+   "offset": 1085,
+   "addr": "CA:1406",
+   "op": "28",
+   "name": "WAIT",
+   "d0": 1,
+   "params": {
+    "ticks": 32,
+    "wait_press": false
+   },
+   "length": 2
+  },
+  {
+   "t": 3083,
+   "s": 51.299,
+   "event": "0x429",
+   "offset": 1087,
+   "addr": "CA:1408",
+   "op": "TEXT",
+   "name": "TEXT",
+   "d0": 1,
+   "bytes": 1
+  },
+  {
+   "t": 3088,
+   "s": 51.382,
+   "event": "0x429",
+   "offset": 1088,
+   "addr": "CA:1409",
+   "op": "2A",
+   "name": "FLAG_DEC",
+   "d0": 1,
+   "params": {
+    "flag": 255
+   },
+   "length": 2
+  },
+  {
+   "t": 3088,
+   "s": 51.382,
+   "event": "0x429",
+   "offset": 1090,
+   "addr": "CA:140B",
+   "op": "00",
+   "name": "END",
+   "d0": 1,
+   "params": {},
+   "length": 1
+  }
+ ],
+ "dialogs": [
+  {
+   "n": 1,
+   "event": "0x429",
+   "offset": 23,
+   "addr": "CA:0FE0",
+   "bytes": 45,
+   "bytes_engine": 45,
+   "t_start": 244,
+   "s_start": 4.06,
+   "t_end": 324,
+   "frames": 80,
+   "credits_block": false
+  },
+  {
+   "n": 2,
+   "event": "0x429",
+   "offset": 70,
+   "addr": "CA:100F",
+   "bytes": 46,
+   "bytes_engine": 46,
+   "t_start": 329,
+   "s_start": 5.474,
+   "t_end": 394,
+   "frames": 65,
+   "credits_block": false
+  },
+  {
+   "n": 3,
+   "event": "0x429",
+   "offset": 118,
+   "addr": "CA:103F",
+   "bytes": 50,
+   "bytes_engine": 50,
+   "t_start": 399,
+   "s_start": 6.639,
+   "t_end": 469,
+   "frames": 70,
+   "credits_block": false
+  },
+  {
+   "n": 4,
+   "event": "0x429",
+   "offset": 170,
+   "addr": "CA:1073",
+   "bytes": 1,
+   "bytes_engine": 1,
+   "t_start": 474,
+   "s_start": 7.887,
+   "t_end": 489,
+   "frames": 15,
+   "credits_block": false
+  },
+  {
+   "n": 5,
+   "event": "0x429",
+   "offset": 182,
+   "addr": "CA:107F",
+   "bytes": 19,
+   "bytes_engine": 19,
+   "t_start": 554,
+   "s_start": 9.218,
+   "t_end": 599,
+   "frames": 45,
+   "credits_block": false
+  },
+  {
+   "n": 6,
+   "event": "0x429",
+   "offset": 203,
+   "addr": "CA:1094",
+   "bytes": 1,
+   "bytes_engine": 1,
+   "t_start": 604,
+   "s_start": 10.05,
+   "t_end": 609,
+   "frames": 5,
+   "credits_block": false
+  },
+  {
+   "n": 7,
+   "event": "0x429",
+   "offset": 208,
+   "addr": "CA:1099",
+   "bytes": 54,
+   "bytes_engine": 54,
+   "t_start": 614,
+   "s_start": 10.217,
+   "t_end": 689,
+   "frames": 75,
+   "credits_block": false
+  },
+  {
+   "n": 8,
+   "event": "0x429",
+   "offset": 264,
+   "addr": "CA:10D1",
+   "bytes": 40,
+   "bytes_engine": 40,
+   "t_start": 694,
+   "s_start": 11.548,
+   "t_end": 754,
+   "frames": 60,
+   "credits_block": false
+  },
+  {
+   "n": 9,
+   "event": "0x429",
+   "offset": 306,
+   "addr": "CA:10FB",
+   "bytes": 8,
+   "bytes_engine": 8,
+   "t_start": 759,
+   "s_start": 12.629,
+   "t_end": 779,
+   "frames": 20,
+   "credits_block": false
+  },
+  {
+   "n": 10,
+   "event": "0x429",
+   "offset": 316,
+   "addr": "CA:1105",
+   "bytes": 60,
+   "bytes_engine": 60,
+   "t_start": 859,
+   "s_start": 14.293,
+   "t_end": 944,
+   "frames": 85,
+   "credits_block": false
+  },
+  {
+   "n": 11,
+   "event": "0x429",
+   "offset": 378,
+   "addr": "CA:1143",
+   "bytes": 1,
+   "bytes_engine": 1,
+   "t_start": 949,
+   "s_start": 15.791,
+   "t_end": 954,
+   "frames": 5,
+   "credits_block": false
+  },
+  {
+   "n": 12,
+   "event": "0x429",
+   "offset": 382,
+   "addr": "CA:1147",
+   "bytes": 9,
+   "bytes_engine": 9,
+   "t_start": 954,
+   "s_start": 15.874,
+   "t_end": 979,
+   "frames": 25,
+   "credits_block": false
+  },
+  {
+   "n": 13,
+   "event": "0x429",
+   "offset": 396,
+   "addr": "CA:1155",
+   "bytes": 44,
+   "bytes_engine": 44,
+   "t_start": 984,
+   "s_start": 16.373,
+   "t_end": 1049,
+   "frames": 65,
+   "credits_block": false
+  },
+  {
+   "n": 14,
+   "event": "0x429",
+   "offset": 446,
+   "addr": "CA:1187",
+   "bytes": 7,
+   "bytes_engine": 7,
+   "t_start": 1064,
+   "s_start": 17.704,
+   "t_end": 1089,
+   "frames": 25,
+   "credits_block": false
+  },
+  {
+   "n": 15,
+   "event": "0x429",
+   "offset": 455,
+   "addr": "CA:1190",
+   "bytes": 4,
+   "bytes_engine": 4,
+   "t_start": 1249,
+   "s_start": 20.782,
+   "t_end": 1264,
+   "frames": 15,
+   "credits_block": false
+  },
+  {
+   "n": 16,
+   "event": "0x429",
+   "offset": 463,
+   "addr": "CA:1198",
+   "bytes": 47,
+   "bytes_engine": 47,
+   "t_start": 1269,
+   "s_start": 21.115,
+   "t_end": 1334,
+   "frames": 65,
+   "credits_block": false
+  },
+  {
+   "n": 17,
+   "event": "0x429",
+   "offset": 512,
+   "addr": "CA:11C9",
+   "bytes": 78,
+   "bytes_engine": 78,
+   "t_start": 1339,
+   "s_start": 22.28,
+   "t_end": 1444,
+   "frames": 105,
+   "credits_block": false
+  },
+  {
+   "n": 18,
+   "event": "0x429",
+   "offset": 592,
+   "addr": "CA:1219",
+   "bytes": 72,
+   "bytes_engine": 72,
+   "t_start": 1449,
+   "s_start": 24.11,
+   "t_end": 1554,
+   "frames": 105,
+   "credits_block": false
+  },
+  {
+   "n": 19,
+   "event": "0x429",
+   "offset": 666,
+   "addr": "CA:1263",
+   "bytes": 75,
+   "bytes_engine": 75,
+   "t_start": 1559,
+   "s_start": 25.941,
+   "t_end": 1664,
+   "frames": 105,
+   "credits_block": false
+  },
+  {
+   "n": 20,
+   "event": "0x429",
+   "offset": 743,
+   "addr": "CA:12B0",
+   "bytes": 1,
+   "bytes_engine": 1,
+   "t_start": 1669,
+   "s_start": 27.771,
+   "t_end": 1674,
+   "frames": 5,
+   "credits_block": false
+  },
+  {
+   "n": 21,
+   "event": "0x429",
+   "offset": 748,
+   "addr": "CA:12B5",
+   "bytes": 74,
+   "bytes_engine": 74,
+   "t_start": 1679,
+   "s_start": 27.937,
+   "t_end": 1779,
+   "frames": 100,
+   "credits_block": false
+  },
+  {
+   "n": 22,
+   "event": "0x429",
+   "offset": 824,
+   "addr": "CA:1301",
+   "bytes": 70,
+   "bytes_engine": 70,
+   "t_start": 1784,
+   "s_start": 29.684,
+   "t_end": 1884,
+   "frames": 100,
+   "credits_block": false
+  },
+  {
+   "n": 23,
+   "event": "0x429",
+   "offset": 896,
+   "addr": "CA:1349",
+   "bytes": 16,
+   "bytes_engine": 16,
+   "t_start": 1889,
+   "s_start": 31.432,
+   "t_end": 1924,
+   "frames": 35,
+   "credits_block": false
+  },
+  {
+   "n": 24,
+   "event": "0x429",
+   "offset": 914,
+   "addr": "CA:135B",
+   "bytes": 17,
+   "bytes_engine": 17,
+   "t_start": 1929,
+   "s_start": 32.097,
+   "t_end": 1959,
+   "frames": 30,
+   "credits_block": false
+  },
+  {
+   "n": 25,
+   "event": "0x429",
+   "offset": 933,
+   "addr": "CA:136E",
+   "bytes": 1,
+   "bytes_engine": 1,
+   "t_start": 1964,
+   "s_start": 32.68,
+   "t_end": 1969,
+   "frames": 5,
+   "credits_block": false
+  },
+  {
+   "n": 26,
+   "event": "0x429",
+   "offset": 936,
+   "addr": "CA:1371",
+   "bytes": 14,
+   "bytes_engine": 14,
+   "t_start": 2034,
+   "s_start": 33.844,
+   "t_end": 2059,
+   "frames": 25,
+   "credits_block": false
+  },
+  {
+   "n": 27,
+   "event": "0x429",
+   "offset": 954,
+   "addr": "CA:1383",
+   "bytes": 11,
+   "bytes_engine": 11,
+   "t_start": 2064,
+   "s_start": 34.343,
+   "t_end": 2089,
+   "frames": 25,
+   "credits_block": false
+  },
+  {
+   "n": 28,
+   "event": "0x429",
+   "offset": 975,
+   "addr": "CA:1398",
+   "bytes": 1,
+   "bytes_engine": 1,
+   "t_start": 2324,
+   "s_start": 38.67,
+   "t_end": 2339,
+   "frames": 15,
+   "credits_block": false
+  },
+  {
+   "n": 29,
+   "event": "0x429",
+   "offset": 1009,
+   "addr": "CA:13BA",
+   "bytes": 19,
+   "bytes_engine": 19,
+   "t_start": 2523,
+   "s_start": 41.981,
+   "t_end": 2548,
+   "frames": 25,
+   "credits_block": false
+  },
+  {
+   "n": 30,
+   "event": "0x429",
+   "offset": 1030,
+   "addr": "CA:13CF",
+   "bytes": 29,
+   "bytes_engine": 29,
+   "t_start": 2708,
+   "s_start": 45.059,
+   "t_end": 2743,
+   "frames": 35,
+   "credits_block": false
+  },
+  {
+   "n": 31,
+   "event": "0x429",
+   "offset": 1061,
+   "addr": "CA:13EE",
+   "bytes": 24,
+   "bytes_engine": 24,
+   "t_start": 2903,
+   "s_start": 48.304,
+   "t_end": 2923,
+   "frames": 20,
+   "credits_block": false
+  },
+  {
+   "n": 32,
+   "event": "0x429",
+   "offset": 1087,
+   "addr": "CA:1408",
+   "bytes": 1,
+   "bytes_engine": 1,
+   "t_start": 3083,
+   "s_start": 51.299,
+   "t_end": 3088,
+   "frames": 5,
+   "credits_block": false
+  }
+ ],
+ "sounds": [
+  {
+   "t": 114,
+   "s": 1.897,
+   "kind": "music",
+   "cmd": 1,
+   "id": 55,
+   "p2": 18,
+   "p3": 143,
+   "source": "vm_op"
+  },
+  {
+   "t": 2344,
+   "s": 39.002,
+   "kind": "music",
+   "cmd": 1,
+   "id": 57,
+   "p2": 20,
+   "p3": 255,
+   "source": "vm_op"
+  }
+ ],
+ "objects": {
+  "hero0_boy": {
+   "slot": 0,
+   "moves": [
+    {
+     "t0": 1049,
+     "t1": 1056,
+     "s0": 17.455,
+     "id": 128,
+     "frm": [
+      344,
+      218
+     ],
+     "to": [
+      344,
+      202
+     ],
+     "frames": 8,
+     "px": 16,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       8,
+       0,
+       -2
+      ]
+     ],
+     "cause": "0x429+01B8 ACTOR_WALK actor 1 up 8 frames",
+     "autonomous": false
+    },
+    {
+     "t0": 2350,
+     "t1": 2438,
+     "s0": 39.102,
+     "id": 128,
+     "frm": [
+      344,
+      202
+     ],
+     "to": [
+      344,
+      24
+     ],
+     "frames": 89,
+     "px": 178,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       89,
+       0,
+       -2
+      ]
+     ],
+     "cause": "engine: exit walk of the party during the map change started at frame 2349",
+     "autonomous": false
+    },
+    {
+     "t0": 2467,
+     "t1": 2500,
+     "s0": 41.049,
+     "id": 128,
+     "frm": [
+      296,
+      468
+     ],
+     "to": [
+      296,
+      400
+     ],
+     "frames": 34,
+     "px": 68,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       34,
+       0,
+       -2
+      ]
+     ],
+     "cause": "engine: entry walk after the map load",
+     "autonomous": false
+    }
+   ],
+   "facing": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "facing": "left",
+     "code": 130
+    },
+    {
+     "t": 64,
+     "s": 1.065,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 609,
+     "s": 10.133,
+     "facing": "up",
+     "code": 0
+    }
+   ],
+   "pose": [],
+   "presence": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "on": true,
+     "id": 128,
+     "x": 261,
+     "y": 437
+    }
+   ],
+   "ids": [
+    {
+     "t": 0,
+     "id": 128
+    }
+   ],
+   "visibility": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "obj0E": 0
+    }
+   ]
+  },
+  "hero1_girl": {
+   "slot": 1,
+   "moves": [
+    {
+     "t0": 99,
+     "t1": 106,
+     "s0": 1.647,
+     "id": 129,
+     "frm": [
+      344,
+      218
+     ],
+     "to": [
+      328,
+      218
+     ],
+     "frames": 8,
+     "px": 16,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "left"
+     ],
+     "vel": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       8,
+       -2,
+       0
+      ]
+     ],
+     "cause": "0x47C+0007 ACTOR_WALK actor 2 left 8 frames",
+     "autonomous": false
+    },
+    {
+     "t0": 489,
+     "t1": 504,
+     "s0": 8.137,
+     "id": 129,
+     "frm": [
+      328,
+      218
+     ],
+     "to": [
+      328,
+      186
+     ],
+     "frames": 16,
+     "px": 32,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       16,
+       0,
+       -2
+      ]
+     ],
+     "cause": "0x429+00AB ACTOR_WALK actor 2 up 16 frames",
+     "autonomous": false
+    },
+    {
+     "t0": 2350,
+     "t1": 2353,
+     "s0": 39.102,
+     "id": 129,
+     "frm": [
+      328,
+      186
+     ],
+     "to": [
+      340,
+      196
+     ],
+     "frames": 4,
+     "px": 22,
+     "px_per_frame": 5.5,
+     "px_per_s": 330.54,
+     "anim": [
+      2
+     ],
+     "facing": [
+      "right"
+     ],
+     "vel": [
+      [
+       3,
+       -2
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "profile": [
+      [
+       3,
+       3,
+       3
+      ],
+      [
+       1,
+       3,
+       1
+      ]
+     ],
+     "cause": "engine: exit walk of the party during the map change started at frame 2349",
+     "autonomous": false
+    },
+    {
+     "t0": 2354,
+     "t1": 2355,
+     "s0": 39.169,
+     "id": 129,
+     "frm": [
+      340,
+      196
+     ],
+     "to": [
+      344,
+      192
+     ],
+     "frames": 2,
+     "px": 8,
+     "px_per_frame": 4.0,
+     "px_per_s": 240.4,
+     "anim": [
+      1,
+      2
+     ],
+     "facing": [
+      "right"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       1,
+       -2
+      ]
+     ],
+     "profile": [
+      [
+       1,
+       3,
+       -2
+      ],
+      [
+       1,
+       1,
+       -2
+      ]
+     ],
+     "cause": "engine: exit walk of the party during the map change started at frame 2349",
+     "autonomous": false
+    },
+    {
+     "t0": 2356,
+     "t1": 2463,
+     "s0": 39.202,
+     "id": 129,
+     "frm": [
+      344,
+      192
+     ],
+     "to": [
+      344,
+      -24
+     ],
+     "frames": 108,
+     "px": 216,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ]
+     ],
+     "profile": [
+      [
+       108,
+       0,
+       -2
+      ]
+     ],
+     "cause": "engine: exit walk of the party during the map change started at frame 2349",
+     "autonomous": false
+    },
+    {
+     "t0": 2467,
+     "t1": 2500,
+     "s0": 41.049,
+     "id": 129,
+     "frm": [
+      296,
+      468
+     ],
+     "to": [
+      296,
+      400
+     ],
+     "frames": 34,
+     "px": 68,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       34,
+       0,
+       -2
+      ]
+     ],
+     "cause": "engine: entry walk after the map load",
+     "autonomous": false
+    },
+    {
+     "t0": 2508,
+     "t1": 2515,
+     "s0": 41.731,
+     "id": 129,
+     "frm": [
+      296,
+      400
+     ],
+     "to": [
+      280,
+      400
+     ],
+     "frames": 8,
+     "px": 16,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "left"
+     ],
+     "vel": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       8,
+       -2,
+       0
+      ]
+     ],
+     "cause": "0x429+03E0 ACTOR_WALK actor 2 left 8 frames",
+     "autonomous": false
+    }
+   ],
+   "facing": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 64,
+     "s": 1.065,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 99,
+     "s": 1.647,
+     "facing": "left",
+     "code": 130
+    },
+    {
+     "t": 109,
+     "s": 1.814,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 489,
+     "s": 8.137,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 549,
+     "s": 9.135,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 954,
+     "s": 15.874,
+     "facing": "right",
+     "code": 2
+    },
+    {
+     "t": 1674,
+     "s": 27.854,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 2089,
+     "s": 34.759,
+     "facing": "right",
+     "code": 2
+    },
+    {
+     "t": 2356,
+     "s": 39.202,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 2508,
+     "s": 41.731,
+     "facing": "left",
+     "code": 130
+    },
+    {
+     "t": 2518,
+     "s": 41.898,
+     "facing": "up",
+     "code": 0
+    }
+   ],
+   "pose": [
+    {
+     "t": 2254,
+     "s": 37.505,
+     "state": 64,
+     "anim": 168
+    },
+    {
+     "t": 2274,
+     "s": 37.838,
+     "state": 0,
+     "anim": "idle"
+    }
+   ],
+   "presence": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "on": true,
+     "id": 129,
+     "x": 261,
+     "y": 469
+    }
+   ],
+   "ids": [
+    {
+     "t": 0,
+     "id": 129
+    }
+   ],
+   "visibility": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "obj0E": 0
+    }
+   ]
+  },
+  "hero2_sprite": {
+   "slot": 2,
+   "moves": [
+    {
+     "t0": 99,
+     "t1": 106,
+     "s0": 1.647,
+     "id": 130,
+     "frm": [
+      344,
+      218
+     ],
+     "to": [
+      360,
+      218
+     ],
+     "frames": 8,
+     "px": 16,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "right"
+     ],
+     "vel": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       8,
+       2,
+       0
+      ]
+     ],
+     "cause": "0x47C+000A ACTOR_WALK actor 3 right 8 frames",
+     "autonomous": false
+    },
+    {
+     "t0": 489,
+     "t1": 504,
+     "s0": 8.137,
+     "id": 130,
+     "frm": [
+      360,
+      218
+     ],
+     "to": [
+      360,
+      186
+     ],
+     "frames": 16,
+     "px": 32,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       16,
+       0,
+       -2
+      ]
+     ],
+     "cause": "0x429+00AE ACTOR_WALK actor 3 up 16 frames",
+     "autonomous": false
+    },
+    {
+     "t0": 2350,
+     "t1": 2353,
+     "s0": 39.102,
+     "id": 130,
+     "frm": [
+      360,
+      186
+     ],
+     "to": [
+      348,
+      196
+     ],
+     "frames": 4,
+     "px": 22,
+     "px_per_frame": 5.5,
+     "px_per_s": 330.54,
+     "anim": [
+      2
+     ],
+     "facing": [
+      "left"
+     ],
+     "vel": [
+      [
+       -3,
+       -2
+      ],
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       3
+      ]
+     ],
+     "profile": [
+      [
+       3,
+       -3,
+       3
+      ],
+      [
+       1,
+       -3,
+       1
+      ]
+     ],
+     "cause": "engine: exit walk of the party during the map change started at frame 2349",
+     "autonomous": false
+    },
+    {
+     "t0": 2354,
+     "t1": 2355,
+     "s0": 39.169,
+     "id": 130,
+     "frm": [
+      348,
+      196
+     ],
+     "to": [
+      344,
+      192
+     ],
+     "frames": 2,
+     "px": 8,
+     "px_per_frame": 4.0,
+     "px_per_s": 240.4,
+     "anim": [
+      1,
+      2
+     ],
+     "facing": [
+      "left"
+     ],
+     "vel": [
+      [
+       -1,
+       -2
+      ],
+      [
+       0,
+       -2
+      ]
+     ],
+     "profile": [
+      [
+       1,
+       -3,
+       -2
+      ],
+      [
+       1,
+       -1,
+       -2
+      ]
+     ],
+     "cause": "engine: exit walk of the party during the map change started at frame 2349",
+     "autonomous": false
+    },
+    {
+     "t0": 2356,
+     "t1": 2463,
+     "s0": 39.202,
+     "id": 130,
+     "frm": [
+      344,
+      192
+     ],
+     "to": [
+      344,
+      -24
+     ],
+     "frames": 108,
+     "px": 216,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ]
+     ],
+     "profile": [
+      [
+       108,
+       0,
+       -2
+      ]
+     ],
+     "cause": "engine: exit walk of the party during the map change started at frame 2349",
+     "autonomous": false
+    },
+    {
+     "t0": 2467,
+     "t1": 2500,
+     "s0": 41.049,
+     "id": 130,
+     "frm": [
+      296,
+      468
+     ],
+     "to": [
+      296,
+      400
+     ],
+     "frames": 34,
+     "px": 68,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "up"
+     ],
+     "vel": [
+      [
+       0,
+       -2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       34,
+       0,
+       -2
+      ]
+     ],
+     "cause": "engine: entry walk after the map load",
+     "autonomous": false
+    },
+    {
+     "t0": 2508,
+     "t1": 2515,
+     "s0": 41.731,
+     "id": 130,
+     "frm": [
+      296,
+      400
+     ],
+     "to": [
+      312,
+      400
+     ],
+     "frames": 8,
+     "px": 16,
+     "px_per_frame": 2.0,
+     "px_per_s": 120.2,
+     "anim": [
+      0,
+      1
+     ],
+     "facing": [
+      "right"
+     ],
+     "vel": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "profile": [
+      [
+       8,
+       2,
+       0
+      ]
+     ],
+     "cause": "0x429+03E3 ACTOR_WALK actor 3 right 8 frames",
+     "autonomous": false
+    }
+   ],
+   "facing": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 99,
+     "s": 1.647,
+     "facing": "right",
+     "code": 2
+    },
+    {
+     "t": 109,
+     "s": 1.814,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 489,
+     "s": 8.137,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 549,
+     "s": 9.135,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 979,
+     "s": 16.29,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 1264,
+     "s": 21.032,
+     "facing": "down",
+     "code": 1
+    },
+    {
+     "t": 2059,
+     "s": 34.26,
+     "facing": "left",
+     "code": 130
+    },
+    {
+     "t": 2356,
+     "s": 39.202,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 2508,
+     "s": 41.731,
+     "facing": "right",
+     "code": 2
+    },
+    {
+     "t": 2518,
+     "s": 41.898,
+     "facing": "up",
+     "code": 0
+    }
+   ],
+   "pose": [
+    {
+     "t": 1969,
+     "s": 32.763,
+     "state": 64,
+     "anim": 168
+    },
+    {
+     "t": 1989,
+     "s": 33.096,
+     "state": 0,
+     "anim": "idle"
+    }
+   ],
+   "presence": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "on": true,
+     "id": 130,
+     "x": 261,
+     "y": 435
+    }
+   ],
+   "ids": [
+    {
+     "t": 0,
+     "id": 130
+    }
+   ],
+   "visibility": [
+    {
+     "t": 0,
+     "s": 0.0,
+     "obj0E": 0
+    }
+   ]
+  },
+  "slot3": {
+   "slot": 3,
+   "moves": [],
+   "facing": [
+    {
+     "t": 2470,
+     "s": 41.099,
+     "facing": "down",
+     "code": 1
+    }
+   ],
+   "pose": [],
+   "presence": [
+    {
+     "t": 2464,
+     "s": 40.999,
+     "on": true,
+     "id": 127,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "ids": [
+    {
+     "t": 2464,
+     "id": 127
+    }
+   ],
+   "visibility": [
+    {
+     "t": 2464,
+     "s": 40.999,
+     "obj0E": 0
+    }
+   ]
+  },
+  "slot6": {
+   "slot": 6,
+   "moves": [],
+   "facing": [
+    {
+     "t": 2470,
+     "s": 41.099,
+     "facing": "up",
+     "code": 0
+    }
+   ],
+   "pose": [],
+   "presence": [
+    {
+     "t": 2466,
+     "s": 41.032,
+     "on": true,
+     "id": 0,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "ids": [
+    {
+     "t": 2466,
+     "id": 0
+    }
+   ],
+   "visibility": [
+    {
+     "t": 2466,
+     "s": 41.032,
+     "obj0E": 0
+    }
+   ]
+  },
+  "slot7": {
+   "slot": 7,
+   "moves": [],
+   "facing": [
+    {
+     "t": 2546,
+     "s": 42.364,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 2738,
+     "s": 45.558,
+     "facing": "up",
+     "code": 0
+    },
+    {
+     "t": 2922,
+     "s": 48.62,
+     "facing": "up",
+     "code": 0
+    }
+   ],
+   "pose": [],
+   "presence": [
+    {
+     "t": 2546,
+     "s": 42.364,
+     "on": true,
+     "id": 0,
+     "x": 0,
+     "y": 0
+    },
+    {
+     "t": 2733,
+     "s": 45.475,
+     "on": false,
+     "id": null,
+     "x": null,
+     "y": null
+    },
+    {
+     "t": 2738,
+     "s": 45.558,
+     "on": true,
+     "id": 0,
+     "x": 104,
+     "y": 0
+    },
+    {
+     "t": 2917,
+     "s": 48.537,
+     "on": false,
+     "id": null,
+     "x": null,
+     "y": null
+    },
+    {
+     "t": 2922,
+     "s": 48.62,
+     "on": true,
+     "id": 0,
+     "x": 104,
+     "y": 0
+    },
+    {
+     "t": 3084,
+     "s": 51.316,
+     "on": false,
+     "id": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ids": [
+    {
+     "t": 2546,
+     "id": 0
+    }
+   ],
+   "visibility": [
+    {
+     "t": 2546,
+     "s": 42.364,
+     "obj0E": 0
+    },
+    {
+     "t": 2738,
+     "s": 45.558,
+     "obj0E": 0
+    },
+    {
+     "t": 2922,
+     "s": 48.62,
+     "obj0E": 0
+    }
+   ]
+  }
+ },
+ "camera": [
+  {
+   "t0": 0,
+   "t1": 0,
+   "frm": [
+    142,
+    310
+   ],
+   "to": [
+    142,
+    310
+   ],
+   "initial": true,
+   "s0": 0.0,
+   "frames": 1
+  },
+  {
+   "t0": 60,
+   "t1": 60,
+   "frm": [
+    142,
+    310
+   ],
+   "to": [
+    216,
+    104
+   ],
+   "map_load": true,
+   "s0": 0.998,
+   "frames": 1
+  },
+  {
+   "t0": 89,
+   "t1": 95,
+   "frm": [
+    216,
+    104
+   ],
+   "to": [
+    216,
+    90
+   ],
+   "s0": 1.481,
+   "frames": 7
+  },
+  {
+   "t0": 2464,
+   "t1": 2464,
+   "frm": [
+    216,
+    90
+   ],
+   "to": [
+    168,
+    248
+   ],
+   "map_load": true,
+   "s0": 40.999,
+   "frames": 1
+  }
+ ],
+ "fades": [
+  {
+   "t0": 4,
+   "t1": 60,
+   "frm": 15,
+   "to": 0,
+   "dir": -1,
+   "s0": 0.067,
+   "frames": 57,
+   "kind": "fade_out"
+  },
+  {
+   "t0": 61,
+   "t1": 75,
+   "frm": 0,
+   "to": 15,
+   "dir": 1,
+   "s0": 1.015,
+   "frames": 15,
+   "kind": "fade_in"
+  },
+  {
+   "t0": 2408,
+   "t1": 2464,
+   "frm": 15,
+   "to": 0,
+   "dir": -1,
+   "s0": 40.067,
+   "frames": 57,
+   "kind": "fade_out"
+  },
+  {
+   "t0": 2465,
+   "t1": 2479,
+   "frm": 0,
+   "to": 15,
+   "dir": 1,
+   "s0": 41.016,
+   "frames": 15,
+   "kind": "fade_in"
+  }
+ ],
+ "palette_fades": [
+  {
+   "t0": 119,
+   "mode": 96,
+   "target": "0x0010",
+   "t1": 2339,
+   "frames": 2220,
+   "final_010A": "0x0010",
+   "n_steps": 17,
+   "t_last_step": 195
+  },
+  {
+   "t0": 2339,
+   "mode": 96,
+   "target": "0xFFFF",
+   "t1": 2464,
+   "frames": 125,
+   "final_010A": "0x6739",
+   "n_steps": 26,
+   "t_last_step": 2460
+  }
+ ],
+ "screen": [
+  {
+   "t": 1,
+   "s": 0.017,
+   "what": "pad_locked"
+  },
+  {
+   "t": 60,
+   "s": 0.998,
+   "what": "jitter_byte_49",
+   "value": 0
+  },
+  {
+   "t": 79,
+   "s": 1.315,
+   "what": "world_freeze_on"
+  },
+  {
+   "t": 89,
+   "s": 1.481,
+   "what": "camera_recentre_start"
+  },
+  {
+   "t": 96,
+   "s": 1.597,
+   "what": "camera_recentre_done"
+  },
+  {
+   "t": 119,
+   "s": 1.98,
+   "what": "palette_fade_mode_2A",
+   "value": 96,
+   "target_010C": "0x0010"
+  },
+  {
+   "t": 124,
+   "s": 2.063,
+   "what": "jitter_byte_49",
+   "value": 224
+  },
+  {
+   "t": 164,
+   "s": 2.729,
+   "what": "jitter_byte_49",
+   "value": 96
+  },
+  {
+   "t": 2464,
+   "s": 40.999,
+   "what": "jitter_byte_49",
+   "value": 0
+  },
+  {
+   "t": 2464,
+   "s": 40.999,
+   "what": "palette_fade_mode_2A",
+   "value": 0,
+   "target_010C": "0xFFFF"
+  },
+  {
+   "t": 2503,
+   "s": 41.648,
+   "what": "boss_freeze_flag_set"
+  },
+  {
+   "t": 3088,
+   "s": 51.382,
+   "what": "world_freeze_off"
+  },
+  {
+   "t": 3088,
+   "s": 51.382,
+   "what": "pad_released"
+  },
+  {
+   "t": 3088,
+   "s": 51.382,
+   "what": "boss_freeze_flag_cleared"
+  }
+ ],
+ "flags": [
+  {
+   "t": 2503,
+   "s": 41.648,
+   "flag": 11,
+   "old": 2,
+   "new": 15
+  },
+  {
+   "t": 2503,
+   "s": 41.648,
+   "flag": 255,
+   "old": 0,
+   "new": 1
+  },
+  {
+   "t": 3088,
+   "s": 51.382,
+   "flag": 255,
+   "old": 1,
+   "new": 0
+  }
+ ],
+ "vm_states": [
+  {
+   "t": 1,
+   "s": 0.017,
+   "d0": 1,
+   "prev": 0
+  },
+  {
+   "t": 84,
+   "s": 1.398,
+   "d0": 128,
+   "prev": 1
+  },
+  {
+   "t": 89,
+   "s": 1.481,
+   "d0": 134,
+   "prev": 128
+  },
+  {
+   "t": 99,
+   "s": 1.647,
+   "d0": 133,
+   "prev": 134
+  },
+  {
+   "t": 114,
+   "s": 1.897,
+   "d0": 1,
+   "prev": 133
+  },
+  {
+   "t": 124,
+   "s": 2.063,
+   "d0": 130,
+   "prev": 1
+  },
+  {
+   "t": 244,
+   "s": 4.06,
+   "d0": 129,
+   "prev": 130
+  },
+  {
+   "t": 324,
+   "s": 5.391,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 329,
+   "s": 5.474,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 394,
+   "s": 6.556,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 399,
+   "s": 6.639,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 469,
+   "s": 7.804,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 474,
+   "s": 7.887,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 489,
+   "s": 8.137,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 509,
+   "s": 8.469,
+   "d0": 130,
+   "prev": 133
+  },
+  {
+   "t": 549,
+   "s": 9.135,
+   "d0": 133,
+   "prev": 130
+  },
+  {
+   "t": 554,
+   "s": 9.218,
+   "d0": 129,
+   "prev": 133
+  },
+  {
+   "t": 599,
+   "s": 9.967,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 604,
+   "s": 10.05,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 609,
+   "s": 10.133,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 614,
+   "s": 10.217,
+   "d0": 129,
+   "prev": 133
+  },
+  {
+   "t": 689,
+   "s": 11.464,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 694,
+   "s": 11.548,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 754,
+   "s": 12.546,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 759,
+   "s": 12.629,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 779,
+   "s": 12.962,
+   "d0": 130,
+   "prev": 129
+  },
+  {
+   "t": 859,
+   "s": 14.293,
+   "d0": 129,
+   "prev": 130
+  },
+  {
+   "t": 944,
+   "s": 15.707,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 949,
+   "s": 15.791,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 979,
+   "s": 16.29,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 984,
+   "s": 16.373,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1049,
+   "s": 17.455,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 1059,
+   "s": 17.621,
+   "d0": 131,
+   "prev": 133
+  },
+  {
+   "t": 1064,
+   "s": 17.704,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1089,
+   "s": 18.12,
+   "d0": 130,
+   "prev": 129
+  },
+  {
+   "t": 1249,
+   "s": 20.782,
+   "d0": 129,
+   "prev": 130
+  },
+  {
+   "t": 1264,
+   "s": 21.032,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 1269,
+   "s": 21.115,
+   "d0": 129,
+   "prev": 133
+  },
+  {
+   "t": 1334,
+   "s": 22.197,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1339,
+   "s": 22.28,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1444,
+   "s": 24.027,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1449,
+   "s": 24.11,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1554,
+   "s": 25.857,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1559,
+   "s": 25.941,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1664,
+   "s": 27.688,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1669,
+   "s": 27.771,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1674,
+   "s": 27.854,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 1679,
+   "s": 27.937,
+   "d0": 129,
+   "prev": 133
+  },
+  {
+   "t": 1779,
+   "s": 29.601,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1784,
+   "s": 29.684,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1884,
+   "s": 31.348,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1889,
+   "s": 31.432,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1924,
+   "s": 32.014,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1929,
+   "s": 32.097,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1959,
+   "s": 32.596,
+   "d0": 131,
+   "prev": 129
+  },
+  {
+   "t": 1964,
+   "s": 32.68,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 1969,
+   "s": 32.763,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 1994,
+   "s": 33.179,
+   "d0": 130,
+   "prev": 133
+  },
+  {
+   "t": 2034,
+   "s": 33.844,
+   "d0": 129,
+   "prev": 130
+  },
+  {
+   "t": 2059,
+   "s": 34.26,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 2064,
+   "s": 34.343,
+   "d0": 129,
+   "prev": 133
+  },
+  {
+   "t": 2089,
+   "s": 34.759,
+   "d0": 133,
+   "prev": 129
+  },
+  {
+   "t": 2094,
+   "s": 34.843,
+   "d0": 130,
+   "prev": 133
+  },
+  {
+   "t": 2254,
+   "s": 37.505,
+   "d0": 133,
+   "prev": 130
+  },
+  {
+   "t": 2279,
+   "s": 37.921,
+   "d0": 130,
+   "prev": 133
+  },
+  {
+   "t": 2319,
+   "s": 38.586,
+   "d0": 131,
+   "prev": 130
+  },
+  {
+   "t": 2324,
+   "s": 38.67,
+   "d0": 129,
+   "prev": 131
+  },
+  {
+   "t": 2339,
+   "s": 38.919,
+   "d0": 1,
+   "prev": 129
+  },
+  {
+   "t": 2508,
+   "s": 41.731,
+   "d0": 133,
+   "prev": 1
+  },
+  {
+   "t": 2523,
+   "s": 41.981,
+   "d0": 129,
+   "prev": 133
+  },
+  {
+   "t": 2548,
+   "s": 42.397,
+   "d0": 130,
+   "prev": 129
+  },
+  {
+   "t": 2708,
+   "s": 45.059,
+   "d0": 129,
+   "prev": 130
+  },
+  {
+   "t": 2743,
+   "s": 45.642,
+   "d0": 130,
+   "prev": 129
+  },
+  {
+   "t": 2903,
+   "s": 48.304,
+   "d0": 129,
+   "prev": 130
+  },
+  {
+   "t": 2923,
+   "s": 48.637,
+   "d0": 130,
+   "prev": 129
+  },
+  {
+   "t": 3083,
+   "s": 51.299,
+   "d0": 129,
+   "prev": 130
+  },
+  {
+   "t": 3088,
+   "s": 51.382,
+   "d0": 0,
+   "prev": 129
+  }
+ ],
+ "boss": [
+  {
+   "t": 2464,
+   "slot": 3,
+   "phase94": 0,
+   "flags98": "0x180D",
+   "engine_x": 288,
+   "engine_y": 288,
+   "age96": 0,
+   "state7A": 0
+  },
+  {
+   "t": 2465,
+   "slot": 3,
+   "phase94": 8,
+   "flags98": "0x180D",
+   "engine_x": 288,
+   "engine_y": 288,
+   "age96": 1,
+   "state7A": 0
+  },
+  {
+   "t": 3345,
+   "slot": 3,
+   "phase94": 1,
+   "flags98": "0x180D",
+   "engine_x": 264,
+   "engine_y": 352,
+   "age96": 60,
+   "state7A": 0
+  },
+  {
+   "t": 3347,
+   "slot": 3,
+   "phase94": 1,
+   "flags98": "0x180D",
+   "engine_x": 264,
+   "engine_y": 353,
+   "age96": 60,
+   "state7A": 0,
+   "note": "first position change in the phase"
+  }
+ ],
+ "after_control_sounds": [
+  {
+   "t": 3345,
+   "cmd": 2,
+   "id": 214,
+   "p2": 0,
+   "p3": 1
+  },
+  {
+   "t": 3373,
+   "cmd": 2,
+   "id": 139,
+   "p2": 15,
+   "p3": 119
+  },
+  {
+   "t": 3408,
+   "cmd": 2,
+   "id": 139,
+   "p2": 15,
+   "p3": 136
+  },
+  {
+   "t": 3413,
+   "cmd": 2,
+   "id": 139,
+   "p2": 15,
+   "p3": 153
+  },
+  {
+   "t": 3453,
+   "cmd": 2,
+   "id": 139,
+   "p2": 15,
+   "p3": 170
+  },
+  {
+   "t": 3468,
+   "cmd": 2,
+   "id": 139,
+   "p2": 15,
+   "p3": 170
+  }
+ ],
+ "variants": {
+  "leader": [
+   {
+    "leader": 0,
+    "total_frames": 3088,
+    "end_op_t": 3088,
+    "map_loads": [
+     [
+      246,
+      0
+     ],
+     [
+      255,
+      60
+     ],
+     [
+      253,
+      2464
+     ]
+    ]
+   },
+   {
+    "leader": 1,
+    "total_frames": 3080,
+    "end_op_t": 3080,
+    "map_loads": [
+     [
+      246,
+      0
+     ],
+     [
+      255,
+      60
+     ],
+     [
+      253,
+      2456
+     ]
+    ]
+   },
+   {
+    "leader": 2,
+    "total_frames": 3080,
+    "end_op_t": 3080,
+    "map_loads": [
+     [
+      246,
+      0
+     ],
+     [
+      255,
+      60
+     ],
+     [
+      253,
+      2456
+     ]
+    ]
+   }
+  ],
+  "hero_weapon_types": [
+   {
+    "weapon_types": [
+     4,
+     1,
+     3
+    ],
+    "total_frames": 3088,
+    "end_op_t": 3088
+   },
+   {
+    "weapon_types": [
+     0,
+     0,
+     0
+    ],
+    "total_frames": 3088,
+    "end_op_t": 3088
+   },
+   {
+    "weapon_types": [
+     5,
+     7,
+     2
+    ],
+    "total_frames": 3088,
+    "end_op_t": 3088
+   }
+  ],
+  "note": "the leader runs use the weapons of the save state; the weapon runs use leader 0; every run presses A in the first frame the VM waits for a button"
+ }
+}
